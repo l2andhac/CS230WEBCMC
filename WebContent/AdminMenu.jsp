@@ -7,6 +7,11 @@
 <title>Admin Menu</title>
 </head>
 <body>
-
+Welcome to the Admin Page
+<br>
+<a href="ManageUniversities.jsp">Manage Universities</a>
+<br>
+<a href="ManageUsers.jsp">Manage Users</a>
+<br>
 </body>
 </html>

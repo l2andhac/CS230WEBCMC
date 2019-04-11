@@ -4,18 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>User Menu</title>
+<title>Insert title here</title>
 </head>
 <body>
-Welcome to the User Page
-
-<br>
-<a href="ManageProfile.jsp">Manage My Profile</a>
-<br>
-<a href="ManageSavedSchools.jsp">Manage My Saved Schools</a>
-<br>
-<a href="Search.jsp">Search for Schools</a>
-<br>
 
 </body>
 </html>
