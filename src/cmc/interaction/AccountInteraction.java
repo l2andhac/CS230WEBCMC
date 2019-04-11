@@ -17,6 +17,8 @@ public class AccountInteraction{
       //a userInteraction to pass after logging in, if account is a user
       private UserInteraction userInteraction;
       
+      private Account account;
+      
 	  /**
 	 * Constructor for an AccountInteraction that creates an AccountFunctionalityController object
 	 * 
@@ -35,6 +37,7 @@ public class AccountInteraction{
 	   */
 	  public AccountInteraction logOn(String u, String p){
 	    Account a = accountFunctCont.logOn(u,p);
+	    account = a;
 	    if(a != null) {
 	    if(a.getUserType() == 'u') {
 	    	userInteraction = new UserInteraction((User) a);
@@ -70,6 +73,10 @@ public class AccountInteraction{
 	   */
 	  public boolean forgotPassword(String u){
 	    return accountFunctCont.forgotPassword(u);
+	  }
+	  
+	  public Account getAccount() {
+		  return account;
 	  }
 	
 }
