@@ -25,6 +25,7 @@ public class AdminInteraction extends AccountInteraction{
  */
   public AdminInteraction(Admin admin) {
 	super();
+	//System.out.println(admin.toString());
 	this.admin = admin;
 	this.adminFunctCont = new AdminFunctionalityController();
   }

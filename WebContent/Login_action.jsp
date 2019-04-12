@@ -2,18 +2,19 @@
 
 <%@page language="java" import="cmc.controller.*" import="cmc.entity.*" import="cmc.interaction.*"%>
 <%  
-	AccountInteraction ai= new AccountInteraction();
+	AccountInteraction aci= new AccountInteraction();
 	String un = request.getParameter("Username");
 	String p = request.getParameter("Password");
 	
-	AccountInteraction account = ai.logOn(un, p);
+	AccountInteraction account = aci.logOn(un, p);
 	
 	if(account != null){
-		session.setAttribute("ai", ai);
 		if(account instanceof UserInteraction){
+			session.setAttribute("ui", (UserInteraction) account);
 		response.sendRedirect("UserMenu.jsp");
 		}
 		else{
+			session.setAttribute("ai", (AdminInteraction) account);
 		response.sendRedirect("AdminMenu.jsp");
 		}
 	}
