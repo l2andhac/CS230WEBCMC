@@ -25,7 +25,7 @@ public class AccountFunctionalityController {
 	 */
 	public AccountFunctionalityController() {
 		this.ac = new AccountController();
-		this.fpc = new ForgotPasswordController();
+		//this.fpc = new ForgotPasswordController();
 		this.dbc = new DBController();
 	}
 

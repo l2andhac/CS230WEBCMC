@@ -71,9 +71,9 @@ public class AccountInteraction{
 	   * 
 	   * @param u - String with the username
 	   */
-	  public boolean forgotPassword(String u){
-	    return accountFunctCont.forgotPassword(u);
-	  }
+	public boolean forgotPassword(String u) {
+		return accountFunctCont.forgotPassword(u);
+	}
 	  
 	  public Account getAccount() {
 		  return account;
