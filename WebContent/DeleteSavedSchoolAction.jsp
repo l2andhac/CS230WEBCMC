@@ -4,7 +4,7 @@
 
 <%
 	UserInteraction ui = (UserInteraction) session.getAttribute("ai");
-	String name = request.getParameter("name");
+	String name = request.getParameter("Name");
 	ui.removeSavedSchool(name);
 	response.sendRedirect("ManageSavedSchools.jsp");
 %>

@@ -23,14 +23,15 @@
 				for (SavedSchool s : savedSchools) {
 					out.println("<tr>");
 					out.println("<td style=\"vertical-align: top;\">");
-					out.println("<form method=\"ManageSavedSchools\" action=\"ViewSchoolDetails.jsp?name=" + s.getSchoolName() + "\" name=\"View\">");
-					out.println("<input name=\"View\" value=\"View\" type=\"submit\">");
+					out.println("<form method=\"post\" action=\"ViewSchoolDetails.jsp?Name=" + s.getSchoolName() + "\" name=\"View\">");
+					out.println("<input name = \"View\" value=\"View\" type=\"submit\">");
 					out.println("</form>");
 					out.println("</td>");
 					out.println("<td style=\"vertical-align: top;\">" + s.getSchoolName() + "</td>");
 					out.println("<td style=\"vertical-align: top;\">");
-					out.println("<form method=\"ManageSavedSchools\" action=\"DeleteSavedSchoolAction.jsp?name=" + s.getSchoolName() + "\" name=\"Remove\">");
-					out.println("<input name=\"Remove\" value=\"Remove\" type=\"submit\">");
+					out.println("<form method=\"post\" action=\"DeleteSavedSchoolAction.jsp?Name=" + s.getSchoolName() + "\" name=\"Remove\">");
+					out.println("<input name=\"Remove\" value=\"Delete\" type=\"submit\">");
+					out.println("</form>");
 					out.println("</td>");
 					out.println("</tr>");
 				}
