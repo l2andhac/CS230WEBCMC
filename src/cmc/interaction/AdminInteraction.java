@@ -229,5 +229,9 @@ public class AdminInteraction extends AccountInteraction{
   public void logOff(){
     this.admin.logOff();
   }
+  
+  public Admin getAccount() {
+	  return admin;
+  }
     
 }
