@@ -11,12 +11,12 @@
 	if(account != null){
 		if(account instanceof UserInteraction){
 			session.setAttribute("ai", (UserInteraction) account);
-			//session.setAttribute("interactionType", "User");
+			session.setAttribute("interactionType", "User");
 		response.sendRedirect("UserMenu.jsp");
 		}
 		else{
 			session.setAttribute("ai", (AdminInteraction) account);
-			//session.setAttribute("interactionType", "Admin");
+			session.setAttribute("interactionType", "Admin");
 		response.sendRedirect("AdminMenu.jsp");
 		}
 	}

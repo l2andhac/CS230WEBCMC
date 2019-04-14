@@ -3,18 +3,24 @@
 <%
    AccountInteraction accountInteraction = (AccountInteraction)session.getAttribute("ai");
   
-/*    AccountInteraction accountInteraction; 
+    UserInteraction userInteraction; 
+    AdminInteraction adminInteraction;
 
   if(session.getAttribute("interactionType").equals("User")){
-	  accountInteraction = (UserInteraction)session.getAttribute("ai");  
+	  userInteraction = (UserInteraction)session.getAttribute("ai");  
+	  if (userInteraction == null || userInteraction.getAccount().isLoggedOn() == false){
+		   response.sendRedirect("index.jsp?Error=3");
+		   return;
+	   }
   }
   else{
-	  accountInteraction = (AdminInteraction)session.getAttribute("ai");  
-  } */
+	  adminInteraction = (AdminInteraction)session.getAttribute("ai");
+	  if (adminInteraction == null || adminInteraction.getAccount().isLoggedOn() == false){
+		   response.sendRedirect("index.jsp?Error=3");
+		   return;
+	   }
+  } 
   
 
-   if (accountInteraction == null || accountInteraction.getAccount().isLoggedOn() == false){
-	   response.sendRedirect("index.jsp?Error=3");
-	   return;
-   }
+   
 %>
