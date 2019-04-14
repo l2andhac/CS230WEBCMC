@@ -143,7 +143,7 @@ public class AdminInteraction extends AccountInteraction{
    * 
    * @return Set<String> - Accounts to be viewed
    */
-  public Set<String> viewAllAccounts(){
+  public Set<Account> viewAllAccounts(){
     return adminFunctCont.viewAllAccounts();
   }
   
