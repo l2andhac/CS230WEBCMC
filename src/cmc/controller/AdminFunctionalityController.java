@@ -131,5 +131,11 @@ public class AdminFunctionalityController extends AccountFunctionalityController
     
   }
 
+
+public boolean removeAccount(String accountToRemove) {
+	dbController.removeAccount(accountToRemove);
+	return true;
+}
+
   
 }
