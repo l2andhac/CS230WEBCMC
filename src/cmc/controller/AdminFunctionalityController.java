@@ -103,7 +103,7 @@ public class AdminFunctionalityController extends AccountFunctionalityController
    * 
    * @return Set<String> - a set of all of the Accounts in the database
    */
-  public Set<String> viewAllAccounts(){
+  public Set<Account> viewAllAccounts(){
     return dbController.viewAllAccounts();
   }
   
@@ -130,6 +130,12 @@ public class AdminFunctionalityController extends AccountFunctionalityController
     
     
   }
+
+
+public boolean removeAccount(String accountToRemove) {
+	dbController.removeAccount(accountToRemove);
+	return true;
+}
 
   
 }

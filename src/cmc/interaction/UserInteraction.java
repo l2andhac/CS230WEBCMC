@@ -233,12 +233,18 @@ public class UserInteraction extends AccountInteraction{
     return univ;
   }
   
+ 
+  
   /**
    * Allows the user to log off
    * 
    */
   public void logOff(){
     this.user.logOff();
+  }
+  
+  public User getAccount() {
+	  return user;
   }
   
   
