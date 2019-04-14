@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="cmc.controller.*" import="cmc.entity.*"
-	import="cmc.interaction.*"%>
+	pageEncoding="UTF-8" import="cmc.controller.*" import="cmc.entity.*" 
+	import="cmc.interaction.*" import="java.util.*" import="javax.mail.*" import="javax.mail.internet.*" 
+	import="java.lang.Math"%>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">

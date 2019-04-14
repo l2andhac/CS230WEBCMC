@@ -4,9 +4,9 @@
 <%@include file="verifyLogin.jsp" %>
 
 <%
-//AccountInteraction ai = (AccountInteraction)session.getAttribute("ai");
-//User dUser = ai.getSpecificUser(request.getParameter("Username"));
-//ai.removeAccount(dUser);
+AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
+ai.removeAccount(request.getParameter("Username"));
+
     
 response.sendRedirect("ManageUsers.jsp");
 %>

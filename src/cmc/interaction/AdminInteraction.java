@@ -143,7 +143,7 @@ public class AdminInteraction extends AccountInteraction{
    * 
    * @return Set<String> - Accounts to be viewed
    */
-  public Set<String> viewAllAccounts(){
+  public Set<Account> viewAllAccounts(){
     return adminFunctCont.viewAllAccounts();
   }
   
@@ -223,11 +223,25 @@ public class AdminInteraction extends AccountInteraction{
   }
 
   /**
+   * 
+   * @param accountToRemove a username of the account you want to remove
+   * @return
+   */
+  public boolean removeAccount(String accountToRemove) {
+	  return adminFunctCont.removeAccount(accountToRemove);
+  }
+  
+  
+  /**
    * Allows the admin to log off
    * 
    */
   public void logOff(){
     this.admin.logOff();
+  }
+  
+  public Admin getAccount() {
+	  return admin;
   }
     
 }
