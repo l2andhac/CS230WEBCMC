@@ -25,10 +25,13 @@
 					out.println("<td style=\"vertical-align: top;\">");
 					out.println("<form method=\"ManageSavedSchools\" action=\"ViewSchoolDetails.jsp&name=" + s.getSchoolName() + "\" name=\"View\">");
 					out.println("<input name=\"View\" value=\"View\" type=\"submit\">");
+					out.println("</form>");
 					out.println("</td>");
 					out.println("<td style=\"vertical-align: top;\">" + s.getSchoolName() + "</td>");
-					out.println("<form method=\"RemoveSavedSchool\" action=RemoveSavedSchoolAction.jsp&name=" + s.getSchoolName() + "\" name=\"Remove\">");
-					out.println("<td style=\"vertical-align: top;\"><button value=\"Remove\"name=\"Remove\" type=\"button\"></button><br></td>");
+					out.println("<td style=\"vertical-align: top;\">");
+					out.println("<form method=\"ManageSavedSchools\" action=\"RemoveSavedSchoolAction.jsp&name=" + s.getSchoolName() + "\" name=\"Remove\">");
+					out.println("<input name=\"Remove\" value=\"Remove\" type=\"submit\">");
+					out.println("</td>");
 					out.println("</tr>");
 				}
 			%>
