@@ -4,9 +4,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Add New University</title>
 </head>
 <body>
+<form action="AddUniv_action.jsp">
+<table style="text-align: left; width: 100%;" border="1"
+		cellpadding="2" cellspacing="2">
+	<tr>
+		<td>SCHOOL</td>
+		<td><input type="text" name="Name"></td>
+	</tr>
+	<tr>
+		<td>STATE</td>
+		<td><input type="text" name="State"></td>
+	</tr>
+</table>
+</form>
 
 </body>
 </html>
