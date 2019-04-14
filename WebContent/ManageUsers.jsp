@@ -48,7 +48,7 @@
 					out.println("<td style=\"vertical-align: top;\">");
 					out.println("<form method=\"post\" action=\"Delete.jsp\" name=\"Delete\">");
 					out.println("<input name=\"Delete\" value=\"Delete\" type=\"submit\"> <input");
-					out.println("name=\"Username\" value=" + u + " type=\"hidden\">");
+					out.println("name=\"Username\" value=" + u.getUsername() + " type=\"hidden\">");
 					out.println("</form>");
 					out.println("</td>");
 					out.println("</tr>");
