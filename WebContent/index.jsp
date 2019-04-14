@@ -48,6 +48,7 @@
 				</tr>
 			</tbody>
 		</table>
+		<a href="ForgotPassword.jsp">Forgot password</a>
 		<br>
 	</form>
 	<br>

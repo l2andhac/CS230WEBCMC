@@ -6,7 +6,9 @@
 	String un = request.getParameter("Username");
 	String p = request.getParameter("Password");
 	
+	session.setAttribute("aci", aci);
 	AccountInteraction account = aci.logOn(un, p);
+	
 	
 	if(account != null){
 		if(account instanceof UserInteraction){
