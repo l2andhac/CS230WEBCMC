@@ -346,12 +346,12 @@ public class DBController {
    * 
    * @return Set<String> - a set of all the usernames
    */
-  public Set<String> viewAllAccounts() {
+  public Set<Account> viewAllAccounts() {
     String[][] allUsers = univDBlib.user_getUsers();
-    Set<String> retList = new HashSet<String>();
+    Set<Account> retList = new HashSet<Account>();
     for(int i = 0; i < allUsers.length; i++)
     {
-      retList.add(allUsers[i][2]);
+      retList.add(findAccount(allUsers[i][2]));
     }
     return retList;
   }

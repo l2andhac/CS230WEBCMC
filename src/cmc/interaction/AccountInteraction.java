@@ -75,8 +75,6 @@ public class AccountInteraction{
 		return accountFunctCont.forgotPassword(u);
 	}
 	  
-	  public Account getAccount() {
-		  return account;
-	  }
+	  
 	
 }

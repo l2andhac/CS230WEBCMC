@@ -243,5 +243,9 @@ public class UserInteraction extends AccountInteraction{
     this.user.logOff();
   }
   
+  public User getAccount() {
+	  return user;
+  }
+  
   
 }
