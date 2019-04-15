@@ -4,20 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>User Menu</title>
+<title>Search For Friends</title>
 </head>
 <body>
-Welcome to the User Page
-
-<br>
-<a href="ManageProfile.jsp">Manage My Profile</a>
-<br>
-<a href="ManageSavedSchools.jsp">Manage My Saved Schools</a>
-<br>
-<a href="Search.jsp">Search for Schools</a>
-<br>
-<a href="SearchForFriends.jsp">Search For Friends</a>
-<br>
-
+Search For a Friend's Saved Schools By Entering Their Username:
+<form action="SearchForFriendsAction.jsp">
+<table>
+	<tr> 
+		<td>USERNAME:</td>
+		<td><input type="text" name="Username"></td>
+	</tr>
+</table>
+<button type="submit">SEARCH</button>
+</form>
 </body>
 </html>
