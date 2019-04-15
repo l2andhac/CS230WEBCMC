@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
+<%UserInteraction ui = (UserInteraction) session.getAttribute("ai");
 String fn = request.getParameter("FirstName");
 String ln = request.getParameter("LastName");
 String u = request.getParameter("Username");
@@ -15,7 +15,7 @@ String p = request.getParameter("Password");
 String t = request.getParameter("Type");
 String s = request.getParameter("Status");
 %>
-<form method="post" action="Edit_action.jsp" name="EditAccount">
+<form method="post" action="Edit_User_Action.jsp" name="EditUser">
 		<br>
 		<table style="text-align: left; width: 266px; height: 228px;"
 			border="1" cellpadding="2" cellspacing="2">
