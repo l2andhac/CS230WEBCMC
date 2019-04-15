@@ -7,7 +7,12 @@
 <title>Request a new account</title>
 </head>
 <body>
-	Fill in the form below to request your account:
+
+<a href="index.jsp">Back to Menu<br><br></a>
+
+	REQUEST OF A NEW ACCOUNT<br>
+		Fill in the form below to request your account.<br>
+		Your request will be pending until one of our administrator approves your request.
 	<br>
 	<form action="RequestAccount_action.jsp" name="RequestNewAccount">
 		<table style="text-align: left; height: 130px; width: 394px;"

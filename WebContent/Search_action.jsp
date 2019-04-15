@@ -29,19 +29,29 @@ int socialScaleLo = Integer.parseInt(request.getParameter("SocialDown"));
 int socialScaleUp = Integer.parseInt(request.getParameter("SocialUp"));
 int qualOfLifeScaleLo = Integer.parseInt(request.getParameter("LifeDown"));
 int qualOfLifeScaleUp = Integer.parseInt(request.getParameter("LifeUp"));
-String emphasis = request.getParameter("Emphasis1");
+String emphasis1 = request.getParameter("Emphasis1");
+String emphasis2 = request.getParameter("Emphasis2");
+String emphasis3 = request.getParameter("Emphasis3");
+String emphasis4 = request.getParameter("Emphasis4");
+String emphasis5 = request.getParameter("Emphasis5");
 
-UserInteraction userInt = (UserInteraction) session.getAttribute("ui");
 List<String> emph = new ArrayList<String>();
-emph.add(emphasis);
-Set<University> list = userInt.searchSchool(name, state, location, control, enrollmentLo, enrollmentUp, percentFemaleLo, percentFemaleUp, 
-		satVerbLo, satVerbUp, satMathLo, satMathUp, expensesLo, expensesUp, percentFinancialAidLo, percentFinancialAidUp,
-		applicantsLo, applicantsUp, percentAdmittedLo, percentAdmittedUp, percentEnrollLo, percentEnrollUp, academicScaleLo,
-		academicScaleUp, socialScaleLo, socialScaleUp, qualOfLifeScaleLo, qualOfLifeScaleUp,
-		emph);
+emph.add(emphasis1);
+emph.add(emphasis2);
+emph.add(emphasis3);
+emph.add(emphasis4);
+emph.add(emphasis5);
+
+UserInteraction userInt = (UserInteraction) session.getAttribute("ai");
+
+Set<University> list = new HashSet<University>();
+list = userInt.searchSchool(name, state, location, control, enrollmentLo, enrollmentUp, percentFemaleLo, percentFemaleUp, satVerbLo, satVerbUp, 
+		satMathLo, satMathUp, expensesLo, expensesUp, percentFinancialAidLo, percentFinancialAidUp, applicantsLo, applicantsUp, 
+		percentAdmittedLo, percentAdmittedUp, percentEnrollLo, percentEnrollUp, academicScaleLo, academicScaleUp, socialScaleLo, 
+		socialScaleUp, qualOfLifeScaleLo, qualOfLifeScaleUp, emph);
 request.setAttribute("SchoolList", list);
-//int si = list.size();
-//out.println(si);
+int si = list.size();
+out.println(si);
 //response.sendRedirect("SearchResults.jsp");
-request.getRequestDispatcher("SearchResults.jsp").forward(request, response);
+//request.getRequestDispatcher("SearchResults.jsp").forward(request, response);
 %>

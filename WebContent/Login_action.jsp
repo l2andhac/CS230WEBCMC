@@ -1,5 +1,3 @@
-
-
 <%@page language="java" import="cmc.controller.*" import="cmc.entity.*" import="cmc.interaction.*"%>
 <%  
 	AccountInteraction aci= new AccountInteraction();
@@ -35,4 +33,3 @@
 	
 	
 %>
-
