@@ -20,9 +20,36 @@
 				<%
 					//UserInteraction ui = (UserInteraction) session.getAttribute("ai");
 					Set<University> list = (Set<University>) request.getAttribute("SchoolList");
-					int size = list.size();
-					out.println(size);
-				%>
+					//int size = list.size();
+					//out.println(size);
+					for (University u : list) {
+						
+						%>
+
+						<tr>
+							<td style="vertical-align: top;">
+								<form method="post" action="SaveSchool_action.jsp" name="Save">
+									<%
+										out.println("<input name=\"Save\" value=\"Save\" type=\"submit\"> <input name=\"SchoolName\" value="
+													+ u.getSchoolName() + " type=\"hidden\">");
+									%>
+								</form>
+							</td>
+							<%
+								out.println("<td style=\"vertical-align: top;\">" + u.getSchoolName() + "</td>");
+							%>
+							<td style="vertical-align: top;">
+								<form method="post" action="ViewSchoolDetails.jsp" name="View">
+									<%
+										out.println("<input name=\"View\" value=\"View\" type=\"submit\"> <input name=\"SchoolName\" value="
+													+ u.getSchoolName() + " type=\"hidden\">");
+									%>
+								</form> <br>
+							</td>
+						</tr>
+						<%
+							}
+						%>
 			</tr>
 		</tbody>
 	</table>
