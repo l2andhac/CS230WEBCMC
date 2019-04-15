@@ -7,6 +7,9 @@
 <title>Admin Menu</title>
 </head>
 <body>
+<a href="LogOffAdmin.jsp">Log off</a>
+<br>
+<br>
 Welcome to the Admin Page
 <br>
 <a href="ManageUniversities.jsp">Manage Universities</a>
