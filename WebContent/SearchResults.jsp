@@ -8,12 +8,49 @@
 <title>Search Results</title>
 </head>
 <body>
-	<%
-		Set<University> list = (Set<University>) request.getAttribute("SchoolList");
-	int size = list.size();
-	out.println(size);
-		
-	%>
+<table style="text-align: left; width: 100%;" border="1"
+		cellpadding="2" cellspacing="2">
+		<tbody>
+			<tr align="center">
 
-</body>
-</html>
+				<td colspan="8" rowspan="1" style="vertical-align: top;">SCHOOL</td>
+
+			</tr>
+			<tr>
+	<%
+		HashSet<University> list = (HashSet<University>) request.getAttribute("SchoolList");
+	//int size = list.size();
+	//out.println(size);
+	for (University u : list) {
+		
+		%>
+
+		<tr>
+			<td style="vertical-align: top;">
+				<form method="post" action="SaveSchool_action.jsp" name="Save">
+					<%
+						out.println("<input name=\"Save\" value=\"Save\" type=\"submit\"> <input name=\"SchoolName\" value="
+									+ u.getSchoolName() + " type=\"hidden\">");
+					%>
+				</form>
+			</td>
+			<%
+				out.println("<td style=\"vertical-align: top;\">" + u.getSchoolName() + "</td>");
+			%>
+			<td style="vertical-align: top;">
+				<form method="post" action="ViewSchoolDetails.jsp" name="View">
+					<%
+						out.println("<input name=\"View\" value=\"View\" type=\"submit\"> <input name=\"SchoolName\" value="
+									+ u.getSchoolName() + " type=\"hidden\">");
+					%>
+				</form> <br>
+			</td>
+		</tr>
+		<%
+			}
+		%>
+		</tr>
+		</tbody>
+	</table>
+	</body>
+	</html>

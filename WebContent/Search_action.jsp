@@ -40,7 +40,8 @@ Set<University> list = userInt.searchSchool(name, state, location, control, enro
 		academicScaleUp, socialScaleLo, socialScaleUp, qualOfLifeScaleLo, qualOfLifeScaleUp,
 		emph);
 request.setAttribute("SchoolList", list);
-int si = emph.size();
-out.println(si);
+//int si = list.size();
+//out.println(si);
 //response.sendRedirect("SearchResults.jsp");
+request.getRequestDispatcher("SearchResults.jsp").forward(request, response);
 %>
