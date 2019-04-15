@@ -21,13 +21,13 @@ String s = request.getParameter("Status");
 			border="1" cellpadding="2" cellspacing="2">
 			<tbody>
 			    <tr>
-					<td style="vertical-align: top;">FirstName<br>
+					<td style="vertical-align: top;">First Name<br>
 					</td>
-					<td style="vertical-align: top;"><input name="FirstName" value = <%out.println(fn);%>>
+					<%out.println("<td style=\"vertical-align: top;\"><input name=\"FirstName\" value="+fn+"><br>");%>
 					</td>
 				</tr>
 				<tr>
-					<td style="vertical-align: top;">LastName<br>
+					<td style="vertical-align: top;">Last Name<br>
 					</td>
 					<td style="vertical-align: top;"><input name="LastName" value = <%out.println(ln);%>>
 					</td>
