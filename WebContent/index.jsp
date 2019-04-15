@@ -19,6 +19,9 @@
 		if (anyErrors != null && anyErrors.equals("3")) {
 			out.println("Account must be logged in in order to access that page<br>");
 		}
+		if (anyErrors != null && anyErrors.equals("4")) {
+			out.println("Username is not an email, so a new password will not be sent<br>");
+		}
 	%>
 	<form method="post" action="Login_action.jsp" name="Login">
 		<br>
@@ -45,6 +48,7 @@
 				</tr>
 			</tbody>
 		</table>
+		<a href="ForgotPassword.jsp">Forgot password</a>
 		<br>
 	</form>
 	<br>

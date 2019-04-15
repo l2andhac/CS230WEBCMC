@@ -20,36 +20,35 @@
 
 			</tr>
 			<tr>
-				<td style="vertical-align: top;">Edit</td><!-- 
+				<td style="vertical-align: top;">Edit</td>
 				<td style="vertical-align: top; text-align: center;">Full name
-				</td> -->
+				</td>
 				<td style="vertical-align: top; text-align: center;">Username</td>
-				<!-- <td style="vertical-align: top; text-align: center;">Password</td>
+				<td style="vertical-align: top; text-align: center;">Password</td>
 				<td style="vertical-align: top; text-align: center;">Type</td>
-				<td style="vertical-align: top; text-align: center;">Status</td> -->
+				<td style="vertical-align: top; text-align: center;">Status</td>
 				<td style="vertical-align: top;">Delete</td>
 			</tr>
 
 			<%
-				Set<String> allUsers = ai.viewAllAccounts();
-				for (String u : allUsers) {
+				Set<Account> allUsers = ai.viewAllAccounts();
+				for (Account u : allUsers) {
 					out.println("<tr>");
 					out.println("<td style=\"vertical-align: top;\">");
 					out.println("<form method=\"post\" action=\"EditAccount.jsp\" name=\"Edit\">");
 					out.println("<input name=\"Edit\" value=\"Edit\" type=\"submit\"> <input");
-					out.println("name=\"Username\" value=" + u + " type=\"hidden\">");
+					out.println("name=\"Username\" value=" + u.getUsername() + " type=\"hidden\">");
 					out.println("</form>");
 					out.println("</td>");
-					out.println("<td style=\"vertical-align: top;\">" + u + "</td>");
-					/* out.println("<td style=\"vertical-align: top;\">" + u.getfName() + " " + u.getlName() + "</td>");
-					
+					out.println("<td style=\"vertical-align: top;\">" + u.getFirstName() + " " + u.getLastName() + "</td>");
+					out.println("<td style=\"vertical-align: top;\">" + u.getUsername() + "</td>");
 					out.println("<td style=\"vertical-align: top;\">" + u.getPassword() + "</td>");
-					out.println("<td style=\"vertical-align: top;\">" + u.getType() + "</td>");
-					out.println("<td style=\"vertical-align: top;\">" + u.getStatus() + "</td>"); */
+					out.println("<td style=\"vertical-align: top;\">" + u.getUserType() + "</td>");
+					out.println("<td style=\"vertical-align: top;\">" + u.getStatus() + "</td>"); 
 					out.println("<td style=\"vertical-align: top;\">");
 					out.println("<form method=\"post\" action=\"Delete.jsp\" name=\"Delete\">");
 					out.println("<input name=\"Delete\" value=\"Delete\" type=\"submit\"> <input");
-					out.println("name=\"Username\" value=" + u + " type=\"hidden\">");
+					out.println("name=\"Username\" value=" + u.getUsername() + " type=\"hidden\">");
 					out.println("</form>");
 					out.println("</td>");
 					out.println("</tr>");
