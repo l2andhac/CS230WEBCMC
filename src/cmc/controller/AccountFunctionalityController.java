@@ -150,4 +150,8 @@ public class AccountFunctionalityController {
 		    dbc.changeAccount(account);
 	  }
 
+	public University getSchool(String schoolName) {
+		return dbc.getSchool(schoolName);
+	}
+
 }
