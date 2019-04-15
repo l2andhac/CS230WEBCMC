@@ -45,7 +45,7 @@
 				for (University u : allSchools) {
 					out.println("<tr>");
 					out.println("<td style=\"vertical-align: top;\">");
-					out.println("<form method=\"post\" action=\"EditAccount.jsp\" name=\"Edit\">");
+					out.println("<form method=\"post\" action=\"EditUniv.jsp\" name=\"Edit\">");
 					out.println("<input name=\"Edit\" value=\"Edit\" type=\"submit\"> <input");
 					out.println("name=\"schoolName\" value=" + u.getSchoolName() + " type=\"hidden\">");
 					out.println("</form>");
@@ -67,9 +67,9 @@
 					out.println("<td style=\"vertical-align: top;\">" + u.getSocialScale() + "</td>");
 					out.println("<td style=\"vertical-align: top;\">" + u.getQualityOfLifeScale() + "</td>");
 					out.println("<td style=\"vertical-align: top;\">");
-					out.println("<form method=\"post\" action=\"Delete.jsp\" name=\"Delete\">");
+					out.println("<form method=\"post\" action=\"RemoveUniv.jsp\" name=\"Delete\">");
 					out.println("<input name=\"Delete\" value=\"Delete\" type=\"submit\"> <input");
-					out.println("name=\"Username\" value=" + u + " type=\"hidden\">");
+					out.println("name=\"schoolName\" value=" + u.getSchoolName() + " type=\"hidden\">");
 					out.println("</form>");
 					out.println("</td>");
 					out.println("</tr>");

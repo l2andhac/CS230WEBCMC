@@ -7,6 +7,9 @@
 <title>User Menu</title>
 </head>
 <body>
+<a href="LogOffUser.jsp">Log off</a>
+<br>
+<br>
 Welcome to the User Page
 
 <br>
@@ -15,6 +18,8 @@ Welcome to the User Page
 <a href="ManageSavedSchools.jsp">Manage My Saved Schools</a>
 <br>
 <a href="Search.jsp">Search for Schools</a>
+<br>
+<a href="SearchForFriends.jsp">Search For Friends</a>
 <br>
 
 </body>

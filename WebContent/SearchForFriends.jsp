@@ -4,17 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Admin Menu</title>
+<title>Search For Friends</title>
 </head>
 <body>
-<a href="LogOffAdmin.jsp">Log off</a>
-<br>
-<br>
-Welcome to the Admin Page
-<br>
-<a href="ManageUniversities.jsp">Manage Universities</a>
-<br>
-<a href="ManageUsers.jsp">Manage Users</a>
-<br>
+Search For a Friend's Saved Schools By Entering Their Username:
+<form action="SearchForFriendsAction.jsp">
+<table>
+	<tr> 
+		<td>USERNAME:</td>
+		<td><input type="text" name="Username"></td>
+	</tr>
+</table>
+<button type="submit">SEARCH</button>
+</form>
 </body>
 </html>

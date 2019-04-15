@@ -75,6 +75,8 @@ public class AccountInteraction{
 		return accountFunctCont.forgotPassword(u);
 	}
 	  
-	  
+	public University getSchool(String schoolName) {
+		return accountFunctCont.getSchool(schoolName);
+	}
 	
 }
