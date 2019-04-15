@@ -17,7 +17,7 @@ University school = ai.getSchool(schoolName);
 			<tbody>
 				<tr>
 					<td>SCHOOL</td>
-					<td><input disabled="disabled" value="<%=school.getSchoolName()%>" name="Name" type="text"></td>
+					<td><input readonly= "readonly" value=<%=school.getSchoolName()%> name="Name" type="text"></td>
 				</tr>
 				<tr>
 					<td>STATE</td>

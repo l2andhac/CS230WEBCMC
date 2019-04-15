@@ -14,10 +14,12 @@
 		for(SavedSchool s : list){
 			out.println("<tr>");
 			out.println("<td>" + s.getSchoolName() + "</td>");
-			out.println("<td style=\"vertical-align: top;>");
-			out.println("<form method=\"post\" action=\"ViewSchoolDetails.jsp?Name=" + s.getSchoolName() + "\" name=\"View\">");
-			out.println("<input name = \"View\" value=\"View\" type=\"submit\"></input>");
+			out.println("<td style=\"vertical-align: top;\">");
+			out.println("<form method=\"post\" action=\"ViewSchoolDetails.jsp?schoolName=" +s.getSchoolName() + "\" name=\"View\">");
+			out.println("<input name=\"View\" value=\"View\" type=\"submit\"> <input");
+			out.println("name=\"View\" value=" + s.getSchoolName() + " type=\"hidden\">");
 			out.println("</form>");
+			out.println("</td>");
 			out.println("</tr>");
 		}
 		out.println("</tbody");
