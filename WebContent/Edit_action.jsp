@@ -1,12 +1,23 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
-</html>
+<%@page language="java" import="cmc.controller.*" import="cmc.entity.*" import="cmc.interaction.*"%>
+<%
+	AccountInteraction ai = new AccountInteraction();
+	String fn = request.getParameter("FirstName");
+	String ln = request.getParameter("LastName");
+	String u = request.getParameter("Username");
+	String p = request.getParameter("Password");
+	String t = request.getParameter("Type");
+	String s = request.getParameter("Status");
+	if(t.charAt(0) == 'u'){
+		AdminInteraction adInt = (AdminInteraction) ai;
+	    adInt.editAccountInfo(fn, ln, u, p, t.charAt(0), s.charAt(0));
+	    response.sendRedirect("EditUser.jsp");
+	}
+	else if(t.charAt(0) == 'a'){
+		UserInteraction ui = (UserInteraction) ai;
+		ui.editAccountInfo(fn, ln, p);
+		response.sendRedirect("EditAccount.jsp");
+	}
+	else{
+		
+	}
+%>
