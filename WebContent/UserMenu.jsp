@@ -19,6 +19,8 @@ Welcome to the User Page
 <br>
 <a href="Search.jsp">Search for Schools</a>
 <br>
+<a href="SearchForFriends.jsp">Search For Friends</a>
+<br>
 
 </body>
 </html>
