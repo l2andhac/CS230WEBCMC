@@ -8,23 +8,95 @@ import="java.util.*" import="cmc.controller.*"%>
 </head>
 <body>
 <%
+int numStudents;
+double percFemale;
+double SatVerb;
+double SatMath;
+double expen;
+double percAid;
+int apps;
+double percA;
+double percE;
+int AScale;
+int SScale;
+int QScale;
 	AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
 	String name = request.getParameter("Name");
 	String state = request.getParameter("State");
 	String location = request.getParameter("Location");
 	String control = request.getParameter("Control");
-	int numStudents = Integer.parseInt(request.getParameter("NumOfStudents"));
-	double percFemale = Double.parseDouble(request.getParameter("PercentFemale"));
-	double satVerb = Double.parseDouble(request.getParameter("SATVerb"));
-	double satMath = Double.parseDouble(request.getParameter("SATMath"));
-	double expenses = Double.parseDouble(request.getParameter("Expenses"));
-	double perFinAid = Double.parseDouble(request.getParameter("PercentFinAid"));
-	int app = Integer.parseInt(request.getParameter("NumApplicants"));
-	double percAdm = Double.parseDouble(request.getParameter("PercentAdmitted"));
-	double percEnr = Double.parseDouble(request.getParameter("PercentEnrolled"));
-	int aScale = Integer.parseInt(request.getParameter("AcademicScale"));
-	int sScale = Integer.parseInt(request.getParameter("SocialScale"));
-	int qScale = Integer.parseInt(request.getParameter("QualScale"));
+	String numStudent = request.getParameter("NumOfStudents");
+	if(!numStudent.equals("")){
+		numStudents = Integer.parseInt(numStudent);
+	}else{
+		numStudents = -1;
+	}
+	String percFem = request.getParameter("PercentFemale");
+	if(!percFem.equals("")){
+		percFemale = Double.parseDouble(numStudent);
+	}else{
+		percFemale = -1;
+	}
+	String satVerb = request.getParameter("SATVerb");
+	if(!satVerb.equals("")){
+		SatVerb = Double.parseDouble(satVerb);
+	}else{
+		SatVerb = -1;
+	}
+	String satMath = request.getParameter("SATMath");
+	if(!satMath.equals("")){
+		SatMath = Double.parseDouble(satMath);
+	}else{
+		SatMath = -1;
+	}
+	String expenses = request.getParameter("Expenses");
+	if(!expenses.equals("")){
+		expen = Double.parseDouble(expenses);
+	}else{
+		expen = -1;
+	}
+	String perFinAid = request.getParameter("PercentFinAid");
+	if(!perFinAid.equals("")){
+		percAid = Double.parseDouble(perFinAid);
+	}else{
+		percAid = -1;
+	}
+	String app = request.getParameter("NumApplicants");
+	if(!app.equals("")){
+		apps = Integer.parseInt(app);
+	}else{
+		apps = -1;
+	}
+	String percAdm = request.getParameter("PercentAdmitted");
+	if(!percAdm.equals("")){
+		percA = Double.parseDouble(percAdm);
+	}else{
+		percA = -1;
+	}
+	String percEnr = request.getParameter("PercentEnrolled");
+	if(!percEnr.equals("")){
+		percE = Double.parseDouble(percEnr);
+	}else{
+		percE = -1;
+	}
+	String aScale = request.getParameter("AcademicScale");
+	if(!aScale.equals("")){
+		AScale = Integer.parseInt(aScale);
+	}else{
+		AScale = -1;
+	}
+	String sScale = request.getParameter("SocialScale");
+	if(!sScale.equals("")){
+		SScale = Integer.parseInt(sScale);
+	}else{
+		SScale = -1;
+	}
+	String qScale = request.getParameter("QualScale");
+	if(!qScale.equals("")){
+		QScale =Integer.parseInt(qScale);
+	}else{
+		QScale = -1;
+	}
 	String e1 = request.getParameter("Emphases1");
 	String e2 = request.getParameter("Emphases2");
 	String e3 = request.getParameter("Emphases3");
@@ -37,8 +109,8 @@ import="java.util.*" import="cmc.controller.*"%>
 	emphesis.add(e4);
 	emphesis.add(e5);
 	ai.addSchool(name, state, location, control, numStudents,
-			percFemale, satVerb, satMath, expenses, perFinAid, app, percAdm, percEnr,
-			aScale, sScale, qScale, emphesis);
+			percFemale, SatVerb, SatMath, expen, percAid, apps, percA, percE,
+			AScale, SScale, QScale, emphesis);
 	response.sendRedirect("ManageUniversities.jsp");
 	
 %>
