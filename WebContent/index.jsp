@@ -48,5 +48,6 @@
 		<br>
 	</form>
 	<br>
+	<a href="RequestAccount.jsp">Request New Account</a><br>
 </body>
 </html>
