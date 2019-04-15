@@ -6,6 +6,7 @@
 	
 	session.setAttribute("aci", aci);
 	AccountInteraction account = aci.logOn(un, p);
+	session.setAttribute("aci", account);
 	
 	
 	if(account != null){
