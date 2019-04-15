@@ -7,6 +7,9 @@
 <title>User Menu</title>
 </head>
 <body>
+<a href="LogOffUser.jsp">Log off</a>
+<br>
+<br>
 Welcome to the User Page
 
 <br>
