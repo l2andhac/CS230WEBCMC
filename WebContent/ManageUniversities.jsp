@@ -47,7 +47,7 @@
 					out.println("<td style=\"vertical-align: top;\">");
 					out.println("<form method=\"post\" action=\"EditUniv.jsp\" name=\"Edit\">");
 					out.println("<input name=\"Edit\" value=\"Edit\" type=\"submit\"> <input");
-					out.println("name=\"schoolName\" value=" + u.getSchoolName() + " type=\"hidden\">");
+					out.println("name=\"schoolName\" value=\"" + u.getSchoolName() + "\" type=\"hidden\">");
 					out.println("</form>");
 					out.println("</td>");
 					out.println("<td style=\"vertical-align: top;\">" + u.getSchoolName() + "</td>");

@@ -8,6 +8,7 @@
 <%AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
 String schoolName = request.getParameter("schoolName");
 University school = ai.getSchool(schoolName);
+System.out.println(schoolName);
 %>
 <body>
 	<a href="AdminMenu.jsp">Back to Menu</a>
@@ -17,7 +18,7 @@ University school = ai.getSchool(schoolName);
 			<tbody>
 				<tr>
 					<td>SCHOOL</td>
-					<td><input readonly= "readonly" value=<%=school.getSchoolName()%> name="Name" type="text"></td>
+					<td><input readonly= "readonly" value= "<%=school.getSchoolName()%>" name="Name" type="text"></td>
 				</tr>
 				<tr>
 					<td>STATE</td>

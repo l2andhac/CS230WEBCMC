@@ -2,8 +2,8 @@ package cmc.controller;
 import java.lang.Math;
 import cmc.entity.*;
 import java.util.*;
-import javax.mail.*;
-import javax.mail.internet.*;
+//import javax.mail.*;
+//import javax.mail.internet.*;
 
 /**
  * 
@@ -58,7 +58,7 @@ public class ForgotPasswordController{
    * @param username is an email to send the password to, account is the Account which the username belongs
    * @param account - Account that is requesting a new password
  * @throws MessagingException 
-   */
+   *//*
 	public boolean emailNewPassword(String username, Account account) {
 		String to = username;
 		String from = "l2hackstreet@gmail.com";
@@ -79,5 +79,5 @@ public class ForgotPasswordController{
 		catch (MessagingException mex) {
 			return false;
 		}
-	}
+	}*/
 }
