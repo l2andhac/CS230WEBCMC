@@ -1,5 +1,7 @@
 package cmc.controller;
 
+import javax.mail.MessagingException;
+
 import cmc.entity.*;
 
 /**
@@ -25,7 +27,7 @@ public class AccountFunctionalityController {
 	 */
 	public AccountFunctionalityController() {
 		this.ac = new AccountController();
-		//this.fpc = new ForgotPasswordController();
+		this.fpc = new ForgotPasswordController();
 		this.dbc = new DBController();
 		
 	}
@@ -69,6 +71,7 @@ public class AccountFunctionalityController {
 	 * address
 	 * 
 	 * @param u - String that is the username of the Account to recover the password for
+	 * @throws MessagingException 
 	 * @throws IllegalArgumentException
 	 */
 	public boolean forgotPassword(String u) {

@@ -4,6 +4,7 @@ import cmc.entity.*;
 import java.util.*;
 import javax.mail.*;
 import javax.mail.internet.*;
+
 /**
  * 
  * A Class that controls all of the functionaliteis of an Account forgetting a password
@@ -56,6 +57,7 @@ public class ForgotPasswordController{
    * 
    * @param username is an email to send the password to, account is the Account which the username belongs
    * @param account - Account that is requesting a new password
+ * @throws MessagingException 
    */
 	public boolean emailNewPassword(String username, Account account) {
 		String to = username;

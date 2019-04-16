@@ -1,5 +1,7 @@
 package cmc.interaction;
 import cmc.entity.*;
+
+
 import cmc.controller.*;
 /**
  * AccountInteraction.class
@@ -70,6 +72,7 @@ public class AccountInteraction{
 	   * Allows the user to request to get password back if forgotten
 	   * 
 	   * @param u - String with the username
+	   *  
 	   */
 	public boolean forgotPassword(String u) {
 		return accountFunctCont.forgotPassword(u);

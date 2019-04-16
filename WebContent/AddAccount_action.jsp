@@ -1,6 +1,9 @@
 <%@page language="java" import="cmc.controller.*" import="cmc.entity.*"
 	import="cmc.interaction.*"%>
-	<%
+	
+	<%@include file="verifyLogin.jsp" %>
+	
+<%
 
 String fn = request.getParameter("FirstName");
 String ln = request.getParameter("LastName");
@@ -11,11 +14,11 @@ String s = request.getParameter("Status");
 
 AdminInteraction ai = (AdminInteraction)session.getAttribute("ai");
 boolean duplicate = false;
-//for(Account user:uc.getAllUsers()){
+//for(Account user:ai.viewAllAccounts()){
 	//if (user.getUsername().equals(u))
 	//{
 	//	duplicate = true;
-	//	response.sendRedirect("Menu.jsp?Error=1");
+	//	response.sendRedirect("AdminMenu.jsp?Error=1");
 	//}
 //}
 

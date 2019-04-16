@@ -1,6 +1,8 @@
 <%@page language="java" import="cmc.controller.*" import="cmc.entity.*"
-	import="cmc.interaction.*" import="java.util.*" import="javax.mail.*" import="javax.mail.internet.*" 
-	import="java.lang.Math"%>
+	import="cmc.interaction.*"%>
+<%@ page import = "java.io.*,java.util.*,javax.mail.*"%>
+<%@ page import = "javax.mail.internet.*,javax.activation.*"%>
+<%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 
 <%
 AccountInteraction aci= new AccountInteraction();
