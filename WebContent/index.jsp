@@ -48,10 +48,10 @@
 				</tr>
 			</tbody>
 		</table>
+		<br>
 		<a href="ForgotPassword.jsp">Forgot password</a>
 		<br>
-	</form>
-	<br>
-	<a href="RequestAccount.jsp">Request New Account</a><br>
+		<a href="RequestAccount.jsp">Request New Account</a><br>
+	</form>	
 </body>
 </html>

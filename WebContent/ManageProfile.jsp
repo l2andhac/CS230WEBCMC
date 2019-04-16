@@ -9,21 +9,21 @@
 <title>Edit User Form</title>
 </head>
 <body>
+<a href="UserMenu.jsp">Return to menu</a>
 	<br> Edit User form:
-	<br>
 	<br>
 
 	<%
 		UserInteraction ui = (UserInteraction) session.getAttribute("ai");
 		if(ui == null){
-			System.out.println("ui is null");
+			out.println("ui is null");
 		}
 		User eUser = ui.getAccount();
 
 		//out.println("Edit user : " + request.getParameter("Username"));
 	%>
 
-	<form method="post" action="Edit_action.jsp" name="editUser">
+	<form method="post" action="Edit_User_Action.jsp" name="editUser">
 		<br>
 		<table style="text-align: left; width: 266px; height: 228px;"
 			border="1">
@@ -84,8 +84,6 @@
 		</table>
 		<br>
 	</form>
-	<br>
-	<br>
 	<br>
 	<a href="RequestforDeactivation_action.jsp">Request for Account
 		Deactivation</a>

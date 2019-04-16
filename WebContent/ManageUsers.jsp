@@ -8,10 +8,11 @@
 	<%
 		AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
 	%>
+	<a href="AdminMenu.jsp">Return to menu</a><br>
 	Hello Admin
 	<%=ai.getUsername()%>
 	<br>
-	<a href="AddAccount.jsp">Add an account</a>
+	
 <br>
 	<table style="text-align: left; width: 100%;" border="1"
 		cellpadding="2" cellspacing="2">
@@ -19,7 +20,7 @@
 			<tr align="center">
 
 				<td colspan="8" rowspan="1" style="vertical-align: top;"><a
-					href="AddAccount.jsp">ADD A USER</a></td>
+					href="AddAccount.jsp">ADD AN ACCOUNT</a></td>
 
 			</tr>
 			<tr>

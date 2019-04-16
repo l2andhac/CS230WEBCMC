@@ -5,49 +5,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Search Results</title>
+<title>Sorted Results</title>
 </head>
 <body>
 <a href="Search.jsp">Back to Search<br></a>
 Results of the search
 <br>
-<br>
-<%
-					//UserInteraction ui = (UserInteraction) session.getAttribute("ai");
-					Set<University> list = new HashSet<University>();
-					list = (Set<University>) request.getAttribute("SchoolList");
-					request.setAttribute("SortList", list);
-					
-					//int size = list.size();
-					//out.println(size);
-					%>
-<form action="SortResults_action.jsp" name="sort">Sort results by:
-<select name="sortBy">
-<option value="" selected="selected">Choose One</option>
-<option value="e">Expenses</option>
-<option value="a">Percentage of admission</option>
-<option value="n">Number of students</option>
-</select>
-
-<%--<select name="sortBy">
-<option value="" selected="selected">Choose One</option>
-<option value="<%if(request.getParameter("sortBy").equals("Expenses")) {
-	request.getRequestDispatcher("SortResults_action.jsp").forward(request, response);
-	} %>">Expenses</option>
-<option value="<%if(request.getParameter("sortBy").equals("Percentage of admission")) {
-	request.getRequestDispatcher("SortResults_action.jsp").forward(request, response);
-	} %>">Percentage of admission</option>
-<option value="<%if(request.getParameter("sortBy").equals("Number of students")) {
-	request.getRequestDispatcher("SortResults_action.jsp").forward(request, response);
-	} %>">Number of students</option>
-
-</select>
---%>
-
-<input name="Sort" value="Sort" type="submit">
-<br>
-
-</form>
 <br>
 	<table style="text-align: left; width: 100%;" border="1"
 		cellpadding="2" cellspacing="2">
@@ -58,8 +21,13 @@ Results of the search
 
 			</tr>
 			<tr>
-				
-					<% for (University u : list) {
+				<%
+					//UserInteraction ui = (UserInteraction) session.getAttribute("ai");
+					Collection<University> list = (Collection<University>) request.getAttribute("SortedSchoolList");
+					//request.setAttribute("SortList", list);
+					int size = list.size();
+					out.println(size);
+					for (University u : list) {
 						
 						%>
 

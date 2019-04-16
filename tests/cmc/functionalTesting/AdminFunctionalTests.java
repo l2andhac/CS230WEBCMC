@@ -97,7 +97,7 @@ public class AdminFunctionalTests {
 		int oldNumOfStudents = univ.getNumStudents();
 		String oldLocation = univ.getLocation();
 		
-		ai.editSchool("UNIVERSITE DE OUAGADOUGOU", "FOREIGN", "SUBURBAN", "STATE", 5000, 30.0, -1, -1, 5000, 10.5, 10500, 95.0, 70.0, 2, 1, 1);
+		ai.editSchool("UNIVERSITE DE OUAGADOUGOU", "FOREIGN", "SUBURBAN", "STATE", 5000, 30.0, -1, -1, 5000, 10.5, 10500, 95.0, 70.0, 2, 1, 1, null);
 		University uni2 = dbc.getSchool("UNIVERSITE DE OUAGADOUGOU");
 		int newNumOfStudents = uni2.getNumStudents();
 		String newLocation = uni2.getLocation();

@@ -8,7 +8,7 @@
 	String t = request.getParameter("Type");
 	String s = request.getParameter("Status");
 	
-		ai.editAccountInfo(fn, ln, u, p, t.charAt(0), s.charAt(0));
-	    response.sendRedirect("EditAccount.jsp");
+		ai.editAccountInfo(u, fn, ln, p, t.charAt(0), s.charAt(0));
+	    response.sendRedirect("ManageProfile.jsp");
 
 %>
