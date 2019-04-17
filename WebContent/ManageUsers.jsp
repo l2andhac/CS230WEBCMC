@@ -24,6 +24,7 @@
 
 			</tr>
 			<tr>
+			    <td style="vertical-align: top;">Deactivate</td>
 				<td style="vertical-align: top;">Edit</td>
 				<td style="vertical-align: top; text-align: center;">Full name
 				</td>
@@ -39,6 +40,11 @@
 				for (Account u : allUsers) {
 					out.println("<tr>");
 					out.println("<td style=\"vertical-align: top;\">");
+					out.println("<form method=\"post\" action=\"Deactive_Account.jsp\" name=\"Deactivate\">");
+					out.println("<input name=\"Delete\" value=\"Deactivate\" type=\"submit\"> <input");
+					out.println("name=\"Username\" value=" + u.getUsername() + " type=\"hidden\">");
+					out.println("</form>");
+					out.println("<td style=\"vertical-align: top;\">");//
 					out.println("<form method=\"post\" action=\"EditAccount.jsp\" name=\"Edit\">");
 					out.println("<input name=\"Edit\" value=\"Edit\" type=\"submit\"> <input");
 					out.println("name=\"Username\" value=" + u.getUsername() + " type=\"hidden\">");
