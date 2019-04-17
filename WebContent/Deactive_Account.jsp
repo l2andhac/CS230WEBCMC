@@ -6,13 +6,7 @@
 <%
 AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
 
-
-	//String fn = request.getParameter("FirstName");
-	//String ln = request.getParameter("LastName");
 	String u = request.getParameter("Username");
-	//String p = request.getParameter("Password");
-	//String t = request.getParameter("Type");
-	//String s = request.getParameter("Status");
 	Account a = ai.viewAccountInfo(u);
 	String fn = a.getFirstName();
 	String ln = a.getLastName();
