@@ -90,15 +90,34 @@ University school = ui.getSchool(schoolName);
 		</table>
 	</form>
 	
-	<%Map<Double, String> topFive = ui.showRecSchools(schoolName);
 	
+	
+	<table style="text-align: left; width: 100%;" border="1"
+			cellpadding="2" cellspacing="2">
+			<tbody>
+	<%Map<Double, String> topFive = ui.showRecSchools(schoolName);
 	  out.println("Top 5 Recommended Schools");
 	  for(String name: topFive.values()){
-		  out.println(name);
+		   
+		   out.println("<tr>");
+			out.println("<td style=\"vertical-align: top;\">");
+			out.println("<form method=\"post\" action=\"ViewSchoolDetails.jsp\" name=\"View\">");
+			out.println("<input name=\"View\" value=\"View\" type=\"submit\"> <input");
+			out.println("name=\"schoolName\" value=\"" + name + "\" type=\"hidden\">");
+			out.println("</form>");
+			out.println("</td>");
+			out.println("<td style=\"vertical-align: top;\">" + name + "</td>");
+			out.println("</form>");
+			out.println("</td>");
+			out.println("</tr>");
+		  
+		  
 	  }
+	  
 	
 	%>
-	
+	 </tbody>
+	  </table>
 </body>
 </html>
 
