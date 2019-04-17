@@ -1,5 +1,8 @@
-<%@ page language="java" import="cmc.interaction.*" import="cmc.entity.*" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" import="cmc.controller.*" import="cmc.entity.*"
+	import="cmc.interaction.*" import="java.util.*"%>
+
+<%@include file="verifyLogin.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,13 +10,13 @@
 <title>Edit Account</title>
 </head>
 <body>
-<%AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
-String fn = request.getParameter("FirstName");
-String ln = request.getParameter("LastName");
+<%
+AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
+if(ai == null){
+	out.println("ai is null");
+}
 String u = request.getParameter("Username");
-String p = request.getParameter("Password");
-String t = request.getParameter("Type");
-String s = request.getParameter("Status");
+User user = ai.viewAccountInfo(u);
 %>
 <form method="post" action="Edit_action.jsp" name="EditAccount">
 		<br>
@@ -23,37 +26,37 @@ String s = request.getParameter("Status");
 			    <tr>
 					<td style="vertical-align: top;">First Name<br>
 					</td>
-					<td style="vertical-align: top;"><input name="FirstName" value = <%out.println(fn);%>>
+					<td style="vertical-align: top;"><input name="FirstName" value = <%out.print(fn);%>>
 					</td>
 				</tr>
 				<tr>
 					<td style="vertical-align: top;">Last Name<br>
 					</td>
-					<td style="vertical-align: top;"><input name="LastName" value = <%out.println(ln);%>>
+					<td style="vertical-align: top;"><input name="LastName" value = <%out.println(a.getLastName());%>>
 					</td>
 				</tr>
 				<tr>
 					<td style="vertical-align: top;">Username<br>
 					</td>
-					<td style="vertical-align: top;"><input disabled="disabled" name="Username" value = <%out.println(u);%>>
+					<td style="vertical-align: top;"><input disabled="disabled" name="Username" value = <%out.println(a.getUsername());%>>
 					</td>
 				</tr>
 				<tr>
 					<td style="vertical-align: top;">Password<br>
 					</td>
-					<td style="vertical-align: top;"><input name="Password" value = <%out.println(p);%>>
+					<td style="vertical-align: top;"><input name="Password" value = <%out.println(a.getPassword());%>>
 					</td>
 				</tr>
 				<tr>
 					<td style="vertical-align: top;">Type<br>
 					</td>
-					<td style="vertical-align: top;"><input name="Type" value = <%out.println(t);%>>
+					<td style="vertical-align: top;"><input name="Type" value = <%out.println(a.getUserType());%>>
 					</td>
 				</tr>
 				<tr>
 					<td style="vertical-align: top;">Status<br>
 					</td>
-					<td style="vertical-align: top;"><input name="Status" value = <%out.println(s);%>>
+					<td style="vertical-align: top;"><input name="Status" value = <%out.println(a.getStatus());%>>
 					</td>
 				</tr>
 
