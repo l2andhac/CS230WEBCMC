@@ -74,7 +74,7 @@ public class AccountFunctionalityController {
 	 * @throws MessagingException 
 	 * @throws IllegalArgumentException
 	 */
-	/*public boolean forgotPassword(String u) {
+	public boolean forgotPassword(String u) {
 		String np = fpc.generateRandomPassword();
 		Boolean email = fpc.checkIfEmail(u);
 		Account a = dbc.findAccount(u);
@@ -90,7 +90,7 @@ public class AccountFunctionalityController {
 		} else {
 			throw new IllegalArgumentException("Account not found");
 		}
-	}*/
+	}
 
 	/**
 	 * Allows the Account to view the details of an account

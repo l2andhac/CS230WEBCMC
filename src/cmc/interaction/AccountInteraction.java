@@ -74,9 +74,9 @@ public class AccountInteraction{
 	   * @param u - String with the username
 	   *  
 	   */
-	/*public boolean forgotPassword(String u) {
+	public boolean forgotPassword(String u) {
 		return accountFunctCont.forgotPassword(u);
-	}*/
+	}
 	  
 	public University getSchool(String schoolName) {
 		return accountFunctCont.getSchool(schoolName);

@@ -9,12 +9,12 @@ AccountInteraction aci= new AccountInteraction();
 String username = request.getParameter("ForgotPassUsername");
 
 //boolean sent = ai.forgotPassword(username);
-//boolean sent = aci.forgotPassword(username);
+boolean sent = aci.forgotPassword(username);
 
-/* if (sent){
+ if (sent){
 	response.sendRedirect("index.jsp");
 }
 else{
 	response.sendRedirect("index.jsp?Error=4");
-} */
+}
 %>
