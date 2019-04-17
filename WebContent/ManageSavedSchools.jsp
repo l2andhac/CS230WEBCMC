@@ -23,7 +23,7 @@
 				for (SavedSchool s : savedSchools) {
 					out.println("<tr>");
 					out.println("<td style=\"vertical-align: top;\">");
-					out.println("<form method=\"post\" action=\"ViewSchoolDetails.jsp?schoolName=\"" + s.getSchoolName() + "\" name=\"View\">");
+					out.println("<form method=\"post\" action=\"ViewSchoolDetails.jsp?schoolName=" + s.getSchoolName() + "\" name=\"View\">");
 					out.println("<input name = \"View\" value=\"View\" type=\"submit\">");
 					out.println("</form>");
 					out.println("</td>");

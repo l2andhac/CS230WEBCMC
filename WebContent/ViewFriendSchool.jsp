@@ -13,6 +13,12 @@
 		out.println("<tbody>");
 		for(SavedSchool s : list){
 			out.println("<tr>");
+			out.println("<td style=\"vertical-align: top;\">");
+			out.println("<form method=\"post\" action=\"SaveSchool_action.jsp?SchoolName=" +s.getSchoolName() + "\" name=\"Save\">");
+			out.println("<input name=\"Save\" value=\"Save\" type=\"submit\"> <input");
+			out.println("name=\"Save\" value=" + s.getSchoolName() + " type=\"hidden\">");
+			out.println("</form>");
+			out.println("</td>");
 			out.println("<td>" + s.getSchoolName() + "</td>");
 			out.println("<td style=\"vertical-align: top;\">");
 			out.println("<form method=\"post\" action=\"ViewSchoolDetails.jsp?schoolName=" +s.getSchoolName() + "\" name=\"View\">");
