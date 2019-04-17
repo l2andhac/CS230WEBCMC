@@ -9,6 +9,7 @@ UserInteraction ai = (UserInteraction) session.getAttribute("ai");
 String name = request.getParameter("SchoolName");
 
 University univ = ai.getSchool(name);
+System.out.println(name);
 
 ai.saveSchool(univ);
 

@@ -1,16 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="cmc.interaction.*" import="cmc.entity.*"%>
+	pageEncoding="UTF-8" import="cmc.interaction.*" import="cmc.entity.*" import="java.util.*"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Add New University</title>
+<title>View School Details</title>
 </head>
 <%UserInteraction ui = (UserInteraction) session.getAttribute("ai");
 String schoolName = request.getParameter("schoolName");
 University school = ui.getSchool(schoolName);
 %>
 <body>
-	<a href="AdminMenu.jsp">Back to Menu</a>
+	<a href="UserMenu.jsp">Back to Menu</a>
 	<form action="EditUniv_action.jsp">
 		<table style="text-align: left; width: 100%;" border="1"
 			cellpadding="2" cellspacing="2">
@@ -89,6 +89,16 @@ University school = ui.getSchool(schoolName);
 			</tbody>
 		</table>
 	</form>
+	
+	<%Map<Double, String> topFive = ui.showRecSchools(schoolName);
+	
+	  out.println("Top 5 Recommended Schools");
+	  for(String name: topFive.values()){
+		  out.println(name);
+	  }
+	
+	%>
+	
 </body>
 </html>
 
