@@ -7,6 +7,7 @@
 <title>Search For Friends</title>
 </head>
 <body>
+<a href="UserMenu.jsp">Return to menu</a><br>
 Search For a Friend's Saved Schools By Entering Their Username:
 <form action="SearchForFriendsAction.jsp">
 <table>

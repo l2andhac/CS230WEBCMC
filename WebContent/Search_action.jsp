@@ -36,11 +36,11 @@ String emphasis4 = request.getParameter("Emphasis4");
 String emphasis5 = request.getParameter("Emphasis5");
 
 List<String> emph = new ArrayList<String>();
-//emph.add(emphasis1);
-//emph.add(emphasis2);
-//emph.add(emphasis3);
-//emph.add(emphasis4);
-//emph.add(emphasis5);
+emph.add(emphasis1);
+emph.add(emphasis2);
+emph.add(emphasis3);
+emph.add(emphasis4);
+emph.add(emphasis5);
 
 UserInteraction userInt = (UserInteraction) session.getAttribute("ai");
 

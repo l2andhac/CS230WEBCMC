@@ -8,6 +8,7 @@
 	<%
 		AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
 	%>
+	<a href="AdminMenu.jsp">Return to menu</a><br>
 	Hello Admin
 	<%=ai.getUsername()%>
 	<table style="text-align: left; width: 100%;" border="1"

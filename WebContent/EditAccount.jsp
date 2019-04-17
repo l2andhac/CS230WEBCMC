@@ -16,7 +16,7 @@ if(ai == null){
 	out.println("ai is null");
 }
 String u = request.getParameter("Username");
-User user = ai.viewAccountInfo(u);
+User user = (User) ai.viewAccountInfo(u);
 %>
 <form method="post" action="Edit_action.jsp" name="EditAccount">
 		<br>
