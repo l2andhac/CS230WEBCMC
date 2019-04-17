@@ -93,7 +93,6 @@
 		<br>
 	</form>
 	<br>
-	<a href="Deactive_Account.jsp">Deactivate Account</a>
 	<br>
 </body>
 </html>
