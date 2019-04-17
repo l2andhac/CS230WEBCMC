@@ -14,35 +14,20 @@ Results of the search
 <br>
 <%
 					//UserInteraction ui = (UserInteraction) session.getAttribute("ai");
-					Set<University> list = new HashSet<University>();
-					list = (Set<University>) request.getAttribute("SchoolList");
-					request.setAttribute("SortList", list);
+					Collection<University> list = (Collection<University>) request.getAttribute("SchoolList");
+					//request.setAttribute("SortList", list);
 					
 					//int size = list.size();
 					//out.println(size);
 					%>
 <form action="SortResults_action.jsp" name="sort">Sort results by:
+
 <select name="sortBy">
 <option value="" selected="selected">Choose One</option>
 <option value="e">Expenses</option>
 <option value="a">Percentage of admission</option>
 <option value="n">Number of students</option>
 </select>
-
-<%--<select name="sortBy">
-<option value="" selected="selected">Choose One</option>
-<option value="<%if(request.getParameter("sortBy").equals("Expenses")) {
-	request.getRequestDispatcher("SortResults_action.jsp").forward(request, response);
-	} %>">Expenses</option>
-<option value="<%if(request.getParameter("sortBy").equals("Percentage of admission")) {
-	request.getRequestDispatcher("SortResults_action.jsp").forward(request, response);
-	} %>">Percentage of admission</option>
-<option value="<%if(request.getParameter("sortBy").equals("Number of students")) {
-	request.getRequestDispatcher("SortResults_action.jsp").forward(request, response);
-	} %>">Number of students</option>
-
-</select>
---%>
 
 <input name="Sort" value="Sort" type="submit">
 <br>
@@ -76,10 +61,12 @@ Results of the search
 								out.println("<td style=\"vertical-align: top;\">" + u.getSchoolName() + "</td>");
 							%>
 							<td style="vertical-align: top;">
-								<form method="post" action="ViewSchoolDetails.jsp" name="View">
+								<%--<form method="post" action="ViewSchoolDetails.jsp" name="View">--%>
 									<%
-										out.println("<input name=\"View\" value=\"View\" type=\"submit\"> <input name=\"SchoolName\" value="
-													+ u.getSchoolName() + " type=\"hidden\">");
+									out.println("<form method=\"post\" action=\"ViewSchoolDetails.jsp?schoolName=" + u.getSchoolName() + "\" name=\"View\">");
+									out.println("<input name = \"View\" value=\"View\" type=\"submit\">");
+										//out.println("<input name=\"View\" value=\"View\" type=\"submit\"> <input name=\"SchoolName\" value="
+											//		+ u.getSchoolName() + " type=\"hidden\">");
 									%>
 								</form> <br>
 							</td>

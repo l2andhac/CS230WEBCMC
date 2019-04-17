@@ -4,35 +4,27 @@
     
 <%
 UserInteraction userInt = (UserInteraction) session.getAttribute("ai");
-String by = request.getParameter("sortBy");
-Set<University> list = (Set<University>) request.getAttribute("SortList");
-int size = list.size();
-//out.println(size);
+//String by = (String) request.getAttribute("sorting");
+Set<University> aList = (Set<University>) session.getAttribute("ListToSort");
+//int size = aList.size();
+//System.out.println(size);
 
-if(by.equals("e")){
-	out.println("Expenses and "+list.toString());
+if(request.getParameter("sortBy").equals("e")){
+	List<University> sortedL = userInt.sortResults(aList, 'e');
+	request.setAttribute("SchoolList", sortedL);
+	request.getRequestDispatcher("SearchResults.jsp").forward(request, response);
 	
-} else if(by.equals("a")){
-	out.println("Admission");
-} else if(by.equals("n")){
-	out.println("Number of Students");
-}
-
-/*if(request.getParameter("sortBy").equals("e")){
-	List<University> sortedL = userInt.sortResults(list, 'e');
-	request.setAttribute("SortedSchoolList", sortedL);
-	request.getRequestDispatcher("ViewSortedResults.jsp").forward(request, response);
-}
+} 
 else if(request.getParameter("sortBy").equals("a")){
-	List<University> sortedL = userInt.sortResults(list, 'a');
-	request.setAttribute("SortedSchoolList", sortedL);
-	request.getRequestDispatcher("ViewSortedResults.jsp").forward(request, response);
+	List<University> sortedL = userInt.sortResults(aList, 'a');
+	request.setAttribute("SchoolList", sortedL);
+	request.getRequestDispatcher("SearchResults.jsp").forward(request, response);
 }
 else if(request.getParameter("sortBy").equals("n")){
-	List<University> sortedL = userInt.sortResults(list, 'n');
-	request.setAttribute("SortedSchoolList", sortedL);
-	request.getRequestDispatcher("ViewSortedResults.jsp").forward(request, response);
-} */
+	List<University> sortedL = userInt.sortResults(aList, 'n');
+	request.setAttribute("SchoolList", sortedL);
+	request.getRequestDispatcher("SearchResults.jsp").forward(request, response);
+}
 
 
 %>
