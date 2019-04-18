@@ -1,7 +1,7 @@
 <html>
 <head>
 <style>
-	background-image: url("/CS230Misc/CMCImages/background-black-colors-952670.jpg");
+	background-image: url("images/blackBackground1.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 </style>
