@@ -8,11 +8,15 @@ import="cmc.entity.*"%>
 </head>
 <body>
 <%
+try {
 UserInteraction ui = (UserInteraction)session.getAttribute("ai");
 String u = request.getParameter("Username");
 List<SavedSchool> list = ui.searchForFriends(u);
 session.setAttribute("FriendList", list);
 response.sendRedirect("ViewFriendSchool.jsp");
+}catch(Exception e){
+	out.println(e.getMessage());
+}
 %>
 
 </body>

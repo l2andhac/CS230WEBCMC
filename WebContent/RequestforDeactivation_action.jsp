@@ -4,7 +4,11 @@
 <%@include file="verifyLogin.jsp" %>
 
 <%
+try{
 UserInteraction ai = (UserInteraction) session.getAttribute("ai");
 ai.requestDeactivation();
 response.sendRedirect("ManageProfile.jsp");
+}catch(Exception e){
+	out.println(e.getMessage());
+}
 %>

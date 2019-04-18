@@ -1,5 +1,6 @@
 <%@page language="java" import="cmc.controller.*" import="cmc.entity.*" import="cmc.interaction.*"%>
 <%
+try{
     UserInteraction ui = (UserInteraction) session.getAttribute("ai");
 	String fn = request.getParameter("FirstName");
 	String ln = request.getParameter("LastName");
@@ -11,5 +12,8 @@
 	    ui.editAccountInfo(fn, ln, p);
 	    response.sendRedirect("ManageProfile.jsp");
 	    //instead of sendRedirect to EditUser.jsp
+}catch(Exception e){
+	out.println(e.getMessage());
+}
 	
 %>

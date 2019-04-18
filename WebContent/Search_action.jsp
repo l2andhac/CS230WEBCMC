@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     import="cmc.entity.*,cmc.controller.*,cmc.interaction.*,java.util.*" pageEncoding="UTF-8"%>
 <%
+try{
 String name = request.getParameter("SchoolName");
 String state = request.getParameter("State");
 String location = request.getParameter("Location");
@@ -145,4 +146,7 @@ session.setAttribute("ListToSort", list);
 //response.sendRedirect("SearchResults.jsp?list="+list);
 request.getRequestDispatcher("SearchResults.jsp").forward(request, response);
 //request.getRequestDispatcher("SortResults_action.jsp").forward(request, response);
+}catch(Exception e){
+	out.println(e.getMessage());
+}
 %>

@@ -3,10 +3,14 @@
 <html>
 
 <%
+try{
 	UserInteraction ui = (UserInteraction) session.getAttribute("ai");
 	String name = request.getParameter("Name");
 	ui.removeSavedSchool(name);
 	response.sendRedirect("ManageSavedSchools.jsp");
+}catch(Exception e){
+	out.println(e.getMessage());
+}
 %>
 
 </html>

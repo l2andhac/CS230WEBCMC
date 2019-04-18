@@ -5,6 +5,7 @@
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 
 <%
+try{
 AccountInteraction aci= new AccountInteraction();
 String username = request.getParameter("ForgotPassUsername");
 
@@ -16,5 +17,8 @@ boolean sent = aci.forgotPassword(username);
 }
 else{
 	response.sendRedirect("index.jsp?Error=4");
+}
+}catch(Exception e){
+	out.println(e.getMessage());
 }
 %>

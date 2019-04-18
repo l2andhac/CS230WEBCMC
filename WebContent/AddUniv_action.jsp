@@ -8,6 +8,7 @@ import="java.util.*" import="cmc.controller.*"%>
 </head>
 <body>
 <%
+try{
 int numStudents;
 double percFemale;
 double SatVerb;
@@ -112,6 +113,9 @@ int QScale;
 			percFemale, SatVerb, SatMath, expen, percAid, apps, percA, percE,
 			AScale, SScale, QScale, emphesis);
 	response.sendRedirect("ManageUniversities.jsp");
+}catch(Exception e){
+	out.println(e.getMessage());
+}
 	
 %>
 

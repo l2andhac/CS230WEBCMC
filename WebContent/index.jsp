@@ -15,7 +15,7 @@
 	<%
 		String anyErrors = request.getParameter("Error");
 		String person = request.getParameter("name");
-		if (anyErrors != null && anyErrors.equals("1")) {
+		if (anyErrors != null && anyErrors.equals("")) {
 			out.println("Incorrect information was given<br>");
 		}
 		if (anyErrors != null && anyErrors.equals("2")) {

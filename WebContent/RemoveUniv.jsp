@@ -4,9 +4,13 @@
 <%@include file="verifyLogin.jsp" %>
 
 <%
+try{
 AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
 ai.removeSchool(request.getParameter("schoolName"));
 
     
 response.sendRedirect("ManageUniversities.jsp");
+}catch(Exception e){
+	out.println(e.getMessage());
+}
 %>

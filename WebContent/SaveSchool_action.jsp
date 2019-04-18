@@ -4,6 +4,7 @@
 <%@include file="verifyLogin.jsp" %>
 
 <%
+try{
 UserInteraction ai = (UserInteraction) session.getAttribute("ai");
 
 String name = request.getParameter("SchoolName");
@@ -14,4 +15,8 @@ University univ = ai.getSchool(name);
 ai.saveSchool(univ);
 
 response.sendRedirect("ManageSavedSchools.jsp");
+}catch(Exception e){
+	out.println(e.getMessage());
+}
+
 %>

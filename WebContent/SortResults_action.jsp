@@ -3,6 +3,7 @@
     pageEncoding="UTF-8"%>
     
 <%
+try{
 UserInteraction userInt = (UserInteraction) session.getAttribute("ai");
 //String by = (String) request.getAttribute("sorting");
 //Set<University> aList = (Set<University>) session.getAttribute("ListToSort");
@@ -26,6 +27,9 @@ else if(request.getParameter("sortBy").equals("n")){
 	List<University> sortedL = userInt.sortResults(aList, 'n');
 	request.setAttribute("SchoolList", sortedL);
 	request.getRequestDispatcher("SearchResults.jsp").forward(request, response);
+}
+}catch(Exception e){
+	out.println(e.getMessage());
 }
 
 

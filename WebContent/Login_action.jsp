@@ -1,5 +1,6 @@
 <%@page language="java" import="cmc.controller.*" import="cmc.entity.*" import="cmc.interaction.*"%>
 <%  
+try{
 	AccountInteraction aci= new AccountInteraction();
 	String un = request.getParameter("Username");
 	String p = request.getParameter("Password");
@@ -20,6 +21,9 @@
 			session.setAttribute("interactionType", "Admin");
 		response.sendRedirect("AdminMenu.jsp");
 		}
+	}
+	} catch (Exception e){
+		out.println(e.getMessage());
 	}
 	
 	//incorrect information was given

@@ -1,5 +1,6 @@
 <%@page language="java" import="cmc.controller.*" import="cmc.entity.*" import="cmc.interaction.*"%>
 <%
+try{
     AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
 	String fn = request.getParameter("FirstName");
 	String ln = request.getParameter("LastName");
@@ -12,5 +13,8 @@
 	
 		ai.editAccountInfo(u, fn, ln, p, type, status);
 	    response.sendRedirect("AdminMenu.jsp");
+}catch(Exception e){
+	out.println(e.getMessage());
+}
 
 %>

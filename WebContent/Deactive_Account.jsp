@@ -4,6 +4,7 @@
 <%@include file="verifyLogin.jsp" %>
 
 <%
+try{
 AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
 
 	String u = request.getParameter("Username");
@@ -21,4 +22,7 @@ AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
 		ai.editAccountInfo(u, fn, ln, p, type, status);
 		response.sendRedirect("ManageUsers.jsp");
 	}
+}catch(Exception e){
+	out.println(e.getMessage());
+}
 %>
