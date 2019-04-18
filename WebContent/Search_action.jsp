@@ -36,11 +36,22 @@ String emphasis4 = request.getParameter("Emphasis4");
 String emphasis5 = request.getParameter("Emphasis5");
 
 List<String> emph = new ArrayList<String>();
-/*emph.add(emphasis1);
+if(!emphasis1.equals("")){
+emph.add(emphasis1);
+}
+if(!emphasis2.equals("")){
 emph.add(emphasis2);
+}
+if(!emphasis3.equals("")){
 emph.add(emphasis3);
+}
+if(!emphasis4.equals("")){
 emph.add(emphasis4);
-emph.add(emphasis5);*/
+}
+if(!emphasis5.equals("")){
+emph.add(emphasis5);
+}
+
 
 if(enrollmentLo == ""){
 	enrollmentLo = "-1";
