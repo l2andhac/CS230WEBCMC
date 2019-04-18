@@ -7,7 +7,7 @@
 <title>Search form</title>
 </head>
 <body>
-<a href="UserMenu.jsp">Return to Menu</a>
+	<a href="UserMenu.jsp">Return to Menu</a>
 	<form action="Search_action.jsp" name="Search">
 		<table style="text-align: left; height: 696px; width: 923px;"
 			border="1" cellpadding="2" cellspacing="2">

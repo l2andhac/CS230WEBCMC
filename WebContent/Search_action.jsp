@@ -118,16 +118,17 @@ if(qualOfLifeScaleUp == ""){
 UserInteraction userInt = (UserInteraction) session.getAttribute("ai");
 
 Set<University> list = new HashSet<University>();
-list = userInt.searchSchool(name, state, location, control, Integer.parseInt(enrollmentLo), Integer.parseInt(enrollmentUp), 
-		Integer.parseInt(percentFemaleLo), Integer.parseInt(percentFemaleUp), Integer.parseInt(satVerbLo), Integer.parseInt(satVerbUp), 
-		Integer.parseInt(satMathLo), Integer.parseInt(satMathUp), Integer.parseInt(expensesLo), Integer.parseInt(expensesUp), 
+list = userInt.searchSchool(name.toUpperCase(), state.toUpperCase(), location.toUpperCase(), control.toUpperCase(), 
+		Integer.parseInt(enrollmentLo), Integer.parseInt(enrollmentUp), Integer.parseInt(percentFemaleLo), 
+		Integer.parseInt(percentFemaleUp), Integer.parseInt(satVerbLo), Integer.parseInt(satVerbUp), Integer.parseInt(satMathLo), 
+		Integer.parseInt(satMathUp), Integer.parseInt(expensesLo), Integer.parseInt(expensesUp), 
 		Integer.parseInt(percentFinancialAidLo), Integer.parseInt(percentFinancialAidUp), Integer.parseInt(applicantsLo), 
 		Integer.parseInt(applicantsUp), Integer.parseInt(percentAdmittedLo), Integer.parseInt(percentAdmittedUp), 
 		Integer.parseInt(percentEnrollLo), Integer.parseInt(percentEnrollUp), Integer.parseInt(academicScaleLo), 
 		Integer.parseInt(academicScaleUp), Integer.parseInt(socialScaleLo), Integer.parseInt(socialScaleUp), 
 		Integer.parseInt(qualOfLifeScaleLo), Integer.parseInt(qualOfLifeScaleUp), emph);
 request.setAttribute("SchoolList", list);
-//session.setAttribute("ListToSort", list);
+session.setAttribute("ListToSort", list);
 //int si = list.size();
 //out.println(si);
 //response.sendRedirect("SearchResults.jsp?list="+list);

@@ -5,7 +5,9 @@
 <%
 UserInteraction userInt = (UserInteraction) session.getAttribute("ai");
 //String by = (String) request.getAttribute("sorting");
+//Set<University> aList = (Set<University>) session.getAttribute("ListToSort");
 Set<University> aList = (Set<University>) session.getAttribute("ListToSort");
+//session.invalidate();
 //int size = aList.size();
 //System.out.println(size);
 
