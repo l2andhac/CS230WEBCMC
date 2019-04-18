@@ -50,8 +50,9 @@ Results of the search
 
 						<tr>
 							<td style="vertical-align: top;">
-								<form method="post" action="SaveSchool_action.jsp" name="Save">
-									<%
+								<%
+								
+								out.println("<form method=\"post\" action=\"SaveSchool_action.jsp?SchoolName=" +u.getSchoolName() + "\" name=\"Save\">");
 										out.println("<input name=\"Save\" value=\"Save\" type=\"submit\"> <input name=\"SchoolName\" value="
 													+ u.getSchoolName() + " type=\"hidden\">");
 									%>

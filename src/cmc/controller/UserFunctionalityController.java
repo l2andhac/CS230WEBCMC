@@ -140,7 +140,7 @@ public class UserFunctionalityController extends AccountFunctionalityController{
 	  SavedSchool schoolToSave = new SavedSchool(univ, "time");
 	  
 	  if(list.size() == 0) {
-		  dbController.addSavedSchool(user,  schoolToSave);
+		  dbController.addSavedSchool(user, schoolToSave);
 	  }
 	  
 	  boolean found = false;
