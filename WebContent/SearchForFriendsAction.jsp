@@ -12,10 +12,12 @@ try {
 UserInteraction ui = (UserInteraction)session.getAttribute("ai");
 String u = request.getParameter("Username");
 List<SavedSchool> list = ui.searchForFriends(u);
-session.setAttribute("FriendList", list);
-response.sendRedirect("ViewFriendSchool.jsp");
+request.setAttribute("FriendList", list);
+request.getRequestDispatcher("ViewFriendSchool.jsp").forward(request, response); 
 }catch(Exception e){
-	out.println(e.getMessage());
+	String err = e.getMessage();
+	request.setAttribute("Error", err);
+    request.getRequestDispatcher("SearchForFriends.jsp").forward(request, response);   
 }
 %>
 

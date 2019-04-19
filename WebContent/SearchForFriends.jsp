@@ -9,6 +9,17 @@
 <body>
 <a href="UserMenu.jsp">Return to menu</a><br>
 Search For a Friend's Saved Schools By Entering Their Username:
+<br>
+	<%
+		String anyErrors = (String) request.getAttribute("Error");
+		if (anyErrors != null) { %>
+		<i style="color:red">
+		<%
+			out.println(anyErrors);
+		}
+		%>
+		</i>
+		<br>
 <form action="SearchForFriendsAction.jsp">
 <table>
 	<tr> 

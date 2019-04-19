@@ -7,7 +7,16 @@
 <title>Request a new account</title>
 </head>
 <body>
-
+<a href="index.jsp">Back to Login Page<br></a>
+<%
+		String anyErrors = (String) request.getAttribute("Error");
+		if (anyErrors != null) { %>
+		<i style="color:red">
+		<%
+			out.println(anyErrors);
+		}
+		%>
+		</i><br>
 	REQUEST OF A NEW ACCOUNT
 	<br> Fill in the form below to request your account.
 	<br> Your request will be pending until one of our administrator

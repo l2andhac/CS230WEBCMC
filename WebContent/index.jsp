@@ -1,21 +1,30 @@
 <html>
 <head>
-<style>
-	background-image: url("images/blackBackground1.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-</style>
+
+
+
+
 <title>Login Form</title>
+<style type="text/css">
+</style>
 </head>
-<body>
-	
+<body
+	style="background-image: url(images/img1.jpg); background-repeat: no-repeat; background-size: cover;">
+
 	<br> Login form:
 	<br>
 	<br>
 	<%
-		String anyErrors = request.getParameter("Error");
+		String anyErrors = (String) request.getAttribute("Error");
 		String person = request.getParameter("name");
-		if (anyErrors != null && anyErrors.equals("")) {
+		if (anyErrors != null) { %>
+		<i style="color:red">
+		<%
+			out.println(anyErrors);
+		}
+		%>
+		</i>
+		<%-- if (anyErrors != null && anyErrors.equals("")) {
 			out.println("Incorrect information was given<br>");
 		}
 		if (anyErrors != null && anyErrors.equals("2")) {
@@ -26,8 +35,10 @@
 		}
 		if (anyErrors != null && anyErrors.equals("4")) {
 			out.println("Username is not an email, so a new password will not be sent<br>");
-		}
-	%>
+		}--%>
+		
+		
+
 	<form method="post" action="Login_action.jsp" name="Login">
 		<br>
 		<table style="text-align: left; width: 266px; height: 228px;"
@@ -42,8 +53,8 @@
 				<tr>
 					<td style="vertical-align: top;">Password<br>
 					</td>
-					<td style="vertical-align: top;"><input name="Password" type="password">
-					</td>
+					<td style="vertical-align: top;"><input name="Password"
+						type="password"></td>
 				</tr>
 
 				<td style="vertical-align: top;"><input value="Log in"
@@ -53,10 +64,8 @@
 				</tr>
 			</tbody>
 		</table>
-		<br>
-		<a href="ForgotPassword.jsp">Forgot password</a>
-		<br>
-		<a href="RequestAccount.jsp">Request New Account</a><br>
-	</form>	
+		<br> <a href="ForgotPassword.jsp">Forgot password</a> <br> <a
+			href="RequestAccount.jsp">Request New Account</a><br>
+	</form>
 </body>
 </html>

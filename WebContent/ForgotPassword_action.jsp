@@ -19,6 +19,8 @@ else{
 	response.sendRedirect("index.jsp?Error=4");
 }
 }catch(Exception e){
-	out.println(e.getMessage());
+	String err = e.getMessage();
+	request.setAttribute("Error", err);
+    request.getRequestDispatcher("ForgotPassword.jsp").forward(request, response); 
 }
 %>

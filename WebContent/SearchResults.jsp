@@ -10,6 +10,15 @@
 <body>
 	<a href="Search.jsp">Back to Search<br></a> Results of the search
 	<br>
+	<%
+		String anyErrors = (String) request.getAttribute("Error");
+		if (anyErrors != null) { %>
+		<i style="color:red">
+		<%
+			out.println(anyErrors);
+		}
+		%>
+		</i>
 	<br>
 
 	<%

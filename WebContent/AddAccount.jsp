@@ -8,6 +8,15 @@
 <title>AddAccount</title>
 </head>
 <body>
+<%
+		String anyErrors = (String) request.getAttribute("Error");
+		if (anyErrors != null) { %>
+		<i style="color:red">
+		<%
+			out.println(anyErrors);
+		}
+		%>
+		</i><br>
 	<form action="AddAccount_action.jsp" name="AddAccountForm">
 		<big><big><big>Enter the information of the account
 					to add</big></big></big><br> <br>

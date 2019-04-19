@@ -7,7 +7,7 @@
 </head>
 <body>
 <%
-	List<SavedSchool> list = (List<SavedSchool>)session.getAttribute("FriendList");
+	List<SavedSchool> list = (List<SavedSchool>)request.getAttribute("FriendList");
 	if(list.size() > 0 ){
 		out.println("<table style=\"text-align: left; width: 100%;\" border=\"1\" cellpadding=\"2\" cellspacing=\"2\">");
 		out.println("<tbody>");

@@ -11,6 +11,8 @@ ai.removeSchool(request.getParameter("schoolName"));
     
 response.sendRedirect("ManageUniversities.jsp");
 }catch(Exception e){
-	out.println(e.getMessage());
+	String err = e.getMessage();
+	request.setAttribute("Error", err);
+    request.getRequestDispatcher("ManageUniversities.jsp").forward(request, response); 
 }
 %>

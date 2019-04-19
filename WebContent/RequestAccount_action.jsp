@@ -12,6 +12,8 @@ aci.requestNewAccount(fname, lname, username, password);
 
 response.sendRedirect("index.jsp");
 }catch(Exception e){
-	out.println(e.getMessage());
+	String err = e.getMessage();
+	request.setAttribute("Error", err);
+    request.getRequestDispatcher("RequestAccount.jsp").forward(request, response); 
 }
 %>

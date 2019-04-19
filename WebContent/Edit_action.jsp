@@ -14,7 +14,9 @@ try{
 		ai.editAccountInfo(u, fn, ln, p, type, status);
 	    response.sendRedirect("AdminMenu.jsp");
 }catch(Exception e){
-	out.println(e.getMessage());
+	String err = e.getMessage();
+	request.setAttribute("Error", err);
+    request.getRequestDispatcher("EditAccount.jsp").forward(request, response);   
 }
 
 %>

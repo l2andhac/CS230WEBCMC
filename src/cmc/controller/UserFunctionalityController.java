@@ -62,12 +62,12 @@ public class UserFunctionalityController extends AccountFunctionalityController{
    * @param username - String representing the username of the "friend" that the current User is trying to search for
    * @return List<SavedSchool> - the list of schools saved by the "friend"
    */
-  public List<SavedSchool> searchForFriends(String username){
+  public List<SavedSchool> searchForFriends(String username) {
 	  User friend = (User) dbController.findAccount(username);
 	  if(friend == null) {
-		  //System.out.println("Friend was not found");
-		  return null;
+		  throw new IllegalArgumentException("There is no user with this username");
 	  }
+	  
 	  return viewSavedSchools(friend);
   }
   
@@ -92,10 +92,7 @@ public class UserFunctionalityController extends AccountFunctionalityController{
 	  if(searchObject != null) {
 		  return this.dbController.findSearchedSchool(searchObject);
       }
-	  else {
-		  //System.out.println("All the fields are empty");
-		  return null;
-      }
+	  return null;
     
   }
   

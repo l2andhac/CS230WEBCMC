@@ -1,4 +1,5 @@
-<%@page language="java" import="cmc.controller.*" import="cmc.entity.*" import="cmc.interaction.*"%>
+<%@page language="java" import="cmc.controller.*" import="cmc.entity.*" import="cmc.interaction.*"
+errorPage="error.jsp"%>
 <%  
 try{
 	AccountInteraction aci= new AccountInteraction();
@@ -23,7 +24,9 @@ try{
 		}
 	}
 	} catch (Exception e){
-		out.println(e.getMessage());
+		String err = e.getMessage();
+		request.setAttribute("Error", err);
+        request.getRequestDispatcher("index.jsp").forward(request, response);   
 	}
 	
 	//incorrect information was given

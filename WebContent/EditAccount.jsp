@@ -10,6 +10,7 @@
 <title>Edit Account</title>
 </head>
 <body>
+<a href=AdminMenu.jsp>Back to Menu<br></a>
 <%
 	AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
 	if (ai == null) {
@@ -24,6 +25,15 @@
 
 	}
 %>
+<%
+		String anyErrors = (String) request.getAttribute("Error");
+		if (anyErrors != null) { %>
+		<i style="color:red">
+		<%
+			out.println(anyErrors);
+		}
+		%>
+		</i>
 <form method="post" action="Edit_action.jsp" name="EditAccount">
 		<br>
 		<table style="text-align: left; width: 266px; height: 228px;"

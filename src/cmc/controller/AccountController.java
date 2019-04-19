@@ -48,7 +48,7 @@ public class AccountController {
 				//System.out.println("Incorrect password was given");
 				throw new IllegalArgumentException("Account status is not valid");
 			} else if (account.getStatus() == 'P') {
-				throw new IllegalArgumentException("You cannot log in your account is pending");
+				throw new IllegalArgumentException("You cannot log in, your account is pending");
 			} else if (password.equals(password2) && account.getStatus() != 'N' && account.getStatus() != 'P') {
 				account.logOn();
 				// System.out.println("You have successfully logged on to CMC");

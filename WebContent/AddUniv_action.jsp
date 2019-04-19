@@ -104,17 +104,19 @@ int QScale;
 	String e4 = request.getParameter("Emphases4");
 	String e5 = request.getParameter("Emphases5");
 	List<String> emphesis = new ArrayList<String>();
-	emphesis.add(e1);
-	emphesis.add(e2);
-	emphesis.add(e3);
-	emphesis.add(e4);
-	emphesis.add(e5);
-	ai.addSchool(name, state, location, control, numStudents,
+	emphesis.add(e1.toUpperCase());
+	emphesis.add(e2.toUpperCase());
+	emphesis.add(e3.toUpperCase());
+	emphesis.add(e4.toUpperCase());
+	emphesis.add(e5.toUpperCase());
+	ai.addSchool(name.toUpperCase(), state.toUpperCase(), location.toUpperCase(), control.toUpperCase(), numStudents,
 			percFemale, SatVerb, SatMath, expen, percAid, apps, percA, percE,
 			AScale, SScale, QScale, emphesis);
 	response.sendRedirect("ManageUniversities.jsp");
 }catch(Exception e){
-	out.println(e.getMessage());
+	String err = e.getMessage();
+	request.setAttribute("Error", err);
+    request.getRequestDispatcher("AddUniv.jsp").forward(request, response);  
 }
 	
 %>

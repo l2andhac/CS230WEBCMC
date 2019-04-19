@@ -11,7 +11,16 @@
 <title>ForgotPassword</title>
 </head>
 <body>
-
+<a href="index.jsp">Return to Login page</a><br><br>
+<%
+		String anyErrors = (String) request.getAttribute("Error");
+		if (anyErrors != null) { %>
+		<i style="color:red">
+		<%
+			out.println(anyErrors);
+		}
+		%>
+		</i><br>
 	<span style="font-family: Bitstream Charter;">FORGOT PASSWORD</span>
 	<br style="font-family: Bitstream Charter;">
 	<span style="font-family: Bitstream Charter;">&nbsp;&nbsp;&nbsp;

@@ -7,7 +7,16 @@
 <title>Add New University</title>
 </head>
 <body>
-<a href="AdminMenu.jsp">Return to Menu</a>
+<a href="AdminMenu.jsp">Return to Menu</a><br>
+<%
+		String anyErrors = (String) request.getAttribute("Error");
+		if (anyErrors != null) { %>
+		<i style="color:red">
+		<%
+			out.println(anyErrors);
+		}
+		%>
+		</i><br>
 <form action="AddUniv_action.jsp">
 <table style="text-align: left; width: 100%;" border="1"
 		cellpadding="2" cellspacing="2">
