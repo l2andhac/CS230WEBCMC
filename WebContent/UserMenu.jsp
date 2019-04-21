@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>User Menu</title>
 </head>
-<body>
+<body style="background-image: url(images/img2.jpg); background-repeat: no-repeat; background-size: cover;">
 <a href="LogOffUser.jsp">Log off</a>
 <br>
 <br>

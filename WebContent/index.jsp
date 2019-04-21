@@ -10,8 +10,9 @@
 </head>
 <body
 	style="background-image: url(images/img1.jpg); background-repeat: no-repeat; background-size: cover;">
+	<h1 style="color:white;">Welcome to CMC</h1>
 
-	<br> Login form:
+	<br><h3  style="color:white;"  > Login: </h3>
 	<br>
 	<br>
 	<%
@@ -45,15 +46,15 @@
 			border="1" cellpadding="2" cellspacing="2">
 			<tbody>
 				<tr>
-					<td style="vertical-align: top;">Username<br>
+					<td style="color:white;">Username<br>
 					</td>
-					<td style="vertical-align: top;"><input name="Username">
+					<td><input name="Username">
 					</td>
 				</tr>
 				<tr>
-					<td style="vertical-align: top;">Password<br>
+					<td style="color:white;">Password<br>
 					</td>
-					<td style="vertical-align: top;"><input name="Password"
+					<td><input name="Password"
 						type="password"></td>
 				</tr>
 
