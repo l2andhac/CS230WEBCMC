@@ -36,7 +36,7 @@
 			</tr>
 
 			<%
-				Set<Account> allUsers = ai.viewAllAccounts();
+				List<Account> allUsers = ai.viewAllAccounts();
 				for (Account u : allUsers) {
 					out.println("<tr>");
 					out.println("<td style=\"vertical-align: top;\">");

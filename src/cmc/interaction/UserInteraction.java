@@ -91,7 +91,7 @@ public class UserInteraction extends AccountInteraction{
   * 
   * @return Set<University> that hold the Universities that match the search criteria
   */
-  public Set<University> searchSchool(String name, String state, String location, String control, int enrollmentUp, 
+  public List<University> searchSchool(String name, String state, String location, String control, int enrollmentUp, 
                 int enrollmentLo, int percentFemaleUp, int percentFemaleLo, int satVerbUp, 
                 int satVerbLo, int satMathUp, int satMathLo, int expensesUp, int expensesLo, int percentFinancialAidUp, 
                 int percentFinancialAidLo,  int applicantsUp, int applicantsLo, int percentAdmittedUp,
@@ -124,7 +124,7 @@ public class UserInteraction extends AccountInteraction{
     * @param list - Set<University> Universities to be sorted
     * @param c -character denoting what to sort by
     */
-   public List<University> sortResults(Set<University> list, char c){
+   public List<University> sortResults(List<University> list, char c){
      if(list != null) {
    List<University> aList = userFunctCont.sortResults(list, c);
    return aList;

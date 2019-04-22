@@ -129,7 +129,7 @@ if(qualOfLifeScaleUp == ""){
 
 UserInteraction userInt = (UserInteraction) session.getAttribute("ai");
 
-Set<University> list = new HashSet<University>();
+List<University> list = new ArrayList<University>();
 list = userInt.searchSchool(name.toUpperCase(), state.toUpperCase(), location.toUpperCase(), control.toUpperCase(), 
 		Integer.parseInt(enrollmentLo), Integer.parseInt(enrollmentUp), Integer.parseInt(percentFemaleLo), 
 		Integer.parseInt(percentFemaleUp), Integer.parseInt(satVerbLo), Integer.parseInt(satVerbUp), Integer.parseInt(satMathLo), 

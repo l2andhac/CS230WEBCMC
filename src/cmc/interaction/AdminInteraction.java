@@ -133,7 +133,7 @@ public class AdminInteraction extends AccountInteraction{
    * 
    * @return Set<University> - Universities to be viewed
    */
-  public Set<University> viewAllSchools(){  
+  public List<University> viewAllSchools(){  
     return adminFunctCont.viewAllSchools();
   }
   
@@ -143,7 +143,7 @@ public class AdminInteraction extends AccountInteraction{
    * 
    * @return Set<String> - Accounts to be viewed
    */
-  public Set<Account> viewAllAccounts(){
+  public List<Account> viewAllAccounts(){
     return adminFunctCont.viewAllAccounts();
   }
   

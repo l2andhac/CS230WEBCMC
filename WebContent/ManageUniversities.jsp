@@ -51,7 +51,7 @@
 			</tr>
 
 			<%
-				Set<University> allSchools = ai.viewAllSchools();
+				List<University> allSchools = ai.viewAllSchools();
 				for (University u : allSchools) {
 					out.println("<tr>");
 					out.println("<td style=\"vertical-align: top;\">");

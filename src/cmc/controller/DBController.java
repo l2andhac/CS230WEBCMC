@@ -157,10 +157,10 @@ public class DBController {
    * 
    * @return List<University> - the list of all the universities in the database
    */
-  public Set<University> getAllSchools() {
+  public List<University> getAllSchools() {
     String[][] schools = univDBlib.university_getUniversities();
     // I think a HashSet would be better.
-    Set<University> retList = new HashSet<University>();
+    List<University> retList = new ArrayList<University>();
     for (int i = 0; i < schools.length; i++)
     {
       List<String> emphasesList = new ArrayList<String>();
@@ -276,10 +276,10 @@ public class DBController {
    * @param s - Search object containing all the wanted criteria
    * @return Set<University> - the set of all the matching universities
    */
-  public Set<University> findSearchedSchool(Search s) {
+  public List<University> findSearchedSchool(Search s) {
 	this.searchController = new SearchController(s);
-    Set<University> allSchools = getAllSchools();
-    Set<University> matches = new HashSet<University>();
+    List<University> allSchools = getAllSchools();
+    List<University> matches = new ArrayList<University>();
     for(University school : allSchools) {
     	if(this.searchController.testForMatch(school)) {
     		matches.add(school);
@@ -346,9 +346,9 @@ public class DBController {
    * 
    * @return Set<String> - a set of all the usernames
    */
-  public Set<Account> viewAllAccounts() {
+  public List<Account> viewAllAccounts() {
     String[][] allUsers = univDBlib.user_getUsers();
-    Set<Account> retList = new HashSet<Account>();
+    List<Account> retList = new ArrayList<Account>();
     for(int i = 0; i < allUsers.length; i++)
     {
       retList.add(findAccount(allUsers[i][2]));
@@ -457,7 +457,7 @@ public Map<Double, String> findRecSchools(String school) {
 	
 	University univ = this.getSchool(school);
 	
-	Set<University> allUniversities = this.getAllSchools();
+	List<University> allUniversities = this.getAllSchools();
 	
 	double distance = 0;
 	Map<Double, String> distanceMap = new TreeMap<Double, String>();
