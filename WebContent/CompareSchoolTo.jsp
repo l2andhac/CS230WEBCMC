@@ -3,11 +3,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Manage Saved Schools</title>
+<title>Compare Saved Schools</title>
 </head>
 <body>
 	<%
 		UserInteraction ui = (UserInteraction) session.getAttribute("ai");
+	    String schoolName1 = request.getParameter("schoolName");
 	%>
 	
 	<a href="UserMenu.jsp">Return to Menu</a>
@@ -17,28 +18,20 @@
 		<tbody>
 			<tr align="center">
 
-				<td colspan="18" rowspan="1" style="vertical-align: top;"><a>School</a></td>
+				<td colspan="18" rowspan="1" style="vertical-align: top;"><a>Pick a school to compare to <%out.println(schoolName1);%></a></td>
 				<%
 				List<SavedSchool> savedSchools = ui.viewSavedSchools();
 				for (SavedSchool s : savedSchools) {
+					if(!s.getSchoolName().equals(schoolName1)){
 					out.println("<tr>");
 					out.println("<td style=\"vertical-align: top;\">");
-					out.println("<form method=\"post\" action=\"CompareSchoolTo.jsp?schoolName=" + s.getSchoolName() + "\" name=\"Compare\">");
-					out.println("<input name = \"Compare\" value=\"Compare\" type=\"submit\">");
-					out.println("</form>");
-					out.println("</td>");
-					out.println("<td style=\"vertical-align: top;\">");
-					out.println("<form method=\"post\" action=\"ViewSchoolDetails.jsp?schoolName=" + s.getSchoolName() + "\" name=\"View\">");
-					out.println("<input name = \"View\" value=\"View\" type=\"submit\">");
+					out.println("<form method=\"post\" action=\"CompareSchools.jsp?schoolName=" + schoolName1 + "&schoolName2=" + s.getSchoolName() + "\" name=\"Compare\">");
+					out.println("<input name = \"Compare\" value=\"Compare\"type=\"submit\">");
 					out.println("</form>");
 					out.println("</td>");
 					out.println("<td style=\"vertical-align: top;\">" + s.getSchoolName() + "</td>");
-					out.println("<td style=\"vertical-align: top;\">");
-					out.println("<form method=\"post\" action=\"DeleteSavedSchoolAction.jsp?Name=" + s.getSchoolName() + "\" name=\"Remove\">");
-					out.println("<input name=\"Remove\" value=\"Delete\" type=\"submit\">");
-					out.println("</form>");
-					out.println("</td>");
 					out.println("</tr>");
+					}
 				}
 			%>
 				

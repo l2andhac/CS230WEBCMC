@@ -174,8 +174,8 @@ public class UserInteraction extends AccountInteraction{
    * 
    * @param s1 - SavedSchool that the user wishes to compare to
    */
-  public List<University> compareSavedSchools(String s1){
-    return userFunctCont.compareSavedSchools(s1);
+  public List<University> compareSavedSchools(String s1, String s2){
+    return userFunctCont.compareSavedSchools(s1, s2);
   }
   
   

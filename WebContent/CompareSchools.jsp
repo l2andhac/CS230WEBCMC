@@ -1,13 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="cmc.interaction.*" import="cmc.entity.*" import="java.util.*"%>
+	
+	<%@include file="verifyLogin.jsp" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>View School Details</title>
+<title>Compare Saved School Details</title>
 </head>
 <%UserInteraction ui = (UserInteraction) session.getAttribute("ai");
-String schoolName = request.getParameter("schoolName");
-List<University> schoolList = ui.compareSavedSchools(schoolName);
+String schoolName1 = request.getParameter("schoolName");
+String schoolName2 = request.getParameter("schoolName2");
+List<University> schoolList = ui.compareSavedSchools(schoolName1, schoolName2);
 University school = schoolList.get(0);
 University school2 = schoolList.get(1);
 %>
@@ -18,9 +21,9 @@ University school2 = schoolList.get(1);
 			cellpadding="2" cellspacing="2">
 			<tbody>
 				<tr>
-					<td>SCHOOL</td>
-					<td><input disabled="disabled" value="<%=school.getSchoolName()%>" name="Name" type="text"></td>
-					<td><input disabled="disabled" value="<%=school2.getSchoolName()%>" name="Name" type="text"></td>
+					<td></td>
+					<td><%=school.getSchoolName()%></td>
+					<td><%=school2.getSchoolName()%></td>
 				</tr>
 				<tr>
 					<td>STATE</td>
@@ -95,27 +98,12 @@ University school2 = schoolList.get(1);
 				<tr>
 					<td>QUALITY OF LIFE SCALE (1-5)</td>
 					<td><input disabled="disabled" value=<%=school.getQualityOfLifeScale()%> name="QualScale" type="text"></td>
-					<td><input disabled="disabled" value=<%=school.getQualityOfLifeScale()%> name="QualScale" type="text"></td>
-				</tr>
-				<tr>
-					<td>EMPHASES</td>
-					<td><input name="Emphases1" type="text"> <input
-						name="Emphases2" type="text"> <input name="Emphases3"
-						type="text"> <input name="Emphases4" type="text">
-						<input name="Emphases5" type="text"></td>
+					<td><input disabled="disabled" value=<%=school2.getQualityOfLifeScale()%> name="QualScale" type="text"></td>
 				</tr>
 			</tbody>
 		</table>
 	</form>
 	
-	<%Map<Double, String> topFive = ui.showRecSchools(schoolName);
-	
-	  out.println("Top 5 Recommended Schools");
-	  for(String name: topFive.values()){
-		  out.println(name);
-	  }
-	
-	%>
 	
 </body>
 </html>
