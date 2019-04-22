@@ -90,9 +90,9 @@ public class AdminFunctionalityController extends AccountFunctionalityController
    * 
    * @return Set<University> - A set of all the Schools in the database
    */
-  public Set<University> viewAllSchools(){
+  public List<University> viewAllSchools(){
 	  
-    Set<University> schools = dbController.getAllSchools();
+    List<University> schools = dbController.getAllSchools();
     return schools;
 
   }
@@ -103,7 +103,7 @@ public class AdminFunctionalityController extends AccountFunctionalityController
    * 
    * @return Set<String> - a set of all of the Accounts in the database
    */
-  public Set<Account> viewAllAccounts(){
+  public List<Account> viewAllAccounts(){
     return dbController.viewAllAccounts();
   }
   

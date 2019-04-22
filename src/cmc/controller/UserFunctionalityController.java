@@ -88,7 +88,7 @@ public class UserFunctionalityController extends AccountFunctionalityController{
    * @return Set<University> - a set of universities matching the search object if the object is not null
    *         returns null if the searchObject is null
    */
-  public Set<University> searchSchool(Search searchObject){
+  public List<University> searchSchool(Search searchObject){
 	  if(searchObject != null) {
 		  return this.dbController.findSearchedSchool(searchObject);
       }
@@ -104,7 +104,7 @@ public class UserFunctionalityController extends AccountFunctionalityController{
    * 
    * @return newList - the sorted list of universities
    */
-  public List<University> sortResults(Set<University> univs, char howToSort){
+  public List<University> sortResults(List<University> univs, char howToSort){
 	  List<University> newList = new ArrayList<University>();
 	  for(University uni : univs) {
 		  newList.add(uni);
