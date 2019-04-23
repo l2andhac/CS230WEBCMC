@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Edit Account</title>
 </head>
-<body>
+<body style="background-image: url(images/pens.jpg); background-repeat: no-repeat; background-size: cover;">
 <a href=AdminMenu.jsp>Back to Menu<br></a>
 <%
 	AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");

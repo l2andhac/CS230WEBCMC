@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Search form</title>
 </head>
-<body>
+<body style="background-image: url(images/laptop.jpg); background-repeat: no-repeat; background-size: cover;">
 	<a href="UserMenu.jsp">Return to Menu</a>
 	<form action="Search_action.jsp" name="Search">
 		<table style="text-align: left; height: 696px; width: 923px;"

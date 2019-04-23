@@ -12,7 +12,7 @@
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
 <title>ForgotPassword</title>
 </head>
-<body>
+<body style="background-image: url(images/book.jpg); background-repeat: no-repeat; background-size: cover;">
 <a href="index.jsp">Return to Login page</a><br><br>
 <%
 		String anyErrors = (String) request.getAttribute("Error");

@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Manage Saved Schools</title>
 </head>
-<body>
+<body style="background-image: url(images/plants.jpg); background-repeat: no-repeat; background-size: cover;">
 	<%
 		UserInteraction ui = (UserInteraction) session.getAttribute("ai");
 	%>

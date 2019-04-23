@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Search For Friends</title>
 </head>
-<body>
+<body style="background-image: url(images/book.jpg); background-repeat: no-repeat; background-size: cover;">
 <a href="UserMenu.jsp">Return to menu</a><br>
 Search For a Friend's Saved Schools By Entering Their Username:
 <br>

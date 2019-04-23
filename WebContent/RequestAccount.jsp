@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Request a new account</title>
 </head>
-<body>
+<body style="background-image: url(images/book.jpg); background-repeat: no-repeat; background-size: cover;">
 <a href="index.jsp">Back to Login Page<br></a>
 <%
 		String anyErrors = (String) request.getAttribute("Error");

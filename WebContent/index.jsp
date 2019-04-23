@@ -9,7 +9,7 @@
 </style>
 </head>
 <body
-	style="background-image: url(images/img1.jpg); background-repeat: no-repeat; background-size: cover;">
+	style="background-image: url(images/chalk.jpg); background-repeat: no-repeat; background-size: cover;">
 	<h1 style="color:white;">Welcome to CMC</h1>
 
 	<br><h3  style="color:white;"  > Login: </h3>

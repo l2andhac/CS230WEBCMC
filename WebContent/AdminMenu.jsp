@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Admin Menu</title>
 </head>
-<body>
+<body style="background-image: url(images/notebook.jpg); background-repeat: no-repeat; background-size: cover;">
 <a href="LogOffAdmin.jsp">Log off</a>
 <br>
 <br>

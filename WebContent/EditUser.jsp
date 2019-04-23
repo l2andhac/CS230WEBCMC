@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body style="background-image: url(images/pencils.jpg); background-repeat: no-repeat; background-size: cover;">
 <%UserInteraction ui = (UserInteraction) session.getAttribute("ai");
 String fn = request.getParameter("FirstName");
 String ln = request.getParameter("LastName");

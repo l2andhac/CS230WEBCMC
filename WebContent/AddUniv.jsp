@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add New University</title>
 </head>
-<body>
+<body style="background-image: url(images/book.jpg); background-repeat: no-repeat; background-size: cover;">
 <a href="AdminMenu.jsp">Return to Menu</a><br>
 <%
 		String anyErrors = (String) request.getAttribute("Error");
