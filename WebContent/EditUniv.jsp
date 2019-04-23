@@ -112,10 +112,14 @@
 						<%
 							if (emph.size() != 0) {
 								for (; i < emph.size(); i++) {
-						%> <input value=<%=emph.get(i)%> name="Emphases" type="text"> <%
- 	}
- 	}
- %>
+									out.print("<input value= \"" + emph.get(i) + "\" name=\"Emphases" + (i + 1) + "\" type=\"text\">");
+								}
+
+							}
+
+							for (; i < 5; i++) {
+								out.print("<input value= \"\" name=\"Emphases" + (i + 1) + "\" type=\"text\">");
+							}%>
 					</td>
 				</tr>
 			</tbody>
