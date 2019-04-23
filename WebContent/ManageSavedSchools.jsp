@@ -24,7 +24,25 @@
 				if(savedSchools.size() == 0){
 					request.setAttribute("Error", "You have no saved schools");
 			        request.getRequestDispatcher("UserMenu.jsp").forward(request, response);
-				}else{
+				}
+				else if(savedSchools.size() == 1){
+					for (SavedSchool s : savedSchools) {
+						out.println("<tr>");
+						out.println("<td style=\"vertical-align: top;\">");
+						out.println("<form method=\"post\" action=\"ViewSchoolDetails.jsp?schoolName=" + s.getSchoolName() + "\" name=\"View\">");
+						out.println("<input name = \"View\" value=\"View\" type=\"submit\">");
+						out.println("</form>");
+						out.println("</td>");
+						out.println("<td style=\"vertical-align: top;\">" + s.getSchoolName() + "</td>");
+						out.println("<td style=\"vertical-align: top;\">");
+						out.println("<form method=\"post\" action=\"DeleteSavedSchoolAction.jsp?Name=" + s.getSchoolName() + "\" name=\"Remove\">");
+						out.println("<input name=\"Remove\" value=\"Remove\" type=\"submit\">");
+						out.println("</form>");
+						out.println("</td>");
+						out.println("</tr>");
+					}
+				}
+				else{
 				for (SavedSchool s : savedSchools) {
 					out.println("<tr>");
 					out.println("<td style=\"vertical-align: top;\">");
