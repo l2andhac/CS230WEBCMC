@@ -5,7 +5,7 @@
 <head>
 <title></title>
 </head>
-<body>
+<body style="background-image: url(images/img2.jpg); background-repeat: no-repeat; background-size: cover;">
 	<%
 		AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
 	%>
