@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+"WebContent/UserMenu.jsp"<%@ page language="java" contentType="text/html; charset=UTF-8"
     import="cmc.interaction.*, cmc.entity.*" pageEncoding="UTF-8"%>
     
     <%@include file="verifyLogin.jsp" %>
@@ -17,7 +17,17 @@
 User user = ui.getAccount();
 	%>
 Welcome to the User Page, <%=user.getFirstName()%>
-
+<br>
+<%
+		String anyErrors = (String) request.getAttribute("Error");
+		String person = request.getParameter("name");
+		if (anyErrors != null) { %>
+		<i style="color:red">
+		<%
+			out.println(anyErrors);
+		}
+		%>
+		</i>
 <br>
 <a href="ManageProfile.jsp">Manage My Profile</a>
 <br>
