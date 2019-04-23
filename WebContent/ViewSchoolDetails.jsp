@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="cmc.interaction.*" import="cmc.entity.*"
 	import="java.util.*"%>
+	
+	<%@include file="verifyLogin.jsp" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
