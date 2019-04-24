@@ -5,12 +5,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script>
+function validateForm(){
+	var x = document.forms["myform"]["fname"].value;
+	if(x == ""){
+		alert("Please fill out the form");
+		return false;
+	}
+}
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Search form</title>
 </head>
 <body style="background-image: url(images/laptop.jpg); background-repeat: no-repeat; background-size: cover;">
 	<a href="UserMenu.jsp">Return to Menu</a>
-	<form action="Search_action.jsp" name="Search">
+	<form action="Search_action.jsp" name="Search" onsubmit="return validateForm()">
 		<table style="text-align: left; height: 696px; width: 923px;"
 			border="1" cellpadding="2" cellspacing="2">
 			<tbody>

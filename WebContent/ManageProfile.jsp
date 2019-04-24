@@ -5,6 +5,17 @@
 <%@include file="verifyLogin.jsp"%>
 <html>
 <head>
+<script>
+function validateForm(){
+	var x = document.forms["editUser"]["FirstName"].value;
+	var y = document.forms["editUser"]["LastName"].value;
+	var z = document.forms["editUser"]["Password"].value;
+	if(x == "" || y == "" || z == ""){
+		alert("Please fill out all the fields");
+		return false;
+	}
+}
+</script>
 
 <title>Edit User Form</title>
 </head>
@@ -23,7 +34,7 @@
 		//out.println("Edit user : " + request.getParameter("Username"));
 	%>
 
-	<form method="post" action="Edit_User_Action.jsp" name="editUser">
+	<form method="post" action="Edit_User_Action.jsp" name="editUser" onsubmit="return validateForm()">
 		<br>
 		<table style="text-align: left; width: 266px; height: 228px;"
 			border="1">
