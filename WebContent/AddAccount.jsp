@@ -6,6 +6,28 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script>
+function validateForm(){
+	var u = document.forms["AddAccountForm"]["Username"].value;
+	var v = document.forms["AddAccountForm"]["Type"].value;
+	var w = document.forms["AddAccountForm"]["Status"].value;
+	var x = document.forms["AddAccountForm"]["FirstName"].value;
+	var y = document.forms["AddAccountForm"]["LastName"].value;
+	var z = document.forms["AddAccountForm"]["Password"].value;
+	if(v == "" || w == "" || x == "" || y == "" || z == "" || u == ""){
+		alert("Please fill out all the fields");
+		return false;
+	}
+	if(w != 'Y' || w != 'N' || w != 'P' || w != 'D'){
+		alert("Please enter a valid status");
+		return false;
+	}
+	if(v != 'u' || w != 'a'){
+		alert("Please enter a valid type");
+		return false;
+	}
+}
+</script>
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
 <title>AddAccount</title>
 </head>
@@ -19,7 +41,7 @@
 		}
 		%>
 		</i><br>
-	<form action="AddAccount_action.jsp" name="AddAccountForm">
+	<form action="AddAccount_action.jsp" name="AddAccountForm" onsubmit="return validateForm()">
 		<big><big><big>Enter the information of the account
 					to add</big></big></big><br> <br>
 		<table style="text-align: left; width: 656px; height: 313px;"
