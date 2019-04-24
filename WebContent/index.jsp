@@ -1,9 +1,5 @@
 <html>
 <head>
-
-
-
-
 <title>Login Form</title>
 <style type="text/css">
 </style>

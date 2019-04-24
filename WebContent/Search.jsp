@@ -7,11 +7,34 @@
 <head>
 <script>
 function validateForm(){
-	var x = document.forms["myform"]["fname"].value;
-	if(x == ""){
-		alert("Please fill out the form");
-		return false;
-	}
+	var name = document.forms["Search"]["SchoolName"].value;
+	var state = document.forms["Search"]["State"].value;
+	var location = document.forms["Search"]["Location"].value;
+	var control = document.forms["Search"]["Control"].value;
+	var numStuLo = document.forms["Search"]["NumStudentsDown"].value;
+	var numStuUp = document.forms["Search"]["NumStudentsUp"].value;
+	var femLo = document.forms["Search"]["FemaleDown"].value;
+	var femUp = document.forms["Search"]["FemaleUp"].value;
+	var verbLo = document.forms["Search"]["VerbalDown"].value;
+	var verbUp = document.forms["Search"]["VerbalUp"].value;
+	var mathLo = document.forms["Search"]["MathDown"].value;
+	var mathUp = document.forms["Search"]["MathUp"].value;
+	var expensesLo = document.forms["Search"]["ExpensesDown"].value;
+	var expensesUp = document.forms["Search"]["ExpensesUp"].value;
+	var finAidLo = document.forms["Search"]["FinancialAidDown"].value;
+	var finAidUp = document.forms["Search"]["FinancialAidUp"].value;
+	var appLo = document.forms["Search"]["ApplicantsDown"].value;
+	var appUp = document.forms["Search"]["ApplicantsUp"].value;
+	var admLo = document.forms["Search"]["AdmittedDown"].value;
+	var admUp = document.forms["Search"]["AdmittedUp"].value;
+	var enrolLo = document.forms["Search"]["EnrolledDown"].value;
+	var enrolUp = document.forms["Search"]["EnrolledUp"].value;
+	
+	//if(name == "" && state == "" && location == "" && control == ""){
+		//alert("Please fill out at least one field");
+		//return false;
+	//}
+	
 }
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
