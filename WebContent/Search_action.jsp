@@ -38,19 +38,19 @@ String emphasis5 = request.getParameter("Emphasis5");
 
 List<String> emph = new ArrayList<String>();
 if(!emphasis1.equals("")){
-emph.add(emphasis1);
+emph.add(emphasis1.toUpperCase());
 }
 if(!emphasis2.equals("")){
-emph.add(emphasis2);
+emph.add(emphasis2.toUpperCase());
 }
 if(!emphasis3.equals("")){
-emph.add(emphasis3);
+emph.add(emphasis3.toUpperCase());
 }
 if(!emphasis4.equals("")){
-emph.add(emphasis4);
+emph.add(emphasis4.toUpperCase());
 }
 if(!emphasis5.equals("")){
-emph.add(emphasis5);
+emph.add(emphasis5.toUpperCase());
 }
 
 

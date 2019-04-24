@@ -29,11 +29,34 @@ function validateForm(){
 	var admUp = document.forms["Search"]["AdmittedUp"].value;
 	var enrolLo = document.forms["Search"]["EnrolledDown"].value;
 	var enrolUp = document.forms["Search"]["EnrolledUp"].value;
-	
-	//if(name == "" && state == "" && location == "" && control == ""){
-		//alert("Please fill out at least one field");
-		//return false;
-	//}
+	var acadLo = document.forms["Search"]["AcademicsDown"].value;
+	var acadUp = document.forms["Search"]["AcademicsUp"].value;
+	var socLo = document.forms["Search"]["SocialDown"].value;
+	var socUp = document.forms["Search"]["SocialUp"].value;
+	var lifeLo = document.forms["Search"]["LifeDown"].value;
+	var lifeUp = document.forms["Search"]["LifeUp"].value;
+	var emp1 = document.forms["Search"]["Emphasis1"].value;
+	var emp2 = document.forms["Search"]["Emphasis2"].value;
+	var emp3 = document.forms["Search"]["Emphasis3"].value;
+	var emp4 = document.forms["Search"]["Emphasis4"].value;
+	var emp5 = document.forms["Search"]["Emphasis5"].value;
+	if(name == "" && state == "" && location == "" && control == "" && numStuLo == ""
+			&& numStuUp == "" && femLo == "" && femUp == "" && verbLo == "" && verbUp == ""
+			&& mathLo == "" && mathUp == "" && expensesLo == "" && expensesUp == "" 
+			&& finAidLo == "" && finAidUp == "" && appLo == "" && appUp == "" && admLo == "" 
+			&& admUp == "" && enrolLo == "" && enrolUp == "" && acadLo == "" && acadUp == ""
+			&& socLo == "" && socUp == "" && lifeLo == "" && lifeUp == "" && emp1 == "" 
+			&& emp2 == "" && emp3 =="" && emp4 == "" && emp5 == ""){
+		alert("Please fill out at least one field");
+		return false;
+	}else if(numStuLo < 0 || numStuUp <0 || femLo < 0 || femUp < 0 || verbLo < 0 || verbUp < 0
+			|| mathLo < 0 || mathUp < 0 || expensesLo < 0 || expensesUp < 0 || finAidLo < 0 
+			|| finAidUp < 0 || appLo < 0 || appUp < 0 || admLo < 0 || admUp < 0 || enrolLo < 0 
+			|| enrolUp < 0 || acadLo < 0 || acadUp < 0 || socLo < 0 || socUp < 0 || lifeLo < 0
+			|| lifeUp < 0){
+		alert("No negative entries allowed. Please enter a positive value or leave the field blank");
+		return false;
+	}
 	
 }
 </script>
