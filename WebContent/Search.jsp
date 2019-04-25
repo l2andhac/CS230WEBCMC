@@ -49,11 +49,11 @@ function validateForm(){
 			&& emp2 == "" && emp3 =="" && emp4 == "" && emp5 == ""){
 		alert("Please fill out at least one field");
 		return false;
-	}else if(numStuLo <= 0 || numStuUp <=0 || femLo <= 0 || femUp <= 0 || verbLo <= 0 || verbUp <= 0
-			|| mathLo <= 0 || mathUp <= 0 || expensesLo <= 0 || expensesUp <= 0 || finAidLo <= 0 
-			|| finAidUp <= 0 || appLo <= 0 || appUp <= 0 || admLo <= 0 || admUp <= 0 || enrolLo <= 0 
-			|| enrolUp <= 0 || acadLo <= 0 || acadUp <= 0 || socLo <= 0 || socUp <= 0 || lifeLo <= 0
-			|| lifeUp <= 0){
+	}else if(numStuLo < 0 || numStuUp <0 || femLo < 0 || femUp < 0 || verbLo < 0 || verbUp < 0
+			|| mathLo < 0 || mathUp < 0 || expensesLo < 0 || expensesUp < 0 || finAidLo < 0 
+			|| finAidUp < 0 || appLo < 0 || appUp < 0 || admLo < 0 || admUp < 0 || enrolLo < 0 
+			|| enrolUp < 0 || acadLo < 0 || acadUp < 0 || socLo < 0 || socUp < 0 || lifeLo < 0
+			|| lifeUp < 0){
 		alert("No negative entries allowed. Please enter a positive value or leave the field blank");
 		return false;
 	}else if(numStuLo > numStuUp){
@@ -99,7 +99,6 @@ function validateForm(){
 			|| lifeUp > 5){
 		alert("Entries must be between 1 and 5 inclusive");
 		return false;
-		
 	}
 	
 }
