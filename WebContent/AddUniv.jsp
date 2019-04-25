@@ -5,9 +5,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script>
+function validateForm(){
+	var u = document.forms["AddUnivForm"]["Name"].value;
+	if(u == ""){
+		alert("Please fill out at least the name");
+		return false;
+	}
+}
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add New University</title>
 </head>
+
 <body style="background-image: url(images/book.jpg); background-repeat: no-repeat; background-size: cover;">
 <a href="AdminMenu.jsp">Return to Menu</a><br>
 <%
@@ -19,7 +29,7 @@
 		}
 		%>
 		</i><br>
-<form action="AddUniv_action.jsp">
+<form action="AddUniv_action.jsp" name="AddUnivForm" onsubmit="return validateForm()">
 <table style="text-align: left; width: 100%;" border="1"
 		cellpadding="2" cellspacing="2">
 	<tr>
