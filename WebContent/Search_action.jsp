@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     import="cmc.entity.*,cmc.controller.*,cmc.interaction.*,java.util.*" pageEncoding="UTF-8"%>
 <%
-try{
+
 String name = request.getParameter("SchoolName");
 String state = request.getParameter("State");
 String location = request.getParameter("Location");
@@ -139,6 +139,10 @@ list = userInt.searchSchool(name.toUpperCase(), state.toUpperCase(), location.to
 		Integer.parseInt(percentEnrollLo), Integer.parseInt(percentEnrollUp), Integer.parseInt(academicScaleLo), 
 		Integer.parseInt(academicScaleUp), Integer.parseInt(socialScaleLo), Integer.parseInt(socialScaleUp), 
 		Integer.parseInt(qualOfLifeScaleLo), Integer.parseInt(qualOfLifeScaleUp), emph);
+if(list==null){
+	out.println("NO MATCHES FOUND");
+	return;
+}
 request.setAttribute("SchoolList", list);
 session.setAttribute("ListToSort", list);
 //int si = list.size();
@@ -146,7 +150,5 @@ session.setAttribute("ListToSort", list);
 //response.sendRedirect("SearchResults.jsp?list="+list);
 request.getRequestDispatcher("SearchResults.jsp").forward(request, response);
 //request.getRequestDispatcher("SortResults_action.jsp").forward(request, response);
-}catch(Exception e){
-	out.println(e.getMessage());
-}
+
 %>

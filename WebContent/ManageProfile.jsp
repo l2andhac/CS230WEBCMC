@@ -20,9 +20,9 @@
 		}
 		User eUser = ui.getAccount();
 
-		//out.println("Edit user : " + request.getParameter("Username"));
-	%>
 
+		%>
+		
 	<form method="post" action="Edit_User_Action.jsp" name="editUser">
 		<br>
 		<table style="text-align: left; width: 266px; height: 228px;"

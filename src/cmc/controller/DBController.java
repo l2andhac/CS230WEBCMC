@@ -285,6 +285,9 @@ public class DBController {
     		matches.add(school);
     	}  	
     }
+    if(matches.size()==0) {
+    	return null;
+    }
     return matches;
 	}
   
