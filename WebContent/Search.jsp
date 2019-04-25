@@ -49,13 +49,57 @@ function validateForm(){
 			&& emp2 == "" && emp3 =="" && emp4 == "" && emp5 == ""){
 		alert("Please fill out at least one field");
 		return false;
-	}else if(numStuLo < 0 || numStuUp <0 || femLo < 0 || femUp < 0 || verbLo < 0 || verbUp < 0
-			|| mathLo < 0 || mathUp < 0 || expensesLo < 0 || expensesUp < 0 || finAidLo < 0 
-			|| finAidUp < 0 || appLo < 0 || appUp < 0 || admLo < 0 || admUp < 0 || enrolLo < 0 
-			|| enrolUp < 0 || acadLo < 0 || acadUp < 0 || socLo < 0 || socUp < 0 || lifeLo < 0
-			|| lifeUp < 0){
+	}else if(numStuLo <= 0 || numStuUp <=0 || femLo <= 0 || femUp <= 0 || verbLo <= 0 || verbUp <= 0
+			|| mathLo <= 0 || mathUp <= 0 || expensesLo <= 0 || expensesUp <= 0 || finAidLo <= 0 
+			|| finAidUp <= 0 || appLo <= 0 || appUp <= 0 || admLo <= 0 || admUp <= 0 || enrolLo <= 0 
+			|| enrolUp <= 0 || acadLo <= 0 || acadUp <= 0 || socLo <= 0 || socUp <= 0 || lifeLo <= 0
+			|| lifeUp <= 0){
 		alert("No negative entries allowed. Please enter a positive value or leave the field blank");
 		return false;
+	}else if(numStuLo > numStuUp){
+		alert("Numer of students lower bound must be lower than or equal to the upper bound");
+		return false;
+	}else if(femLo > femUp){
+		alert("Percent female lower bound must be lower than or equal to the upper bound");
+		return false;
+	}else if(verbLo > verbUp){
+		alert("SATVerbal lower bound must be lower than or equal to the upper bound");
+		return false;
+	}else if(mathLo > mathUp){
+		alert("SATMath lower bound bust be lower than or equal to the upper bound");
+		return false;
+	}else if(expensesLo > expensesUp){
+		alert("Expenses lower bound must be lower than or equal to the upper bound");
+		return false;
+	}else if(finAidLo > finAidUp){
+		alert("Financial Aid lower bound must be lower than or equal to the upper bound");
+		return false;
+	}else if(appLo > appUp){
+		alert("Applicants lower bound must be lower than or equal to the upper bound");
+		return false;
+	}else if(admLo > admUp){
+		alert("Admitted lower bound must be lower than or equal to the upper bound");
+		return false;
+	}else if(enrolLo > enrolUp){
+		alert("Enrollment lower bound must be lower than or equal to the upper bound");
+		return false;
+	}else if(acadLo > acadUp){
+		alert("Academic Scale lower bound must be lower than or equal to the upper bound");
+		return false;
+	}else if(lifeLo > lifeUp){
+		alert("Quality of Life Scale lower bound must be lower than or equal to the upper bound");
+		return false;
+	}else if(socLo > socUp){
+		alert("Social Scale lower bound must be lower than or equal to the upper bound");
+		return false;
+	}else if(numStuLo > 5 || numStuUp > 5 || femLo > 5 || femUp > 5 || verbLo > 5 || verbUp > 5
+			|| mathLo > 5 || mathUp > 5 || expensesLo > 5 || expensesUp > 5 || finAidLo > 5 
+			|| finAidUp > 5 || appLo > 5 || appUp > 5 || admLo > 5 || admUp > 5 || enrolLo > 5 
+			|| enrolUp > 5 || acadLo > 5 || acadUp > 5 || socLo > 5 || socUp > 5 || lifeLo > 5
+			|| lifeUp > 5){
+		alert("Entries must be between 1 and 5 inclusive");
+		return false;
+		
 	}
 	
 }

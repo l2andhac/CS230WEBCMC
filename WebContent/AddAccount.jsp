@@ -22,7 +22,7 @@ function validateForm(){
 		alert("Please enter a valid status");
 		return false;
 	}
-	if(v != 'u' || w != 'a'){
+	if(v != 'u' || v != 'a'){
 		alert("Please enter a valid type");
 		return false;
 	}
