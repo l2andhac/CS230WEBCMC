@@ -6,6 +6,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script>
+function validateForm(){
+	var v = document.forms["EditAccount"]["Type"].value;
+	var w = document.forms["EditAccount"]["Status"].value;
+	var x = document.forms["EditAccount"]["FirstName"].value;
+	var y = document.forms["EditAccount"]["LastName"].value;
+	var z = document.forms["EditAccount"]["Password"].value;
+	if(v == "" || w == "" || x == "" || y == "" || z == ""){
+		alert("Please fill out all the fields");
+		return false;
+	}
+	if(w != 'Y' || w != 'N' || w != 'P' || w != 'D'){
+		alert("Please enter a valid status");
+		return false;
+	}
+	if(v != 'u' || w != 'a'){
+		alert("Please enter a valid type");
+		return false;
+	}
+}
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Edit Account</title>
 </head>
@@ -34,7 +55,7 @@
 		}
 		%>
 		</i>
-<form method="post" action="Edit_action.jsp" name="EditAccount">
+<form method="post" action="Edit_action.jsp" name="EditAccount" onsubmit="return validateForm()">
 		<br>
 		<table style="text-align: left; width: 266px; height: 228px;"
 			border="1" cellpadding="2" cellspacing="2">

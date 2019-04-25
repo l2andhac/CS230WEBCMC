@@ -1,13 +1,19 @@
 <html>
 <head>
-
-
-
-
 <title>Login Form</title>
 <style type="text/css">
 </style>
 </head>
+<script>
+function validateForm(){
+	var x = document.forms["Login"]["Username"].value;
+	var y = document.forms["Login"]["Password"].value;
+	if(x == "" || y == ""){
+		alert("Please fill out all the fields");
+		return false;
+	}
+}
+</script>
 <body
 	style="background-image: url(images/chalk.jpg); background-repeat: no-repeat; background-size: cover;">
 	<h1 style="color:white;">Welcome to CMC</h1>
@@ -40,7 +46,7 @@
 		
 		
 
-	<form method="post" action="Login_action.jsp" name="Login">
+	<form method="post" action="Login_action.jsp" name="Login" onsubmit="return validateForm()">
 		<br>
 		<table style="text-align: left; width: 266px; height: 228px;"
 			border="1" cellpadding="2" cellspacing="2">

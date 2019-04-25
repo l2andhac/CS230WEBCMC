@@ -96,11 +96,21 @@ int QScale;
 	String e4 = request.getParameter("Emphases4");
 	String e5 = request.getParameter("Emphases5");
 	List<String> emphesis = new ArrayList<String>();
-	emphesis.add(e1);
-	emphesis.add(e2);
-	emphesis.add(e3);
-	emphesis.add(e4);
-	emphesis.add(e5);
+	if(e1 != null && !e1.equals("")){
+		emphesis.add(e1.toUpperCase());
+		}
+	if(e2 != null && !e2.equals("")){
+		emphesis.add(e2.toUpperCase());
+		}
+	if(e3 != null && !e3.equals("")){
+		emphesis.add(e3.toUpperCase());
+		}
+	if(e4 != null && !e4.equals("")){
+		emphesis.add(e4.toUpperCase());
+		}
+	if(e5 != null && !e5.equals("")){
+		emphesis.add(e5.toUpperCase());
+		}
 	ai.editSchool(name, state, location, control, numStudents,
 			percFemale, SatVerb, SatMath, expen, percAid, apps, percA, percE,
 			AScale, SScale, QScale, emphesis);

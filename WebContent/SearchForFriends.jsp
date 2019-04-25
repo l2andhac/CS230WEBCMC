@@ -5,6 +5,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script>
+function validateForm(){
+	var x = document.forms["Search"]["Username"].value;
+	if(x == ""){
+		alert("Please fill out all the fields");
+		return false;
+	}
+}
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Search For Friends</title>
 </head>
@@ -22,7 +31,7 @@ Search For a Friend's Saved Schools By Entering Their Username:
 		%>
 		</i>
 		<br>
-<form action="SearchForFriendsAction.jsp">
+<form action="SearchForFriendsAction.jsp" name="Search" onsubmit="return validateForm()">
 <table>
 	<tr> 
 		<td>USERNAME:</td>

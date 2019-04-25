@@ -26,17 +26,17 @@
 				</tr>
 				<tr>
 					<td>STATE</td>
-					<td><input disabled="disabled" value=<%=school.getState()%>
+					<td><input disabled="disabled" value="<%=school.getState()%>"
 						name="State" type="text"></td>
 				</tr>
 				<tr>
 					<td>LOCATION</td>
-					<td><input disabled="disabled" value=<%=school.getLocation()%>
+					<td><input disabled="disabled" value="<%=school.getLocation()%>"
 						name="Location" type="text"></td>
 				</tr>
 				<tr>
 					<td>CONTROL</td>
-					<td><input disabled="disabled" value=<%=school.getControl()%>
+					<td><input disabled="disabled" value="<%=school.getControl()%>"
 						name="Control" type="text"></td>
 				</tr>
 				<tr>
