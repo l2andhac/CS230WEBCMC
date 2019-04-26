@@ -125,7 +125,7 @@ public class UserFunctionalTests {
 	//Come back to this one :)
 	@Test
 	public void testSearchSchool() {
-		Set<University> matches = ui.searchSchool("BETHEL UNIVERSITY", "MINNESOTA", "SUBURBAN", "PRIVATE", 8001, 7999, 31, 29, 700, 600, 700, 600, 5001, 4999, 11, 9, 11000, 10000, 96, 94, 71, 69, 3, 1, 5, 1, 5, 1,foci);
+		List<University> matches = ui.searchSchool("BETHEL UNIVERSITY", "MINNESOTA", "SUBURBAN", "PRIVATE", 8001, 7999, 31, 29, 700, 600, 700, 600, 5001, 4999, 11, 9, 11000, 10000, 96, 94, 71, 69, 3, 1, 5, 1, 5, 1,foci);
 		boolean isMatch = false;
 		for(University s: matches) {
 			if(s.getSchoolName().equals("BETHEL UNIVERSITY")) {
@@ -138,13 +138,13 @@ public class UserFunctionalTests {
 	
 	@Test
 	public void testSearchSchoolNoMatch() {
-		Set<University> matches = ui.searchSchool("BETHELLLLLLLLL UNIVERSITY", "MINNESOTA", "SUBURBAN", "PRIVATE", 8001, 7999, 31, 29, 700, 600, 700, 600, 5001, 4999, 11, 9, 11000, 10000, 96, 94, 71, 69, 3, 1, 5, 1, 5, 1,foci);
+		List<University> matches = ui.searchSchool("BETHELLLLLLLLL UNIVERSITY", "MINNESOTA", "SUBURBAN", "PRIVATE", 8001, 7999, 31, 29, 700, 600, 700, 600, 5001, 4999, 11, 9, 11000, 10000, 96, 94, 71, 69, 3, 1, 5, 1, 5, 1,foci);
 		assertTrue("No school should match the search criteria", matches.size() == 0);
 	}
 	
 	@Test
 	 public void testSearchSchoolSuccess() {
-		Set<University> actual = ui.searchSchool("Carleton College", "FOREIGN", "URBAN", "STATE", 8001, 7999, 31, 29, 700, 600, 700, 600, 5001, 4999, 11, 9, 11000, 10000, 96, 94, 71, 69, 3, 1, 5, 1, 5, 1,foci2);
+		List<University> actual = ui.searchSchool("Carleton College", "FOREIGN", "URBAN", "STATE", 8001, 7999, 31, 29, 700, 600, 700, 600, 5001, 4999, 11, 9, 11000, 10000, 96, 94, 71, 69, 3, 1, 5, 1, 5, 1,foci2);
 		boolean found = false;
 		for(University university: actual) {
 			if(university.getSchoolName().equals(univ1.getSchoolName()))
@@ -156,7 +156,7 @@ public class UserFunctionalTests {
 	
 	@Test
 	public void testSearchSchoolNoFieldsFilledOut() {
-		Set<University> actual = ui.searchSchool("", "", "", "", -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, null);
+		List<University> actual = ui.searchSchool("", "", "", "", -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, null);
 		assertTrue("No fields were filled out so the search returns a null list", actual == null);
 	}
 	
@@ -166,7 +166,7 @@ public class UserFunctionalTests {
 		List<String> foci = new ArrayList<String>();
 	    foci.add("ENGINEERING");
 	    foci.add("ENGLISH");
-	    Set<University> listOfMatches = ui.searchSchool("","CALI", "URBAN", "STATE", 60000, 5000, 60, 25, -1, -1, -1, 
+	    List<University> listOfMatches = ui.searchSchool("","CALI", "URBAN", "STATE", 60000, 5000, 60, 25, -1, -1, -1, 
 	    		  -1, -1, -1, -1, -1, -1, -1, -1, -1,-1, -1, -1, -1, -1, -1, -1, -1, foci);
 	    
 	    List<University> list = ui.sortResults(listOfMatches, 'e');
@@ -186,7 +186,7 @@ public class UserFunctionalTests {
 		List<String> foci = new ArrayList<String>();
 	    foci.add("ENGINEERING");
 	    foci.add("ENGLISH");
-	    Set<University> listOfMatches = ui.searchSchool("","CALI", "URBAN", "STATE", 60000, 5000, 60, 25, -1, -1, -1, 
+	    List<University> listOfMatches = ui.searchSchool("","CALI", "URBAN", "STATE", 60000, 5000, 60, 25, -1, -1, -1, 
 	    		  -1, -1, -1, -1, -1, -1, -1, -1, -1,-1, -1, -1, -1, -1, -1, -1, -1, foci);
 	    
 	    List<University> list = ui.sortResults(listOfMatches, 'a');
@@ -206,7 +206,7 @@ public class UserFunctionalTests {
 		List<String> foci = new ArrayList<String>();
 	    foci.add("ENGINEERING");
 	    foci.add("ENGLISH");
-	    Set<University> listOfMatches = ui.searchSchool("","CALI", "URBAN", "STATE", 60000, 5000, 60, 25, -1, -1, -1, 
+	    List<University> listOfMatches = ui.searchSchool("","CALI", "URBAN", "STATE", 60000, 5000, 60, 25, -1, -1, -1, 
 	    		  -1, -1, -1, -1, -1, -1, -1, -1, -1,-1, -1, -1, -1, -1, -1, -1, -1, foci);
 	    
 	    List<University> list = ui.sortResults(listOfMatches, 'n');

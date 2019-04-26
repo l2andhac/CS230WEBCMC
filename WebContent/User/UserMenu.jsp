@@ -1,4 +1,4 @@
-"WebContent/UserMenu.jsp"<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     import="cmc.interaction.*, cmc.entity.*" pageEncoding="UTF-8"%>
     
     <%@include file="../verifyLogin.jsp" %>
@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>User Menu</title>
 </head>
-<body style="background-image: url(images/notebook.jpg); background-repeat: no-repeat; background-size: cover;">
+<body style="background-image: url(../images/notebook.jpg); background-repeat: no-repeat; background-size: cover;">
 <a href="LogOffUser.jsp">Log off</a>
 <br>
 <br>

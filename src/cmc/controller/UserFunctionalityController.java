@@ -63,12 +63,16 @@ public class UserFunctionalityController extends AccountFunctionalityController{
    * @return List<SavedSchool> - the list of schools saved by the "friend"
    */
   public List<SavedSchool> searchForFriends(String username) {
-	  User friend = (User) dbController.findAccount(username);
+	  
+	  Account friend = dbController.findAccount(username);
 	  if(friend == null) {
 		  throw new IllegalArgumentException("There is no user with this username");
 	  }
+	  else if(friend.getUserType()== 'a') {
+		  throw new IllegalArgumentException("The username you entered belongs to an administrator");
+	  }
 	  
-	  return viewSavedSchools(friend);
+	  return viewSavedSchools((User) friend);
   }
   
   /**

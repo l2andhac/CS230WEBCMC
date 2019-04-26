@@ -15,12 +15,12 @@ try{
 		if(account instanceof UserInteraction){
 			session.setAttribute("ai", (UserInteraction) account);
 			session.setAttribute("interactionType", "User");
-		response.sendRedirect("UserMenu.jsp");
+		response.sendRedirect("User/UserMenu.jsp");
 		}
 		else{
 			session.setAttribute("ai", (AdminInteraction) account);
 			session.setAttribute("interactionType", "Admin");
-		response.sendRedirect("AdminMenu.jsp");
+		response.sendRedirect("Admin/AdminMenu.jsp");
 		}
 	}
 	} catch (Exception e){

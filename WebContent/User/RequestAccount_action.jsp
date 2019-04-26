@@ -10,7 +10,7 @@ String username = request.getParameter("username");
 AccountInteraction aci = new AccountInteraction();
 aci.requestNewAccount(fname, lname, username, password);
 
-response.sendRedirect("index.jsp");
+response.sendRedirect("../index.jsp");
 }catch(Exception e){
 	String err = e.getMessage();
 	request.setAttribute("Error", err);

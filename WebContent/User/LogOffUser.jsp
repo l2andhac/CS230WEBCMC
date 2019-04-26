@@ -3,5 +3,5 @@
 	<%
 	UserInteraction ui = (UserInteraction)session.getAttribute("ai");
 	ui.logOff();
-	response.sendRedirect("index.jsp");
+	response.sendRedirect("../index.jsp");
 	%>

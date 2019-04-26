@@ -3,5 +3,5 @@
 	<%
 	AdminInteraction ai = (AdminInteraction)session.getAttribute("ai");
 	ai.logOff();
-	response.sendRedirect("index.jsp");
+	response.sendRedirect("../index.jsp");
 	%>

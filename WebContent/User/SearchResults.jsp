@@ -62,7 +62,7 @@
 				<td style="vertical-align: top;">
 					<%--<form method="post" action="ViewSchoolDetails.jsp" name="View">--%>
 					<%
-						out.println("<form method=\"post\" action=\"ViewSchoolDetails.jsp?schoolName=" + u.getSchoolName()
+						out.println("<form method=\"post\" action=\"../ViewSchoolDetails.jsp?schoolName=" + u.getSchoolName()
 									+ "\" name=\"View\">");
 							out.println("<input name = \"View\" value=\"View\" type=\"submit\">");
 							//out.println("<input name=\"View\" value=\"View\" type=\"submit\"> <input name=\"SchoolName\" value="

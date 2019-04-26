@@ -14,7 +14,7 @@
 	University school = ai.getSchool(schoolName);
 	//System.out.println(schoolName);
 %>
-<body style="background-image: url(images/pens.jpg); background-repeat: no-repeat; background-size: cover;">
+<body style="background-image: url(../images/pens.jpg); background-repeat: no-repeat; background-size: cover;">
 	<a href="AdminMenu.jsp">Back to Menu</a>
 	<form action="EditUniv_action.jsp">
 		<table style="text-align: left; width: 100%;" border="1"

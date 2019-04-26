@@ -98,7 +98,8 @@ public class UserInteraction extends AccountInteraction{
                 int percentAdmittedLo, int percentEnrollUp, int percentEnrollLo, int academicScaleUp, 
                 int academicScaleLo, int socialScaleUp, int socialScaleLo, int qualOfLifeScaleUp,
                 int qualOfLifeScaleLo, List<String> emphasis){
-	  if(name.equals("") && state.equals("") && location.equals("") && control.equals("") && enrollmentUp == -1
+	  if(name.equals("") && state.equals("") && (location.equals("") || Integer.parseInt(location) == -1)
+			  && (control.equals("") || Integer.parseInt(control) == -1) && enrollmentUp == -1
 	    		&& enrollmentLo == -1 && percentFemaleUp == -1 && percentFemaleLo == -1 && satVerbUp == -1 &&
 	    		enrollmentLo == -1 && satMathUp == -1 && satMathLo == -1 && expensesUp == -1 && expensesLo == -1 &&
 	    		percentFinancialAidUp == -1 && percentFinancialAidLo == -1 && applicantsUp == -1 && applicantsLo == -1 &&

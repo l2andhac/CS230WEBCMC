@@ -169,7 +169,7 @@ public class DBControllerTest {
 
 	@Test
 	public void testGetAllSchoolsNumberOfSchools() {
-		Set<University> allSchools = dbc.getAllSchools();
+		List<University> allSchools = dbc.getAllSchools();
 		int numSchools = dbc.getTotalNumberOfSchools();
 		assertTrue("The number of schools in the databse should be: " + numSchools,allSchools.size() == numSchools);
 	}
@@ -200,7 +200,7 @@ public class DBControllerTest {
 	@Test
 	public void testGetAllSchools() {
 		AdminFunctionalityController afc = new AdminFunctionalityController();
-		Set<University> allSchools = dbc.getAllSchools();
+		List<University> allSchools = dbc.getAllSchools();
 		University univ = dbc.getSchool("AUBURN");
 		boolean found = false;
 		for (University u:allSchools) {
@@ -257,7 +257,7 @@ public class DBControllerTest {
 		Set<University> s = new HashSet<University>();
 		s.add(u2);
 		//System.out.println(s);
-		Set<University> searchedSchools = dbc.findSearchedSchool(search);
+		List<University> searchedSchools = dbc.findSearchedSchool(search);
 		//System.out.println(searchedSchools);
 		assertTrue("School matches the search criteria", searchedSchools.toString().equals(s.toString()) && searchedSchools.size() == 1);
 	}
@@ -265,7 +265,7 @@ public class DBControllerTest {
 	@Test
 	public void testFindSearchedSchoolNotFound() {
 		search = new Search("NOWHERE UNIVERSITY", "MINNESOTA", "SUBURBAN", "PRIVATE", 8000, 8000, 30, 30, -1, -1, -1, -1, 5000, 5000, 11, 10, 10500, 10500, 95, 95, 70, 70, 2,2, 1, 1, 1, 1,foci2);
-		Set<University> searchedSchools = dbc.findSearchedSchool(search);
+		List<University> searchedSchools = dbc.findSearchedSchool(search);
 		assertTrue("No school matches the search criteria", searchedSchools.size() == 0);
 	}
 
@@ -304,7 +304,7 @@ public class DBControllerTest {
 
 	@Test
 	public void testViewAllAccounts() {
-		Set<Account> allAccounts = dbc.viewAllAccounts();
+		List<Account> allAccounts = dbc.viewAllAccounts();
 		int expectedSize = dbc.getTotalNumberOfAccounts();
 		//assertTrue("dummyUser should be one of the accounts viewed", allAccounts.contains("dummyUser2"));
 		assertTrue("size of the set should be " + expectedSize, allAccounts.size() == expectedSize);

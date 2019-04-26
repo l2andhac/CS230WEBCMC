@@ -18,7 +18,7 @@ function validateForm(){
 <title>Add New University</title>
 </head>
 
-<body style="background-image: url(images/book.jpg); background-repeat: no-repeat; background-size: cover;">
+<body style="background-image: url(../images/book.jpg); background-repeat: no-repeat; background-size: cover;">
 <a href="AdminMenu.jsp">Return to Menu</a><br>
 <%
 		String anyErrors = (String) request.getAttribute("Error");

@@ -31,7 +31,7 @@ function validateForm(){
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
 <title>AddAccount</title>
 </head>
-<body style="background-image: url(images/book.jpg); background-repeat: no-repeat; background-size: cover;">
+<body style="background-image: url(../images/book.jpg); background-repeat: no-repeat; background-size: cover;">
 <%
 		String anyErrors = (String) request.getAttribute("Error");
 		if (anyErrors != null) { %>

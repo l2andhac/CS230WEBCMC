@@ -49,50 +49,51 @@ function validateForm(){
 			&& emp2 == "" && emp3 =="" && emp4 == "" && emp5 == ""){
 		alert("Please fill out at least one field");
 		return false;
-	}else if(numStuLo <= 0 || numStuUp <=0 || femLo <= 0 || femUp <= 0 || verbLo <= 0 || verbUp <= 0
-			|| mathLo <= 0 || mathUp <= 0 || expensesLo <= 0 || expensesUp <= 0 || finAidLo <= 0 
-			|| finAidUp <= 0 || appLo <= 0 || appUp <= 0 || admLo <= 0 || admUp <= 0 || enrolLo <= 0 
-			|| enrolUp <= 0 || acadLo <= 0 || acadUp <= 0 || socLo <= 0 || socUp <= 0 || lifeLo <= 0
-			|| lifeUp <= 0){
+	} if(numStuLo < 0 || numStuUp <0 || femLo < 0 || femUp < 0 || verbLo < 0 || verbUp < 0
+			|| mathLo < 0 || mathUp < 0 || expensesLo < 0 || expensesUp < 0 || finAidLo < 0 
+			|| finAidUp < 0 || appLo < 0 || appUp < 0 || admLo < 0 || admUp < 0 || enrolLo < 0 
+			|| enrolUp < 0 || acadLo < 0 || acadUp < 0 || socLo < 0 || socUp < 0 || lifeLo < 0
+			|| lifeUp < 0){
 		alert("No negative entries allowed. Please enter a positive value or leave the field blank");
 		return false;
-	}else if(numStuLo > numStuUp){
+	} if(numStuLo > numStuUp){
 		alert("Numer of students lower bound must be lower than or equal to the upper bound");
 		return false;
-	}else if(femLo > femUp){
+	} if(femLo > femUp){
 		alert("Percent female lower bound must be lower than or equal to the upper bound");
 		return false;
-	}else if(verbLo > verbUp){
+	} if(verbLo > verbUp){
 		alert("SATVerbal lower bound must be lower than or equal to the upper bound");
 		return false;
-	}else if(mathLo > mathUp){
+	} if(mathLo > mathUp){
 		alert("SATMath lower bound bust be lower than or equal to the upper bound");
 		return false;
-	}else if(expensesLo > expensesUp){
+	} if(expensesLo > expensesUp){
 		alert("Expenses lower bound must be lower than or equal to the upper bound");
 		return false;
-	}else if(finAidLo > finAidUp){
+	} if(finAidLo > finAidUp){
 		alert("Financial Aid lower bound must be lower than or equal to the upper bound");
 		return false;
-	}else if(appLo > appUp){
+	} if(appLo > appUp){
 		alert("Applicants lower bound must be lower than or equal to the upper bound");
 		return false;
-	}else if(admLo > admUp){
+	} if(admLo > admUp){
 		alert("Admitted lower bound must be lower than or equal to the upper bound");
 		return false;
-	}else if(enrolLo > enrolUp){
+	} if(enrolLo > enrolUp){
 		alert("Enrollment lower bound must be lower than or equal to the upper bound");
 		return false;
-	}else if(acadLo > acadUp){
+	} if(acadLo > acadUp){
 		alert("Academic Scale lower bound must be lower than or equal to the upper bound");
 		return false;
-	}else if(lifeLo > lifeUp){
+	} if(lifeLo > lifeUp){
 		alert("Quality of Life Scale lower bound must be lower than or equal to the upper bound");
 		return false;
-	}else if(socLo > socUp){
+	} if(socLo > socUp){
 		alert("Social Scale lower bound must be lower than or equal to the upper bound");
 		return false;
-	}else if(numStuLo > 5 || numStuUp > 5 || femLo > 5 || femUp > 5 || verbLo > 5 || verbUp > 5
+	} 
+	if(numStuLo > 5 || numStuUp > 5 || femLo > 5 || femUp > 5 || verbLo > 5 || verbUp > 5
 			|| mathLo > 5 || mathUp > 5 || expensesLo > 5 || expensesUp > 5 || finAidLo > 5 
 			|| finAidUp > 5 || appLo > 5 || appUp > 5 || admLo > 5 || admUp > 5 || enrolLo > 5 
 			|| enrolUp > 5 || acadLo > 5 || acadUp > 5 || socLo > 5 || socUp > 5 || lifeLo > 5
@@ -107,25 +108,21 @@ function validateForm(){
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Search form</title>
 </head>
-<body style="background-image: url(images/laptop.jpg); background-repeat: no-repeat; background-size: cover;">
+<body style="background-image: url(../images/laptop.jpg); background-repeat: no-repeat; background-size: cover;">
 	<a href="UserMenu.jsp">Return to Menu</a>
 	<form action="Search_action.jsp" name="Search" onsubmit="return validateForm()">
 		<table style="text-align: left; height: 696px; width: 923px;"
 			border="1" cellpadding="2" cellspacing="2">
 			<tbody>
 				<tr>
-					<td style="vertical-align: top; height: 30px; width: 271px;">by
-						SCHOOL NAME<br>
+					<td>by SCHOOL NAME<br>
 					</td>
-					<td style="vertical-align: top; height: 30px; width: 634px;">Contains<input
-						name="SchoolName"></td>
+					<td>Contains<input name="SchoolName"></td>
 				</tr>
 				<tr>
-					<td style="vertical-align: top; height: 29px; width: 271px;">by
-						STATE<br>
+					<td>by STATE<br>
 					</td>
-					<td style="vertical-align: top; height: 29px; width: 634px;">Contains
-						<input name="State"><br>
+					<td>Contains<input name="State"><br>
 					</td>
 				</tr>
 				<tr>

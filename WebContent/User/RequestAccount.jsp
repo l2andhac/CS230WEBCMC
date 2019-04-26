@@ -4,11 +4,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script>
+function validateForm(){
+	var x = document.forms["RequestNewAccount"]["fName"].value;
+	var y = document.forms["RequestNewAccount"]["lName"].value;
+	var w = document.forms["RequestNewAccount"]["username"].value;
+	var z = document.forms["RequestNewAccount"]["password"].value;
+	if(x == "" || y == "" || z == "" || w == ""){
+		alert("Please fill out all the fields");
+		return false;
+	}
+}
+</script>
+
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Request a new account</title>
 </head>
-<body style="background-image: url(images/book.jpg); background-repeat: no-repeat; background-size: cover;">
-<a href="index.jsp">Back to Login Page<br></a>
+<body style="background-image: url(../images/book.jpg); background-repeat: no-repeat; background-size: cover;">
+<a href="../index.jsp">Back to Login Page<br></a>
 <%
 		String anyErrors = (String) request.getAttribute("Error");
 		if (anyErrors != null) { %>
@@ -23,7 +37,7 @@
 	<br> Your request will be pending until one of our administrator
 	approves your request.
 	<br>
-	<form action="RequestAccount_action.jsp" name="RequestNewAccount">
+	<form method="post" action="RequestAccount_action.jsp" name="RequestNewAccount" onsubmit="return validateForm()">
 		<table style="text-align: left; height: 130px; width: 394px;"
 			border="1" cellpadding="2" cellspacing="2">
 			<tbody>

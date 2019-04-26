@@ -30,7 +30,7 @@ function validateForm(){
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Edit Account</title>
 </head>
-<body style="background-image: url(images/pens.jpg); background-repeat: no-repeat; background-size: cover;">
+<body style="background-image: url(../images/pens.jpg); background-repeat: no-repeat; background-size: cover;">
 <a href=AdminMenu.jsp>Back to Menu<br></a>
 <%
 	AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
@@ -49,12 +49,12 @@ function validateForm(){
 <%
 		String anyErrors = (String) request.getAttribute("Error");
 		if (anyErrors != null) { %>
-		<i style="color:red">
+		<big><i style="color:red">
 		<%
 			out.println(anyErrors);
 		}
 		%>
-		</i>
+		</i></big>
 <form method="post" action="Edit_action.jsp" name="EditAccount" onsubmit="return validateForm()">
 		<br>
 		<table style="text-align: left; width: 266px; height: 228px;"

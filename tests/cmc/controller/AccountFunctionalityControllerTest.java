@@ -109,15 +109,15 @@ public class AccountFunctionalityControllerTest {
 
 	@Test
 	public void testViewAccountInfoAccount() {
-		String actual = afc.viewAccountInfo(user2);
-		assertTrue("The account information is correctly output", user2.toString().equals(actual));
+		User actual = (User) afc.viewAccountInfo(user2);
+		assertTrue("The account information is correctly output", user2.equals(actual));
 	}
 
 	@Test
 	public void testViewAccountInfoString() {
-		String actual = afc.viewAccountInfo("dummyuser7");
-		Account a = dbc.findAccount("dummyuser7");
-		assertTrue("The account info is correctly output", user.equals(a));
+		User actual = (User) afc.viewAccountInfo("dummyuser7");
+		//Account a = dbc.findAccount("dummyuser7");
+		assertTrue("The account info is correctly output", user.equals(actual));
 		//How to do this without the account to use the toString
 	}
 

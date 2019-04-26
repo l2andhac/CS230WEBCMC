@@ -19,7 +19,7 @@ function validateForm(){
 
 <title>Edit User Form</title>
 </head>
-<body style="background-image: url(images/pencils.jpg); background-repeat: no-repeat; background-size: cover;">
+<body style="background-image: url(../images/pencils.jpg); background-repeat: no-repeat; background-size: cover;">
 <a href="UserMenu.jsp">Return to menu</a>
 	<br> Edit User form:
 	<br>

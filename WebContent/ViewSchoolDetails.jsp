@@ -14,8 +14,8 @@
 	University school = ui.getSchool(schoolName);
 %>
 <body>
-	<a href="UserMenu.jsp">Back to Menu</a>
-	<form action="EditUniv_action.jsp">
+	<a href="User/UserMenu.jsp">Back to Menu</a>
+	<form action="Admin/EditUniv_action.jsp">
 		<table style="text-align: left; width: 100%;" border="1"
 			cellpadding="2" cellspacing="2">
 			<tbody>

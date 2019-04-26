@@ -8,10 +8,10 @@ try{
 	String p = request.getParameter("Password");
 	String t = request.getParameter("Type");
 	String s = request.getParameter("Status");
-	char type = t.charAt(0);
-	char status = s.charAt(0);
+	//char type = t.charAt(0);
+	//char status = s.charAt(0);
 	
-		ai.editAccountInfo(u, fn, ln, p, type, status);
+		ai.editAccountInfo(u, fn, ln, p, t.charAt(0), s.charAt(0));
 	    response.sendRedirect("AdminMenu.jsp");
 }catch(Exception e){
 	String err = e.getMessage();

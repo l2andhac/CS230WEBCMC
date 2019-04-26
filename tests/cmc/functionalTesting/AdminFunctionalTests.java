@@ -109,7 +109,7 @@ public class AdminFunctionalTests {
 
 	@Test
 	public void testViewAllSchools() {
-		Set<University> allSchools = ai.viewAllSchools();
+		List<University> allSchools = ai.viewAllSchools();
 		int expectedSize = dbc.getTotalNumberOfSchools();
 		assertTrue("There should be " + expectedSize + " schools in the database", allSchools.size() == expectedSize);
 		List<String> foci = new ArrayList<String>();
@@ -129,7 +129,7 @@ public class AdminFunctionalTests {
 
 	@Test
 	public void testViewAllAccounts() {
-		Set<Account> allAccounts = ai.viewAllAccounts();
+		List<Account> allAccounts = ai.viewAllAccounts();
 		int expectedSize = dbc.getTotalNumberOfAccounts();
 		//assertTrue("deactAdmin is in the Set", allAccounts.contains("deactAdmin"));
 		assertTrue("The size of the set is the correct size", expectedSize == allAccounts.size());

@@ -110,14 +110,14 @@ public class AdminFunctionalityControllerTest {
 
 	@Test
 	public void testViewAllSchoolsNumberOfSchools() {
-		Set<University> allSchools = afc.viewAllSchools();
+		List<University> allSchools = afc.viewAllSchools();
 		int numSchools = dbc.getTotalNumberOfSchools();
 		assertTrue("The number of schools in the databse should be: " + numSchools, allSchools.size() == numSchools);
 	}
 	
 	@Test
 	public void testViewAllSchools() {
-		Set<University> allSchools = afc.viewAllSchools();
+		List<University> allSchools = afc.viewAllSchools();
 		University univ = dbc.getSchool("AUBURN");
 		boolean found = false;
 		for(University u: allSchools) {
@@ -130,7 +130,7 @@ public class AdminFunctionalityControllerTest {
 
 	@Test
 	public void testViewAllAccounts() {
-		Set<Account> allAccounts = afc.viewAllAccounts();
+		List<Account> allAccounts = afc.viewAllAccounts();
 		int expectedSize = dbc.getTotalNumberOfAccounts();
 		//assertTrue("dummyUser should be one of the accounts viewed", allAccounts.contains("dummyUser"));
 		//assertTrue("dummyAdmin should be one of the accounts viewed", allAccounts.contains("dummyAdmin"));
