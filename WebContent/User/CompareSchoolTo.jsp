@@ -28,11 +28,11 @@
 					if(!s.getSchoolName().equals(schoolName1)){
 					out.println("<tr>");
 					out.println("<td style=\"vertical-align: top;\">");
-					out.println("<form method=\"post\" action=\"CompareSchools.jsp?schoolName=" + schoolName1 + "&schoolName2=" + s.getSchoolName() + "\" name=\"Compare\">");
+					out.println("<form method=\"post\" action=\"CompareSchools.jsp?schoolName1=" + schoolName1 + "&schoolName2=" + s.getSchoolName() + "\" name=\"Compare\">");
 					out.println("<input name = \"Compare\" value=\"Compare\"type=\"submit\">");
 					out.println("</form>");
 					out.println("</td>");
-					out.println("<td style=\"vertical-align: top;\">" + s.getSchoolName() + "</td>");
+					out.println("<td style=\"vertical-align: top;\"><input value=" + s.getSchoolName() + " name= \"sName\" type=\"text\"></td>");
 					out.println("</tr>");
 					}
 				}
