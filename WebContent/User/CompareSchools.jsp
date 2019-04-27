@@ -8,11 +8,14 @@
 <title>Compare Saved School Details</title>
 </head>
 <%UserInteraction ui = (UserInteraction) session.getAttribute("ai");
-String schoolName1 = request.getParameter("schoolName");
+String schoolName1 = request.getParameter("schoolName1");
 String schoolName2 = request.getParameter("schoolName2");
+String schoolName1a = request.getParameter("schoolName");
+String schoolName2a = request.getParameter("sName");
 List<University> schoolList = ui.compareSavedSchools(schoolName1, schoolName2);
 University school = schoolList.get(0);
 University school2 = schoolList.get(1);
+System.out.println(schoolName1a + schoolName2a);
 %>
 <body>
 	<a href="UserMenu.jsp">Back to Menu</a>
