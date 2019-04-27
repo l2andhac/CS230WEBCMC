@@ -18,11 +18,12 @@ function validateForm(){
 		alert("Please fill out all the fields");
 		return false;
 	}
-	if(w != 'Y' || w != 'N' || w != 'P' || w != 'D'){
+	else if(w != 'Y' && w != 'N' && w != 'P' && w != 'D'){
 		alert("Please enter a valid status");
 		return false;
 	}
-	if(v != 'u' || v != 'a'){
+	
+	else if(v != 'u' && v != 'a'){
 		alert("Please enter a valid type");
 		return false;
 	}

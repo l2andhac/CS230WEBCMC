@@ -91,29 +91,29 @@ public class UserInteraction extends AccountInteraction{
   * 
   * @return Set<University> that hold the Universities that match the search criteria
   */
-  public List<University> searchSchool(String name, String state, String location, String control, int enrollmentUp, 
-                int enrollmentLo, int percentFemaleUp, int percentFemaleLo, int satVerbUp, 
-                int satVerbLo, int satMathUp, int satMathLo, int expensesUp, int expensesLo, int percentFinancialAidUp, 
-                int percentFinancialAidLo,  int applicantsUp, int applicantsLo, int percentAdmittedUp,
-                int percentAdmittedLo, int percentEnrollUp, int percentEnrollLo, int academicScaleUp, 
-                int academicScaleLo, int socialScaleUp, int socialScaleLo, int qualOfLifeScaleUp,
-                int qualOfLifeScaleLo, List<String> emphasis){
+  public List<University> searchSchool(String name, String state, String location, String control, int enrollmentLo, 
+                int enrollmentUp, int percentFemaleLo, int percentFemaleUp, int satVerbLo, 
+                int satVerbUp, int satMathLo, int satMathUp, int expensesLo, int expensesUp, int percentFinancialAidLo, 
+                int percentFinancialAidUp,  int applicantsLo, int applicantsUp, int percentAdmittedLo,
+                int percentAdmittedUp, int percentEnrollLo, int percentEnrollUp, int academicScaleLo, 
+                int academicScaleUp, int socialScaleLo, int socialScaleUp, int qualOfLifeScaleLo,
+                int qualOfLifeScaleUp, List<String> emphasis){
 	  if(name.equals("") && state.equals("") && (location.equals("") || Integer.parseInt(location) == -1)
-			  && (control.equals("") || Integer.parseInt(control) == -1) && enrollmentUp == -1
-	    		&& enrollmentLo == -1 && percentFemaleUp == -1 && percentFemaleLo == -1 && satVerbUp == -1 &&
-	    		enrollmentLo == -1 && satMathUp == -1 && satMathLo == -1 && expensesUp == -1 && expensesLo == -1 &&
-	    		percentFinancialAidUp == -1 && percentFinancialAidLo == -1 && applicantsUp == -1 && applicantsLo == -1 &&
-	    		percentAdmittedUp == -1 && percentAdmittedLo == -1 && percentEnrollUp == -1 && percentEnrollLo == -1 && 
-	    		academicScaleUp == -1 && academicScaleLo == -1 && socialScaleUp == -1 && socialScaleLo == -1 && qualOfLifeScaleUp == -1
-	    		&& qualOfLifeScaleLo == -1 && (emphasis == null || emphasis.equals(new ArrayList<String>()))) {
+			  && (control.equals("") || Integer.parseInt(control) == -1) && enrollmentLo == -1
+	    		&& enrollmentUp == -1 && percentFemaleLo == -1 && percentFemaleUp == -1 && satVerbLo == -1 &&
+	    				satVerbUp == -1 && satMathLo == -1 && satMathUp == -1 && expensesLo == -1 && expensesUp == -1 &&
+	    		percentFinancialAidLo == -1 && percentFinancialAidUp == -1 && applicantsLo == -1 && applicantsUp == -1 &&
+	    		percentAdmittedLo == -1 && percentAdmittedUp == -1 && percentEnrollLo == -1 && percentEnrollUp == -1 && 
+	    		academicScaleLo == -1 && academicScaleUp == -1 && socialScaleLo == -1 && socialScaleUp == -1 && 
+	    		qualOfLifeScaleLo == -1	&& qualOfLifeScaleUp == -1 && (emphasis == null || emphasis.equals(new ArrayList<String>()))) {
 	    	return null;
 	    }
-    Search s = new Search( name,state, location, control,enrollmentUp, enrollmentLo, percentFemaleUp, 
-                          percentFemaleLo, satVerbUp, satVerbLo, satMathUp, satMathLo, expensesUp, expensesLo, percentFinancialAidUp, 
-                          percentFinancialAidLo, applicantsUp, applicantsLo, percentAdmittedUp,
-                          percentAdmittedLo, percentEnrollUp, percentEnrollLo, academicScaleUp, 
-                          academicScaleLo, socialScaleUp, socialScaleLo, qualOfLifeScaleUp,
-                          qualOfLifeScaleLo, emphasis);
+    Search s = new Search( name,state, location, control,enrollmentLo, enrollmentUp, percentFemaleLo, 
+                          percentFemaleUp, satVerbLo, satVerbUp, satMathLo, satMathUp, expensesLo, expensesUp, 
+                          percentFinancialAidLo, percentFinancialAidUp, applicantsLo, applicantsUp, percentAdmittedLo,
+                          percentAdmittedUp, percentEnrollLo, percentEnrollUp, academicScaleLo, 
+                          academicScaleUp, socialScaleLo, socialScaleUp, qualOfLifeScaleLo,
+                          qualOfLifeScaleUp, emphasis);
     
     return userFunctCont.searchSchool(s);
   }

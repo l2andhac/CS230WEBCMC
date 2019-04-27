@@ -56,7 +56,7 @@ function validateForm(){
 			|| lifeUp < 0){
 		alert("No negative entries allowed. Please enter a positive value or leave the field blank");
 		return false;
-	} if(numStuLo > numStuUp){
+	} if(numStuLo < numStuUp){
 		alert("Numer of students lower bound must be lower than or equal to the upper bound");
 		return false;
 	} if(femLo > femUp){
@@ -93,11 +93,8 @@ function validateForm(){
 		alert("Social Scale lower bound must be lower than or equal to the upper bound");
 		return false;
 	} 
-	if(numStuLo > 5 || numStuUp > 5 || femLo > 5 || femUp > 5 || verbLo > 5 || verbUp > 5
-			|| mathLo > 5 || mathUp > 5 || expensesLo > 5 || expensesUp > 5 || finAidLo > 5 
-			|| finAidUp > 5 || appLo > 5 || appUp > 5 || admLo > 5 || admUp > 5 || enrolLo > 5 
-			|| enrolUp > 5 || acadLo > 5 || acadUp > 5 || socLo > 5 || socUp > 5 || lifeLo > 5
-			|| lifeUp > 5){
+	if(acadLo < 1 && acadUp > 5 && socLo < 1 && socUp > 5 && lifeLo < 1
+			&& lifeUp > 5){
 		alert("Entries must be between 1 and 5 inclusive");
 		return false;
 		

@@ -19,7 +19,7 @@
 		Collection<University> schoollist = (Collection<University>) request.getAttribute("SchoolList");
 		//request.setAttribute("SortList", list);
 
-		//int size = list.size();
+		//int size = schoollist.size();
 		//out.println(size);
 	%>
 	<form action="SortResults_action.jsp" name="sort">
