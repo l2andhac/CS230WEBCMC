@@ -14,12 +14,15 @@
 		}
 	}
 </script>
-<body
-	style="background-image: url(images/chalk.jpg); background-repeat: no-repeat; background-size: cover;">
-	<h1 style="color: white;">Welcome to CMC</h1>
-
+<body style="background-image: url(images/chalk.jpg); background-repeat: no-repeat; background-size: cover;">
+	<section id="container">
+	<header class="lights">
+	<div id="light"></div>
+	<h1 style="color: white; font-family: cursive; text-align:center;">Welcome to CMC</h1>
+	</header>
+	
 	<br>
-	<h3 style="color: white;">Login:</h3>
+	
 	<%
 		String anyErrors = (String) request.getAttribute("Error");
 		String person = request.getParameter("name");
@@ -45,22 +48,36 @@
 
 
 <br>
+<nav id="menu">
+	
+<div id="connexion-box" role="presentation">
+<div><h3 style="color: white; text-align:center;">Login:</h3></div>
+<div role="presentation">
 	<form method="post" action="Login_action.jsp" name="Login"
-		onsubmit="return validateForm()">
-		<div id="userNameArea">
+		onsubmit="return validateForm()" >
+		<div id="userNameArea" style="text-align:center;">
 			<input name="Username" placeholder="Username">
 		</div>
 		<br>
-		<div id="passwordArea">
+		<div id="passwordArea" style="text-align:center;">
 			<input name="Password" placeholder="Password" type="password">
 
 		</div>
 		<br>
+		<div style="text-align:center;">
 		<input value="Log in"
 						name="Log in" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input value="Reset"
 						name="Reset" type="reset">
-		<br><br> <a href="ForgotPassword.jsp">Forgot password</a> <br><br> <a
-			href="User/RequestAccount.jsp">Request New Account</a><br>
+		</div>
+		
+		<br><h4 style="text-align:center;"><small style="text-align:center;"><a href="ForgotPassword.jsp">Forgot password?</a></small></h4>
+		 <h4 style="text-align:center;"><small style="text-align:center;"><a href="User/RequestAccount.jsp">Request New Account</a></small></h4>
+		 <br>
 	</form>
+	</div>
+
+	</div>
+	</nav>
+	</section>
 </body>
 </html>
