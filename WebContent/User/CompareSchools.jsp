@@ -15,6 +15,7 @@ String schoolName2a = request.getParameter("sName");
 List<University> schoolList = ui.compareSavedSchools(schoolName1, schoolName2);
 University school = schoolList.get(0);
 University school2 = schoolList.get(1);
+
 System.out.println(schoolName1a + schoolName2a);
 %>
 <body>
@@ -103,11 +104,43 @@ System.out.println(schoolName1a + schoolName2a);
 					<td><input disabled="disabled" value=<%=school.getQualityOfLifeScale()%> name="QualScale" type="text"></td>
 					<td><input disabled="disabled" value=<%=school2.getQualityOfLifeScale()%> name="QualScale" type="text"></td>
 				</tr>
+				<tr>
+					<td>EMPHASES</td>
+					<%
+					    List<String> s1emph = school.getEmphases();
+						List<String> s2emph = school2.getEmphases();
+					%>
+					<%
+						int i = 0;
+					%>
+					<td>
+						<%
+							if (s1emph.size() != 0) {
+								for (; i < s1emph.size(); i++) {
+						%> <input disabled="disabled" value=<%=s1emph.get(i)%>
+						name="Emphases" type="text"> <br><%
+						
+ 	}
+ 	}
+ %>
+					</td>
+					<%
+						int j = 0;
+					%>
+					<td>
+						<%
+							if (s2emph.size() != 0) {
+								for (; j < s2emph.size(); j++) {
+						%> <input disabled="disabled" value=<%=s2emph.get(j)%>
+						name="Emphases" type="text"> <br><%
+ 	}
+ 	}
+ %>
+					</td>
+				</tr>
 			</tbody>
 		</table>
 	</form>
-	
-	
 </body>
 </html>
 
