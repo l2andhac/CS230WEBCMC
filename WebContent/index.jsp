@@ -51,7 +51,7 @@
 <nav id="menu">
 	
 <div id="connexion-box" role="presentation">
-<div><h3 style="color: white; text-align:center;">Login:</h3></div>
+<div><h3 style="color: white; text-align:center;">Log in:</h3></div>
 <div role="presentation">
 	<form method="post" action="Login_action.jsp" name="Login"
 		onsubmit="return validateForm()" >

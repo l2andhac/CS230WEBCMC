@@ -21,9 +21,7 @@ function validateForm(){
 </head>
 <body style="background-image: url(../images/pencils.jpg); background-repeat: no-repeat; background-size: cover;">
 <a href="UserMenu.jsp">Return to menu</a>
-	<br> Edit User form:
-	<br>
-
+	<br> <h3>Profile</h3>
 	<%
 		UserInteraction ui = (UserInteraction) session.getAttribute("ai");
 		if(ui == null){
@@ -37,10 +35,10 @@ function validateForm(){
 	<form method="post" action="Edit_User_Action.jsp" name="editUser" onsubmit="return validateForm()">
 		<br>
 		<table style="text-align: left; width: 266px; height: 228px;"
-			border="1">
+			border="0">
 			<tbody>
 				<tr>
-					<td style="vertical-align: top;">First Name<br>
+					<td style="vertical-align: top;">First Name:<br>
 					</td>
 					<%
 						out.println("<td style=\"vertical-align: top;\"><input name=\"FirstName\" value=" + eUser.getFirstName()
@@ -50,7 +48,7 @@ function validateForm(){
 				</tr>
 				<tr>
 				<tr>
-					<td style="vertical-align: top;">Last Name<br>
+					<td style="vertical-align: top;">Last Name:<br>
 					</td>
 					<%
 						out.println("<td style=\"vertical-align: top;\"><input name=\"LastName\" value=" + eUser.getLastName()
@@ -59,7 +57,7 @@ function validateForm(){
 					</td>
 				</tr>
 				<tr>
-					<td style="vertical-align: top;">Username<br>
+					<td style="vertical-align: top;">Username:<br>
 					</td>
 					<%
 						out.println("<td style=\"vertical-align: top;\"><input name=\"Username\" value=" + eUser.getUsername()
@@ -68,7 +66,7 @@ function validateForm(){
 					</td>
 				</tr>
 				<tr>
-					<td style="vertical-align: top;">Password<br>
+					<td style="vertical-align: top;">Password:<br>
 					</td>
 					<%
 						out.println("<td style=\"vertical-align: top;\"><input name=\"Password\" value=" + eUser.getPassword()
@@ -76,7 +74,7 @@ function validateForm(){
 					%>
 				</tr>
 				<tr>
-					<td style="vertical-align: top;">Type<br>
+					<td style="vertical-align: top;">Type:<br>
 					</td>
 					<%
 						out.println("<td style=\"vertical-align: top;\"><input name=\"Type\" value=" + eUser.getUserType()

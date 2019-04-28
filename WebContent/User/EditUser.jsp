@@ -20,34 +20,34 @@ String s = request.getParameter("Status");
 <form method="post" action="Edit_User_Action.jsp" name="EditUser">
 		<br>
 		<table style="text-align: left; width: 266px; height: 228px;"
-			border="1" cellpadding="2" cellspacing="2">
+			border="0" cellpadding="2" cellspacing="2">
 			<tbody>
 			    <tr>
-					<td style="vertical-align: top;">First Name<br>
+					<td style="vertical-align: top;">First Name:<br>
 					</td>
 					<%out.println("<td style=\"vertical-align: top;\"><input name=\"FirstName\" value="+fn+"><br>");%>
 					</td>
 				</tr>
 				<tr>
-					<td style="vertical-align: top;">Last Name<br>
+					<td style="vertical-align: top;">Last Name:<br>
 					</td>
 					<td style="vertical-align: top;"><input name="LastName" value = <%out.println(ln);%>>
 					</td>
 				</tr>
 				<tr>
-					<td style="vertical-align: top;">Username<br>
+					<td style="vertical-align: top;">Username:<br>
 					</td>
 					<td style="vertical-align: top;"><input disabled="disabled" name="Username" value = <%out.println(u);%>>
 					</td>
 				</tr>
 				<tr>
-					<td style="vertical-align: top;">Password<br>
+					<td style="vertical-align: top;">Password:<br>
 					</td>
 					<td style="vertical-align: top;"><input name="Password" value = <%out.println(p);%>>
 					</td>
 				</tr>
 				<tr>
-					<td style="vertical-align: top;">Type<br>
+					<td style="vertical-align: top;">Type:<br>
 					</td>
 					<td style="vertical-align: top;"><input disabled="disabled" name="Type" value = <%out.println(t);%>>
 					</td>
