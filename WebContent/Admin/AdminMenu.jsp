@@ -15,7 +15,7 @@
 <%
 		AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
 	%>
-Welcome to the Admin Page, <%=ai.getUsername()%>
+Welcome to the Admin Page, <%=ai.getAccount().getFirstName()%>
 <br>
 <a href="ManageUniversities.jsp">Manage Universities</a>
 <br>

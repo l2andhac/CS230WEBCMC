@@ -10,7 +10,7 @@ try{
 	String s = request.getParameter("Status");
 
 	    ui.editAccountInfo(fn, ln, p);
-	    response.sendRedirect("ManageProfile.jsp");
+	    response.sendRedirect("UserMenu.jsp");
 	    //instead of sendRedirect to EditUser.jsp
 }catch(Exception e){
 	out.println(e.getMessage());

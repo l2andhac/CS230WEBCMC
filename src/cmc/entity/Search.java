@@ -133,11 +133,11 @@ public class Search {
 	 * 
 	 * @param emphasis the areas of focus of a school
 	 */
-	public Search(String name, String state, String location, String control, int enrollmentUp, int enrollmentLo,
-			int percentFemaleUp, int percentFemaleLo, int satVerbUp, int satVerbLo, int satMathUp, int satMathLo,
-			int expensesUp, int expensesLo, int percentFinancialAidUp, int percentFinancialAidLo, int applicantsUp, int applicantsLo,
-			int percentAdmittedUp, int percentAdmittedLo, int percentEnrollUp, int percentEnrollLo, int academicScaleUp,
-			int academicScaleLo, int socialScaleUp, int socialScaleLo, int qualOfLifeScaleUp, int qualOfLifeScaleLo,
+	public Search(String name, String state, String location, String control, int enrollmentLo, int enrollmentUp,
+			int percentFemaleLo, int percentFemaleUp, int satVerbLo, int satVerbUp, int satMathLo, int satMathUp,
+			int expensesLo, int expensesUp, int percentFinancialAidLo, int percentFinancialAidUp, int applicantsLo, int applicantsUp,
+			int percentAdmittedLo, int percentAdmittedUp, int percentEnrollLo, int percentEnrollUp, int academicScaleLO,
+			int academicScaleUp, int socialScaleLo, int socialScaleUp, int qualOfLifeScaleLo, int qualOfLifeScaleUp,
 			List<String> emphasis) {
 		this.name = name;
 		this.state = state;
