@@ -55,14 +55,15 @@ function validateForm(){
 			|| enrolUp < 0 || acadLo < 0 || acadUp < 0 || socLo < 0 || socUp < 0 || lifeLo < 0
 			|| lifeUp < 0){
 		alert("No negative entries allowed. Please enter a positive value or leave the field blank");
+		return false; 
+	} if(femLo > femUp){
+		alert("Percent female lower bound must be lower than or equal to the upper bound");
 		return false;
 	} if(numStuLo > numStuUp){
 		alert("Number of students lower bound must be lower than or equal to the upper bound");
 		return false;
-	} if(femLo > femUp){
-		alert("Percent female lower bound must be lower than or equal to the upper bound");
-		return false;
-	} if(verbLo > verbUp){
+	}
+	if(verbLo > verbUp){
 		alert("SATVerbal lower bound must be lower than or equal to the upper bound");
 		return false;
 	} if(mathLo > mathUp){
