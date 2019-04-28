@@ -9,8 +9,8 @@
 function validateForm(){
 	var name = document.forms["Search"]["SchoolName"].value;
 	var state = document.forms["Search"]["State"].value;
-	var location = document.forms["Search"]["Location"].value);
-	var control = document.forms["Search"]["Control"].value);
+	var location = document.forms["Search"]["Location"].value;
+	var control = document.forms["Search"]["Control"].value;
 	var numStuLo = parseInt(document.forms["Search"]["NumStudentsDown"].value);
 	var numStuUp = parseInt(document.forms["Search"]["NumStudentsUp"].value);
 	var femLo = parseInt(document.forms["Search"]["FemaleDown"].value);
@@ -49,7 +49,8 @@ function validateForm(){
 			&& emp2 == "" && emp3 =="" && emp4 == "" && emp5 == ""){
 		alert("Please fill out at least one field");
 		return false;
-	} if(numStuLo < 0 || numStuUp <0 || femLo < 0 || femUp < 0 || verbLo < 0 || verbUp < 0
+	} 
+	if(numStuLo < 0 || numStuUp <0 || femLo < 0 || femUp < 0 || verbLo < 0 || verbUp < 0
 			|| mathLo < 0 || mathUp < 0 || expensesLo < 0 || expensesUp < 0 || finAidLo < 0 
 			|| finAidUp < 0 || appLo < 0 || appUp < 0 || admLo < 0 || admUp < 0 || enrolLo < 0 
 			|| enrolUp < 0 || acadLo < 0 || acadUp < 0 || socLo < 0 || socUp < 0 || lifeLo < 0
