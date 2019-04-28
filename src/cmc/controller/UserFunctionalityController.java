@@ -1,5 +1,8 @@
 package cmc.controller;
 import cmc.entity.*;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.Map.Entry;
@@ -138,10 +141,17 @@ public class UserFunctionalityController extends AccountFunctionalityController{
   public void saveSchool(University univ, User user){
 	  List<SavedSchool> list = dbController.getSavedSchools(user);
 	  
-	  SavedSchool schoolToSave = new SavedSchool(univ, "time");
+	  SimpleDateFormat timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+
+      String strTS = timeStamp.format(new Date());
+
+	  SavedSchool schoolToSave = new SavedSchool(univ, strTS);
 	  
 	  if(list.size() == 0) {
+		  //SimpleDateFormat timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		  //schoolToSave.setTimeStamp(timeStamp);
 		  dbController.addSavedSchool(user, schoolToSave);
+		  
 	  }
 	  
 	  boolean found = false;
@@ -151,6 +161,8 @@ public class UserFunctionalityController extends AccountFunctionalityController{
 			}
 		}
 	  if(!found) {
+		  //SimpleDateFormat timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		  //schoolToSave.setTimeStamp(timeStamp);
 		  dbController.addSavedSchool(user, schoolToSave);
 		  //user.addSavedSchool(schoolToSave);
       }

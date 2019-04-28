@@ -14,22 +14,20 @@ import java.text.SimpleDateFormat;
  */
 public class SavedSchool extends University {
   //timeStamp that keeps track of when a SavedSchool is added
-  private DateFormat timeStamp;
+  private String timeStamp;
   
   /**
    * Constructor that creates a Saved School 
    * @param u - University that the SavedSchool object represents
    * @param timeStamp - keeps track of when a SavedSchool is added
    */
-  public SavedSchool(University u, String ts) {
+  public SavedSchool(University u, String timeStamp) {
     super(u.getSchoolName(), u.getState(), u.getLocation(), u.getControl(),
                                         u.getNumStudents(), u.getPercentFemales(), u.getSATVerbal(), u.getSATMath(),
                                         u.getExpenses(), u.getPercentFinancialAid(), u.getNumApplicants(),
                                         u.getPercentAdmitted(), u.getPercentEnrolled(), u.getAcademicScale(),
                                         u.getSocialScale(), u.getQualityOfLifeScale(), u.getEmphases());
-    if(timeStamp == null) {
-    this.timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-    }
+    this.timeStamp = timeStamp;
   }
   
   /**
@@ -38,8 +36,7 @@ public class SavedSchool extends University {
    * @return the time stamp of the university
    */
   public String getTimeStamp() {
-	  String strDate = timeStamp.format(new Date());
-    return strDate;
+    return timeStamp;
   }
   
   /**
@@ -47,7 +44,7 @@ public class SavedSchool extends University {
    * 
    * @param time the time the university was saved at
    */
-  public void setTimeStamp(SimpleDateFormat time) {
+  public void setTimeStamp(String time) {
     this.timeStamp = time;
   }
   
