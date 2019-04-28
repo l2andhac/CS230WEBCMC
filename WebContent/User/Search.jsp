@@ -13,28 +13,28 @@ function validateForm(){
 	var control = document.forms["Search"]["Control"].value;
 	var numStuLo = parseInt(document.forms["Search"]["NumStudentsDown"].value);
 	var numStuUp = parseInt(document.forms["Search"]["NumStudentsUp"].value);
-	var femLo = document.forms["Search"]["FemaleDown"].value;
-	var femUp = document.forms["Search"]["FemaleUp"].value;
-	var verbLo = document.forms["Search"]["VerbalDown"].value;
-	var verbUp = document.forms["Search"]["VerbalUp"].value;
-	var mathLo = document.forms["Search"]["MathDown"].value;
-	var mathUp = document.forms["Search"]["MathUp"].value;
-	var expensesLo = document.forms["Search"]["ExpensesDown"].value;
-	var expensesUp = document.forms["Search"]["ExpensesUp"].value;
-	var finAidLo = document.forms["Search"]["FinancialAidDown"].value;
-	var finAidUp = document.forms["Search"]["FinancialAidUp"].value;
-	var appLo = document.forms["Search"]["ApplicantsDown"].value;
-	var appUp = document.forms["Search"]["ApplicantsUp"].value;
-	var admLo = document.forms["Search"]["AdmittedDown"].value;
-	var admUp = document.forms["Search"]["AdmittedUp"].value;
-	var enrolLo = document.forms["Search"]["EnrolledDown"].value;
-	var enrolUp = document.forms["Search"]["EnrolledUp"].value;
-	var acadLo = document.forms["Search"]["AcademicsDown"].value;
-	var acadUp = document.forms["Search"]["AcademicsUp"].value;
-	var socLo = document.forms["Search"]["SocialDown"].value;
-	var socUp = document.forms["Search"]["SocialUp"].value;
-	var lifeLo = document.forms["Search"]["LifeDown"].value;
-	var lifeUp = document.forms["Search"]["LifeUp"].value;
+	var femLo = parseInt(document.forms["Search"]["FemaleDown"].value);
+	var femUp = parseInt(document.forms["Search"]["FemaleUp"].value);
+	var verbLo = parseInt(document.forms["Search"]["VerbalDown"].value);
+	var verbUp = parseInt(document.forms["Search"]["VerbalUp"].value);
+	var mathLo = parseInt(document.forms["Search"]["MathDown"].value);
+	var mathUp = parseInt(document.forms["Search"]["MathUp"].value);
+	var expensesLo = parseInt(document.forms["Search"]["ExpensesDown"].value);
+	var expensesUp = parseInt(document.forms["Search"]["ExpensesUp"].value);
+	var finAidLo = parseInt(document.forms["Search"]["FinancialAidDown"].value);
+	var finAidUp = parseInt(document.forms["Search"]["FinancialAidUp"].value);
+	var appLo = parseInt(document.forms["Search"]["ApplicantsDown"].value);
+	var appUp = parseInt(document.forms["Search"]["ApplicantsUp"].value);
+	var admLo = parseInt(document.forms["Search"]["AdmittedDown"].value);
+	var admUp = parseInt(document.forms["Search"]["AdmittedUp"].value);
+	var enrolLo = parseInt(document.forms["Search"]["EnrolledDown"].value);
+	var enrolUp = parseInt(document.forms["Search"]["EnrolledUp"].value);
+	var acadLo = parseInt(document.forms["Search"]["AcademicsDown"].value);
+	var acadUp = parseInt(document.forms["Search"]["AcademicsUp"].value);
+	var socLo = parseInt(document.forms["Search"]["SocialDown"].value);
+	var socUp = parseInt(document.forms["Search"]["SocialUp"].value);
+	var lifeLo = parseInt(document.forms["Search"]["LifeDown"].value);
+	var lifeUp = parseInt(document.forms["Search"]["LifeUp"].value);
 	var emp1 = document.forms["Search"]["Emphasis1"].value;
 	var emp2 = document.forms["Search"]["Emphasis2"].value;
 	var emp3 = document.forms["Search"]["Emphasis3"].value;
@@ -49,7 +49,8 @@ function validateForm(){
 			&& emp2 == "" && emp3 =="" && emp4 == "" && emp5 == ""){
 		alert("Please fill out at least one field");
 		return false;
-	} if(numStuLo < 0 || numStuUp <0 || femLo < 0 || femUp < 0 || verbLo < 0 || verbUp < 0
+	} 
+	if(numStuLo < 0 || numStuUp <0 || femLo < 0 || femUp < 0 || verbLo < 0 || verbUp < 0
 			|| mathLo < 0 || mathUp < 0 || expensesLo < 0 || expensesUp < 0 || finAidLo < 0 
 			|| finAidUp < 0 || appLo < 0 || appUp < 0 || admLo < 0 || admUp < 0 || enrolLo < 0 
 			|| enrolUp < 0 || acadLo < 0 || acadUp < 0 || socLo < 0 || socUp < 0 || lifeLo < 0
@@ -100,6 +101,15 @@ function validateForm(){
 		return false;
 		
 	}
+	if (femUp > 100 || finAidUp > 100 || admUp > 100 || enrolUp > 100|| femLo > 100 || finAidLo > 100
+			|| admLo > 100){
+		alert("Percents have a maximum value of 100");
+		return false;
+	}
+	if(mathUp > 800 || verbUp > 800){
+		alert("SAT scores have a maximum value of 800");
+		return false;
+	}
 	
 }
 </script>
@@ -134,24 +144,34 @@ function validateForm(){
 					<td style="vertical-align: top; height: 31px; width: 271px;">by
 						LOCATION:<br>
 					</td>
-					<td style="vertical-align: top; height: 31px; width: 634px;"><input
-						name="Location"> (SUBURBAN, URBAN, SMALL-CITY or -1 for
-						UNKNOWN)</td>
+					<td style="vertical-align: top; height: 31px; width: 634px;"><select
+						name="Location">
+						
+						<option></option>
+						<option value="SUBURBAN">Suburban</option>
+						<option value="URBAN">Urban</option>
+						<option value="SMALL-CITY">Small-City</option>
+						</select>
+						</td>
 				</tr>
 				<tr>
 					<td style="vertical-align: top; height: 31px; width: 271px;">by
 						CONTROL:<br>
 					</td>
-					<td style="vertical-align: top; height: 31px; width: 634px;"><input
-						name="Control"> (PRIVATE, STATE, CITY or&nbsp; -1 for
-						UNKNOWN)</td>
+					<td style="vertical-align: top; height: 31px; width: 634px;"><select
+						name="Control">
+						<option></option>
+						<option value="PRIVATE">Private</option>
+						<option value="STATE">State</option>
+						<option value="City">City</option>
+						</select></td>
 				</tr>
 				<tr>
 					<td style="vertical-align: top; height: 30px; width: 271px;">by
 						NUMBER OF STUDENTS:<br>
 					</td>
 					<td style="vertical-align: top; height: 30px; width: 634px;">between&nbsp;<input
-						name="NumStudentsDown" type="number"> and <input name="NumStudentsUp" type="number"><br>
+						name="NumStudentsDown" type="number" min="1"> and <input name="NumStudentsUp" type="number" min="1"><br>
 					</td>
 				</tr>
 				<tr>
@@ -159,7 +179,7 @@ function validateForm(){
 						% FEMALE:<br>
 					</td>
 					<td style="vertical-align: top; height: 31px; width: 634px;">between&nbsp;<input
-						name="FemaleDown"> and&nbsp;<input name="FemaleUp">
+						name="FemaleDown" type="number" min="1" max="100"> and&nbsp;<input name="FemaleUp" type="number" min="1" max="100">
 						<br>
 					</td>
 				</tr>
@@ -168,7 +188,7 @@ function validateForm(){
 						SAT VERBAL:<br>
 					</td>
 					<td style="vertical-align: top; height: 30px; width: 634px;">between&nbsp;<input
-						name="VerbalDown"> and&nbsp;<input name="VerbalUp">
+						name="VerbalDown" type="number" min="1"> and&nbsp;<input name="VerbalUp" type="number" min="1" max="100">
 						<br>
 					</td>
 				</tr>
@@ -177,7 +197,7 @@ function validateForm(){
 						SAT MATH:<br>
 					</td>
 					<td style="vertical-align: top; height: 30px; width: 634px;">between&nbsp;<input
-						name="MathDown"> and&nbsp;<input name="MathUp"> <br>
+						name="MathDown" type="number" min="1"> and&nbsp;<input name="MathUp" type="number" min="1"> <br>
 					</td>
 				</tr>
 				<tr>
@@ -185,7 +205,7 @@ function validateForm(){
 						EXPENSES:<br>
 					</td>
 					<td style="vertical-align: top; height: 29px; width: 634px;">between&nbsp;<input
-						name="ExpensesDown"> and&nbsp;<input name="ExpensesUp">
+						name="ExpensesDown" type="number" min="1"> and&nbsp;<input name="ExpensesUp" type="number" min="1">
 						<br>
 					</td>
 				</tr>
@@ -194,8 +214,8 @@ function validateForm(){
 						% FINANCIAL AID:<br>
 					</td>
 					<td style="vertical-align: top; height: 28px; width: 634px;">between&nbsp;<input
-						name="FinancialAidDown"> and&nbsp;<input
-						name="FinancialAidUp"> <br>
+						name="FinancialAidDown" type="number" min="1" max="100"> and&nbsp;<input
+						name="FinancialAidUp" type="number" min="1" max="100"> <br>
 					</td>
 				</tr>
 				<tr>
@@ -203,7 +223,7 @@ function validateForm(){
 						NUMBER OF APPLICANTS:<br>
 					</td>
 					<td style="vertical-align: top; height: 26px; width: 634px;">between&nbsp;<input
-						name="ApplicantsDown"> and&nbsp;<input name="ApplicantsUp">
+						name="ApplicantsDown" type="number" min="1"> and&nbsp;<input name="ApplicantsUp" type="number" min="1">
 					</td>
 				</tr>
 				<tr>
@@ -211,7 +231,7 @@ function validateForm(){
 						% ADMITTED:<br>
 					</td>
 					<td style="vertical-align: top; height: 29px; width: 634px;">between&nbsp;<input
-						name="AdmittedDown"> and&nbsp;<input name="AdmittedUp">
+						name="AdmittedDown" type="number" min="1" max="100"> and&nbsp;<input name="AdmittedUp" type="number" min="1" max="100">
 					</td>
 				</tr>
 				<tr>
@@ -219,7 +239,7 @@ function validateForm(){
 						% ENROLLED:<br>
 					</td>
 					<td style="vertical-align: top; height: 29px; width: 634px;">between&nbsp;<input
-						name="EnrolledDown"> and&nbsp;<input name="EnrolledUp">
+						name="EnrolledDown" type="number" min="1" max="100"> and&nbsp;<input name="EnrolledUp" type="number" min="1" max="100">
 					</td>
 				</tr>
 				<tr>
@@ -227,7 +247,7 @@ function validateForm(){
 						ACADEMICS SCALE (1-5):<br>
 					</td>
 					<td style="vertical-align: top; height: 29px; width: 634px;">between&nbsp;<input
-						name="AcademicsDown"> and&nbsp;<input name="AcademicsUp">
+						name="AcademicsDown" type="number" min="1" max="5"> and&nbsp;<input name="AcademicsUp" type="number" min="1" max="5">
 					</td>
 				</tr>
 				<tr>
@@ -235,7 +255,7 @@ function validateForm(){
 						SOCIAL SCALE (1-5):<br>
 					</td>
 					<td style="vertical-align: top; height: 28px; width: 634px;">between&nbsp;<input
-						name="SocialDown"> and&nbsp;<input name="SocialUp">
+						name="SocialDown" type="number" min="1" max="5"> and&nbsp;<input name="SocialUp" type="number" min="1" max="5">
 					</td>
 				</tr>
 				<tr>
@@ -243,7 +263,7 @@ function validateForm(){
 						QUALITY OF LIFE SCALE (1-5):<br>
 					</td>
 					<td style="vertical-align: top; height: 28px; width: 634px;">between&nbsp;<input
-						name="LifeDown"> and&nbsp;<input name="LifeUp">
+						name="LifeDown" type="number" min="1" max="5"> and&nbsp;<input name="LifeUp" type="number" min="1" max="5">
 					</td>
 				</tr>
 				<tr>
