@@ -11,8 +11,8 @@ function validateForm(){
 	var state = document.forms["Search"]["State"].value;
 	var location = document.forms["Search"]["Location"].value;
 	var control = document.forms["Search"]["Control"].value;
-	var numStuLo = document.forms["Search"]["NumStudentsDown"].value;
-	var numStuUp = document.forms["Search"]["NumStudentsUp"].value;
+	var numStuLo = parseInt(document.forms["Search"]["NumStudentsDown"].value);
+	var numStuUp = parseInt(document.forms["Search"]["NumStudentsUp"].value);
 	var femLo = document.forms["Search"]["FemaleDown"].value;
 	var femUp = document.forms["Search"]["FemaleUp"].value;
 	var verbLo = document.forms["Search"]["VerbalDown"].value;
@@ -151,7 +151,7 @@ function validateForm(){
 						NUMBER OF STUDENTS:<br>
 					</td>
 					<td style="vertical-align: top; height: 30px; width: 634px;">between&nbsp;<input
-						name="NumStudentsDown"> and <input name="NumStudentsUp"><br>
+						name="NumStudentsDown" type="number"> and <input name="NumStudentsUp" type="number"><br>
 					</td>
 				</tr>
 				<tr>
