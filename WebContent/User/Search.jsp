@@ -15,8 +15,8 @@ function validateForm(){
 	var numStuUp = parseInt(document.forms["Search"]["NumStudentsUp"].value);
 	var femLo = parseFloat(document.forms["Search"]["FemaleDown"].value);
 	var femUp = parseFloat(document.forms["Search"]["FemaleUp"].value);
-	var verbLo = parseFloat(document.forms["Search"]["VerbalDown"].value);
-	var verbUp = parseFloat(document.forms["Search"]["VerbalUp"].value);
+	var verbLo = parseInt(document.forms["Search"]["VerbalDown"].value);
+	var verbUp = parseInt(document.forms["Search"]["VerbalUp"].value);
 	var mathLo = parseFloat(document.forms["Search"]["MathDown"].value);
 	var mathUp = parseFloat(document.forms["Search"]["MathUp"].value);
 	var expensesLo = parseFloat(document.forms["Search"]["ExpensesDown"].value);
