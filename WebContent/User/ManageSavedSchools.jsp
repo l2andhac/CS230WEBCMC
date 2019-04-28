@@ -33,7 +33,7 @@
 						out.println("<input name = \"View\" value=\"View\" type=\"submit\">");
 						out.println("</form>");
 						out.println("</td>");
-						out.println("<td style=\"vertical-align: top;\">" + s.getSchoolName() + "</td>");
+						out.println("<td style=\"vertical-align: top;\">" + s.getSchoolName() + " " + s.getTimeStamp() + "</td>");
 						out.println("<td style=\"vertical-align: top;\">");
 						out.println("<form method=\"post\" action=\"DeleteSavedSchoolAction.jsp?Name=" + s.getSchoolName() + "\" name=\"Remove\">");
 						out.println("<input name=\"Remove\" value=\"Remove\" type=\"submit\">");
@@ -41,6 +41,7 @@
 						out.println("</td>");
 						out.println("</tr>");
 					}
+					
 				}
 				else{
 				for (SavedSchool s : savedSchools) {
@@ -55,7 +56,7 @@
 					out.println("<input name = \"View\" value=\"View\" type=\"submit\">");
 					out.println("</form>");
 					out.println("</td>");
-					out.println("<td style=\"vertical-align: top;\">" + s.getSchoolName() + "</td>");
+					out.println("<td style=\"vertical-align: top;\">" + s.getSchoolName() + " (added on: " + s.getTimeStamp() + ") " + "</td>");
 					out.println("<td style=\"vertical-align: top;\">");
 					out.println("<form method=\"post\" action=\"DeleteSavedSchoolAction.jsp?Name=" + s.getSchoolName() + "\" name=\"Remove\">");
 					out.println("<input name=\"Remove\" value=\"Remove\" type=\"submit\">");

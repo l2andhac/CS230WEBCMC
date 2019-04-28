@@ -1,7 +1,8 @@
 package cmc.entity;
 
+import java.util.Date;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.*;
 /**
  * SavedSchool.java
  * 
@@ -13,7 +14,7 @@ import java.util.*;
  */
 public class SavedSchool extends University {
   //timeStamp that keeps track of when a SavedSchool is added
-  private SimpleDateFormat timeStamp;
+  private DateFormat timeStamp;
   
   /**
    * Constructor that creates a Saved School 
@@ -26,7 +27,9 @@ public class SavedSchool extends University {
                                         u.getExpenses(), u.getPercentFinancialAid(), u.getNumApplicants(),
                                         u.getPercentAdmitted(), u.getPercentEnrolled(), u.getAcademicScale(),
                                         u.getSocialScale(), u.getQualityOfLifeScale(), u.getEmphases());
+    if(timeStamp == null) {
     this.timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+    }
   }
   
   /**
@@ -34,8 +37,9 @@ public class SavedSchool extends University {
    * 
    * @return the time stamp of the university
    */
-  public SimpleDateFormat getTimeStamp() {
-    return this.timeStamp;
+  public String getTimeStamp() {
+	  String strDate = timeStamp.format(new Date());
+    return strDate;
   }
   
   /**
