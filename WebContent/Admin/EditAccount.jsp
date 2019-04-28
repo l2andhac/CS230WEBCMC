@@ -61,10 +61,10 @@ function validateForm(){
 <form method="post" action="Edit_action.jsp" name="EditAccount" onsubmit="return validateForm()">
 		<br>
 		<table style="text-align: left; width: 266px; height: 228px;"
-			border="1" cellpadding="2" cellspacing="2">
+			border="0" cellpadding="2" cellspacing="2">
 			<tbody>
 			   <tr>
-					<td style="vertical-align: top;">First Name<br>
+					<td style="vertical-align: top;">First Name:<br>
 					</td>
 					<%
 						out.println("<td style=\"vertical-align: top;\"><input name=\"FirstName\" value=" + a.getFirstName()
@@ -74,7 +74,7 @@ function validateForm(){
 				</tr>
 				<tr>
 				<tr>
-					<td style="vertical-align: top;">Last Name<br>
+					<td style="vertical-align: top;">Last Name:<br>
 					</td>
 					<%
 						out.println("<td style=\"vertical-align: top;\"><input name=\"LastName\" value=" + a.getLastName()
@@ -83,7 +83,7 @@ function validateForm(){
 					</td>
 				</tr>
 				<tr>
-					<td style="vertical-align: top;">Username<br>
+					<td style="vertical-align: top;">Username:<br>
 					</td>
 					<%
 						out.println("<td style=\"vertical-align: top;\"><input name=\"Username\" value=" + a.getUsername()
@@ -92,7 +92,7 @@ function validateForm(){
 					</td>
 				</tr>
 				<tr>
-					<td style="vertical-align: top;">Password<br>
+					<td style="vertical-align: top;">Password:<br>
 					</td>
 					<%
 						out.println("<td style=\"vertical-align: top;\"><input name=\"Password\" value=" + a.getPassword()
@@ -100,7 +100,7 @@ function validateForm(){
 					%>
 				</tr>
 				<tr>
-					<td style="vertical-align: top;">Type<br>
+					<td style="vertical-align: top;">Type:<br>
 					</td>
 					<%
 						out.println("<td style=\"vertical-align: top;\"><input name=\"Type\" value=" + a.getUserType());
@@ -108,7 +108,7 @@ function validateForm(){
 					</td>
 				</tr>
 				<tr>
-					<td style="vertical-align: top;">Status<br>
+					<td style="vertical-align: top;">Status:<br>
 					</td>
 					<%
 						out.println("<td style=\"vertical-align: top;\"><input name=\"Status\" value=" + a.getStatus());

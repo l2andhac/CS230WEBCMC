@@ -27,12 +27,12 @@
 			<tr>
 			    <td style="vertical-align: top;">Deactivate</td>
 				<td style="vertical-align: top;">Edit</td>
-				<td style="vertical-align: top; text-align: center;">Full name
+				<td style="vertical-align: top; text-align: left;">Full name
 				</td>
-				<td style="vertical-align: top; text-align: center;">Username</td>
-				<td style="vertical-align: top; text-align: center;">Password</td>
-				<td style="vertical-align: top; text-align: center;">Type</td>
-				<td style="vertical-align: top; text-align: center;">Status</td>
+				<td style="vertical-align: top; text-align: left;">Username</td>
+				<td style="vertical-align: top; text-align: left;">Password</td>
+				<td style="vertical-align: top; text-align: left;">Type</td>
+				<td style="vertical-align: top; text-align: left;">Status</td>
 				<td style="vertical-align: top;">Delete</td>
 			</tr>
 
