@@ -1,8 +1,9 @@
+<%@include file="../verifyLogin.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="cmc.controller.*" import="cmc.entity.*"
 	import="cmc.interaction.*" import="java.util.*"%>
 
-<%@include file="../verifyLogin.jsp"%>
+
 <html>
 <head>
 <script>

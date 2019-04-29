@@ -5,6 +5,43 @@
 	<%@include file="../verifyLogin.jsp" %>
 <html>
 <head>
+<script>
+function validateForm(){
+	var state = document.forms["EditUnivForm"]["State"].value;
+	var location = document.forms["EditUnivForm"]["Location"].value;
+	var control = document.forms["EditUnivForm"]["Control"].value;
+	var numStu = parseInt(document.forms["EditUnivForm"]["NumofStudents"].value);
+	var fem = parseInt(document.forms["EditUnivForm"]["PercentFemale"].value);
+	var verb = parseInt(document.forms["EditUnivForm"]["SATVerb"].value);
+	var math = parseInt(document.forms["EditUnivForm"]["SATMath"].value);
+	var expenses = parseInt(document.forms["EditUnivForm"]["Expenses"].value);
+	var finAid = parseInt(document.forms["EditUnivForm"]["PercentFinAid"].value);
+	var app = parseInt(document.forms["EditUnivForm"]["NumApplicants"].value);
+	var adm = parseInt(document.forms["EditUnivForm"]["PercentAdmitted"].value);
+	var enrol = parseInt(document.forms["EditUnivForm"]["PercentEnrolled"].value);
+	var acad = parseInt(document.forms["EditUnivForm"]["AcademicScale"].value);
+	var soc = parseInt(document.forms["EditUnivForm"]["SocialScale"].value);
+	var life = parseInt(document.forms["EditUnivForm"]["QualScale"].value);
+	var emp1 = document.forms["EditUnivForm"]["Emphasis1"].value;
+	var emp2 = document.forms["EditUnivForm"]["Emphasis2"].value;
+	var emp3 = document.forms["EditUnivForm"]["Emphasis3"].value;
+	var emp4 = document.forms["EditUnivForm"]["Emphasis4"].value;
+	var emp5 = document.forms["EditUnivForm"]["Emphasis5"].value;
+	if(numStu <0 || fem < 0 || verb < 0||  math < 0 || expenses < 0  || finAid < 0  || app < 0  
+			|| adm < 0  || enrol < 0 ||  acad < 0 || soc < 0 || life < 0){
+		alert("No negative entries allowed. Please enter a positive value or leave the field blank");
+		return false;
+	}if (fem > 100 || finAid > 100 || adm > 100 || enrol > 100){
+		alert("Percents have a maximum value of 100");
+		return false;
+	}
+		
+	if(math > 800 || verb > 800){
+		alert("SAT scores can not be greater than 800");
+		return false;
+	}
+}
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add New University</title>
 </head>
@@ -16,7 +53,7 @@
 %>
 <body style="background-image: url(../images/pens.jpg); background-repeat: no-repeat; background-size: cover;">
 	<a href="AdminMenu.jsp">Back to Menu</a>
-	<form action="EditUniv_action.jsp">
+	<form action="EditUniv_action.jsp" name="EditUnivForm" onsubmit="return validateForm()">
 		<table style="text-align: left; width: 100%;" border="1"
 			cellpadding="2" cellspacing="2">
 			<tbody>
@@ -53,7 +90,7 @@
 				<tr>
 					<td>SAT VERBAL</td>
 					<td><input value=<%=school.getSATVerbal()%> name="SATVerb"
-						type="text"></td>
+						type="text" max="800"></td>
 				</tr>
 				<tr>
 					<td>SAT MATH</td>
