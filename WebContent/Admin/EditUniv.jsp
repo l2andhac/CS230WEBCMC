@@ -45,7 +45,7 @@ function validate(){
 }
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Add New University</title>
+<title>Edit University</title>
 </head>
 <%
 	AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
