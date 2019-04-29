@@ -6,6 +6,7 @@
 <html>
 <head>
 <script>
+
 function validate(){
 	var location = document.forms["EditForm"]["Location"].value;
 	var control = document.forms["EditForm"]["Control"].value;
@@ -99,7 +100,7 @@ function validate(){
 				<tr>
 					<td>SAT VERBAL</td>
 					<td><input value=<%=school.getSATVerbal()%> name="SATVerb"
-						type="text"></td>
+						type="text" max="800"></td>
 				</tr>
 				<tr>
 					<td>SAT MATH</td>
