@@ -5,6 +5,43 @@
 	<%@include file="../verifyLogin.jsp" %>
 <html>
 <head>
+<script>
+function validate(){
+	var location = document.forms["EditForm"]["Location"].value;
+	var control = document.forms["EditForm"]["Control"].value;
+	var numStu = (document.forms["EditForm"]["NumofStudents"].value);
+	var fem = (document.forms["EditForm"]["PercentFemale"].value);
+	var verb = p(document.forms["EditForm"]["SATVerb"].value);
+	var math = (document.forms["EditForm"]["SATMath"].value);
+	var expenses = (document.forms["EditForm"]["Expenses"].value);
+	var finAid = document.forms["EditForm"]["PercentFinAid"].value;
+	var app = document.forms["EditForm"]["NumApplicants"].value;
+	var adm = (document.forms["EditForm"]["PercentAdmitted"].value);
+	var enrol = (document.forms["EditForm"]["PercentEnrolled"].value);
+	var acad = (document.forms["EditForm"]["AcademicScale"].value);
+	var soc = (document.forms["EditForm"]["SocialScale"].value);
+	var life = (document.forms["EditForm"]["QualScale"].value);
+	var emp1 = document.forms["EditForm"]["Emphasis1"].value;
+	var emp2 = document.forms["EditForm"]["Emphasis2"].value;
+	var emp3 = document.forms["EditForm"]["Emphasis3"].value;
+	var emp4 = document.forms["EditForm"]["Emphasis4"].value;
+	var emp5 = document.forms["EditForm"]["Emphasis5"].value;
+	if(numStu <0 || fem < 0 || verb < 0||  math < 0 || expenses < 0  || finAid < 0  || app < 0  
+			|| adm < 0  || enrol < 0 ||  acad < 0 || soc < 0 || life < 0){
+		alert("No negative entries allowed. Please enter a positive value or leave the field blank");
+		return false;
+	if(math > 800 || verb > 800){
+		alert("SAT scores can not be greater than 800");
+		return false;
+	} if(fem > 100 || finAid > 100 || adm > 100 || enrol > 100){
+		alert("No percentages higher than 100 allowed");
+		return false;
+	}if(soc > 5 || acad > 5 || soc > 5){
+		alert("No scales greater than 5");
+		return false;
+	}
+}
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add New University</title>
 </head>
@@ -16,7 +53,7 @@
 %>
 <body style="background-image: url(../images/pens.jpg); background-repeat: no-repeat; background-size: cover;">
 	<a href="AdminMenu.jsp">Back to Menu</a>
-	<form action="EditUniv_action.jsp">
+	<form name="EditForm" action="EditUniv_action.jsp" onsubmit= "validate()">
 		<table style="text-align: left; width: 100%;" border="1"
 			cellpadding="2" cellspacing="2">
 			<tbody>

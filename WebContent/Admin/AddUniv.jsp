@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="java.util.*"%>
     
     <%@include file="../verifyLogin.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -8,25 +8,21 @@
 <script>
 function validateForm(){
 	var u = document.forms["AddUnivForm"]["Name"].value;
-	if(u == ""){
-		alert("Please fill out a unique name");
-		return false;
-	}
-	var state = document.forms["AddUnivForm"]["State"].value;
+	/* var state = document.forms["AddUnivForm"]["State"].value;
 	var location = document.forms["AddUnivForm"]["Location"].value;
 	var control = document.forms["AddUnivForm"]["Control"].value;
-	var numStu = parseInt(document.forms["AddUnivForm"]["NumofStudents"].value);
-	var fem = parseInt(document.forms["AddUnivForm"]["PercentFemale"].value);
-	var verb = parseInt(document.forms["AddUnivForm"]["SATVerb"].value);
-	var math = parseInt(document.forms["AddUnivForm"]["SATMath"].value);
-	var expenses = parseInt(document.forms["AddUnivForm"]["Expenses"].value);
-	var finAid = parseInt(document.forms["AddUnivForm"]["PercentFinAid"].value);
-	var app = parseInt(document.forms["AddUnivForm"]["NumApplicants"].value);
-	var adm = parseInt(document.forms["AddUnivForm"]["PercentAdmitted"].value);
-	var enrol = parseInt(document.forms["AddUnivForm"]["PercentEnrolled"].value);
-	var acad = parseInt(document.forms["AddUnivForm"]["AcademicScale"].value);
-	var soc = parseInt(document.forms["AddUnivForm"]["SocialScale"].value);
-	var life = parseInt(document.forms["AddUnivForm"]["QualScale"].value);
+	var numStu = (document.forms["AddUnivForm"]["NumofStudents"].value);
+	var fem = (document.forms["AddUnivForm"]["PercentFemale"].value);
+	var verb = p(document.forms["AddUnivForm"]["SATVerb"].value);
+	var math = (document.forms["AddUnivForm"]["SATMath"].value);
+	var expenses = (document.forms["AddUnivForm"]["Expenses"].value);
+	var finAid = document.forms["AddUnivForm"]["PercentFinAid"].value;
+	var app = document.forms["AddUnivForm"]["NumApplicants"].value;
+	var adm = (document.forms["AddUnivForm"]["PercentAdmitted"].value);
+	var enrol = (document.forms["AddUnivForm"]["PercentEnrolled"].value);
+	var acad = (document.forms["AddUnivForm"]["AcademicScale"].value);
+	var soc = (document.forms["AddUnivForm"]["SocialScale"].value);
+	var life = (document.forms["AddUnivForm"]["QualScale"].value);
 	var emp1 = document.forms["AddUnivForm"]["Emphasis1"].value;
 	var emp2 = document.forms["AddUnivForm"]["Emphasis2"].value;
 	var emp3 = document.forms["AddUnivForm"]["Emphasis3"].value;
@@ -39,8 +35,21 @@ function validateForm(){
 	if(math > 800 || verb > 800){
 		alert("SAT scores can not be greater than 800");
 		return false;
+	} if(fem > 100 || finAid > 100 || adm > 100 || enrol > 100){
+		alert("No percentages higher than 100 allowed");
+		return false;
+	}if(soc > 5 || acad > 5 || soc > 5){
+		alert("No scales greater than 5");
+		return false;
+	} */
+	
+	if(u == ""){
+		alert("Please fill out a unique name");
+		return false;
 	}
 }
+	
+
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add New University</title>
