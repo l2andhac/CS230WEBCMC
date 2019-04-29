@@ -26,7 +26,7 @@ int QScale;
 	}
 	String percFem = request.getParameter("PercentFemale");
 	if(!percFem.equals("")){
-		percFemale = Double.parseDouble(numStudent);
+		percFemale = Double.parseDouble(percFem);
 	}else{
 		percFemale = -1;
 	}
