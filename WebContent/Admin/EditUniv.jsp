@@ -9,18 +9,18 @@
 function validate(){
 	var location = document.forms["EditForm"]["Location"].value;
 	var control = document.forms["EditForm"]["Control"].value;
-	var numStu = document.forms["EditForm"]["NumofStudents"].value;
-	var fem = document.forms["EditForm"]["PercentFemale"].value;
-	var verb = document.forms["EditForm"]["SATVerb"].value;
-	var math = document.forms["EditForm"]["SATMath"].value;
-	var expenses = document.forms["EditForm"]["Expenses"].value;
+	var numStu = (document.forms["EditForm"]["NumofStudents"].value);
+	var fem = (document.forms["EditForm"]["PercentFemale"].value);
+	var verb = p(document.forms["EditForm"]["SATVerb"].value);
+	var math = (document.forms["EditForm"]["SATMath"].value);
+	var expenses = (document.forms["EditForm"]["Expenses"].value);
 	var finAid = document.forms["EditForm"]["PercentFinAid"].value;
 	var app = document.forms["EditForm"]["NumApplicants"].value;
-	var adm = document.forms["EditForm"]["PercentAdmitted"].value;
-	var enrol = document.forms["EditForm"]["PercentEnrolled"].value;
-	var acad = document.forms["EditForm"]["AcademicScale"].value;
-	var soc = document.forms["EditForm"]["SocialScale"].value;
-	var life = document.forms["EditForm"]["QualScale"].value;
+	var adm = (document.forms["EditForm"]["PercentAdmitted"].value);
+	var enrol = (document.forms["EditForm"]["PercentEnrolled"].value);
+	var acad = (document.forms["EditForm"]["AcademicScale"].value);
+	var soc = (document.forms["EditForm"]["SocialScale"].value);
+	var life = (document.forms["EditForm"]["QualScale"].value);
 	var emp1 = document.forms["EditForm"]["Emphasis1"].value;
 	var emp2 = document.forms["EditForm"]["Emphasis2"].value;
 	var emp3 = document.forms["EditForm"]["Emphasis3"].value;
@@ -54,7 +54,7 @@ function validate(){
 %>
 <body style="background-image: url(../images/pens.jpg); background-repeat: no-repeat; background-size: cover;">
 	<a href="AdminMenu.jsp">Back to Menu</a>
-	<form name="EditForm" action="EditUniv_action.jsp" onsubmit="return validate()">
+	<form name="EditForm" action="EditUniv_action.jsp" onsubmit= "validate()">
 		<table style="text-align: left; width: 100%;" border="1"
 			cellpadding="2" cellspacing="2">
 			<tbody>
