@@ -83,11 +83,22 @@ function validateForm(){
 	</tr>
 	<tr>
 		<td>LOCATION</td>
-		<td><input type="text" name="Location"></td>
+		<td><select name="Location">
+						
+						<option></option>
+						<option value="SUBURBAN">Suburban</option>
+						<option value="URBAN">Urban</option>
+						<option value="SMALL-CITY">Small-City</option>
+						</select></td>
 	</tr>
 	<tr>
 		<td>CONTROL</td>
-		<td><input type="text" name="Control"></td>
+		<td><select name="Control">
+						<option></option>
+						<option value="PRIVATE">Private</option>
+						<option value="STATE">State</option>
+						<option value="CITY">City</option>
+						</select></td>
 	</tr>
 	<tr>
 		<td>NUMBER OF STUDENTS</td>

@@ -9,7 +9,6 @@
 function validate(){
 	var location = document.forms["EditForm"]["Location"].value;
 	var control = document.forms["EditForm"]["Control"].value;
-<<<<<<< HEAD
 	var numStu = document.forms["EditForm"]["NumOfStudents"].value;
 	var fem = document.forms["EditForm"]["PercentFemale"].value;
 	var verb = document.forms["EditForm"]["SATVerb"].value;
@@ -71,13 +70,21 @@ function validate(){
 				</tr>
 				<tr>
 					<td>LOCATION</td>
-					<td><input value="<%=school.getLocation()%>" name="Location"
-						type="text"></td>
+					<td><select name="Location">
+						<option value="<%=school.getLocation()%>"><%=school.getLocation()%></option>
+						<option value="SUBURBAN">Suburban</option>
+						<option value="URBAN">Urban</option>
+						<option value="SMALL-CITY">Small-City</option>
+						</select></td>
 				</tr>
 				<tr>
 					<td>CONTROL</td>
-					<td><input value="<%=school.getControl()%>" name="Control"
-						type="text"></td>
+					<td><select name="Control">
+						<option value="<%=school.getControl()%>"><%=school.getControl()%></option>
+						<option value="PRIVATE">Private</option>
+						<option value="STATE">State</option>
+						<option value="CITY">City</option>
+						</select></td>
 				</tr>
 				<tr>
 					<td>NUMBER OF STUDENTS</td>
