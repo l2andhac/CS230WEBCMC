@@ -136,7 +136,7 @@ public class Search {
 	public Search(String name, String state, String location, String control, int enrollmentLo, int enrollmentUp,
 			int percentFemaleLo, int percentFemaleUp, int satVerbLo, int satVerbUp, int satMathLo, int satMathUp,
 			int expensesLo, int expensesUp, int percentFinancialAidLo, int percentFinancialAidUp, int applicantsLo, int applicantsUp,
-			int percentAdmittedLo, int percentAdmittedUp, int percentEnrollLo, int percentEnrollUp, int academicScaleLO,
+			int percentAdmittedLo, int percentAdmittedUp, int percentEnrollLo, int percentEnrollUp, int academicScaleLo,
 			int academicScaleUp, int socialScaleLo, int socialScaleUp, int qualOfLifeScaleLo, int qualOfLifeScaleUp,
 			List<String> emphasis) {
 		this.name = name;
@@ -146,6 +146,7 @@ public class Search {
 		this.enrollmentUp = enrollmentUp;
 		this.enrollmentLo = enrollmentLo;
 		this.percentFemaleUp = percentFemaleUp;
+		this.percentFemaleLo = percentFemaleLo;
 		this.satVerbUp = satVerbUp;
 		this.satVerbLo = satVerbLo;
 		this.setExpensesUp(expensesUp);
