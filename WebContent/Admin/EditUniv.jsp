@@ -9,7 +9,7 @@
 function validate(){
 	var location = document.forms["EditForm"]["Location"].value;
 	var control = document.forms["EditForm"]["Control"].value;
-	var numStu = document.forms["EditForm"]["NumofStudents"].value;
+	var numStu = document.forms["EditForm"]["NumOfStudents"].value;
 	var fem = document.forms["EditForm"]["PercentFemale"].value;
 	var verb = document.forms["EditForm"]["SATVerb"].value;
 	var math = document.forms["EditForm"]["SATMath"].value;
@@ -21,13 +21,13 @@ function validate(){
 	var acad = document.forms["EditForm"]["AcademicScale"].value;
 	var soc = document.forms["EditForm"]["SocialScale"].value;
 	var life = document.forms["EditForm"]["QualScale"].value;
-	var emp1 = document.forms["EditForm"]["Emphasis1"].value;
-	var emp2 = document.forms["EditForm"]["Emphasis2"].value;
-	var emp3 = document.forms["EditForm"]["Emphasis3"].value;
-	var emp4 = document.forms["EditForm"]["Emphasis4"].value;
-	var emp5 = document.forms["EditForm"]["Emphasis5"].value;
-	if(numStu < 0 || fem < 0 || verb < 0||  math < 0 || expenses < 0  || finAid < 0  || app < 0  
-			|| adm < 0  || enrol < 0 ||  acad < 0 || soc < 0 || life < 0){
+	var emp1 = document.forms["EditForm"]["Emphases1"].value;
+	var emp2 = document.forms["EditForm"]["Emphases2"].value;
+	var emp3 = document.forms["EditForm"]["Emphases3"].value;
+	var emp4 = document.forms["EditForm"]["Emphases4"].value;
+	var emp5 = document.forms["EditForm"]["Emphases5"].value;
+	if(numStu < -1 || fem < -1 || verb < -1||  math < -1 || expenses < -1  || finAid < -1  || app < -1  
+			|| adm < -1  || enrol < -1 ||  acad < -1 || soc < -1 || life < -1){
 		alert("No negative entries allowed. Please enter a positive value or leave the field blank");
 		return false;
 	}
@@ -37,7 +37,7 @@ function validate(){
 	} if(fem > 100 || finAid > 100 || adm > 100 || enrol > 100){
 		alert("No percentages higher than 100 allowed");
 		return false;
-	}if(soc > 5 || acad > 5 || soc > 5){
+	}if(soc > 5 || acad > 5 || life > 5){
 		alert("No scales greater than 5");
 		return false;
 	}

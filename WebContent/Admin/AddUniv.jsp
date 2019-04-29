@@ -6,12 +6,12 @@
 <html>
 <head>
 <script>
-function validateForms(){
+function validateForm(){
 	var u = document.forms["AddUnivForm"]["Name"].value;
 	var state = document.forms["AddUnivForm"]["State"].value;
 	var location = document.forms["AddUnivForm"]["Location"].value;
 	var control = document.forms["AddUnivForm"]["Control"].value;
-	var numStu = parseInt(document.forms["AddUnivForm"]["NumofStudents"].value);
+	var numStu = parseInt(document.forms["AddUnivForm"]["NumOfStudents"].value);
 	var fem = parseInt(document.forms["AddUnivForm"]["PercentFemale"].value);
 	var verb = parseInt(document.forms["AddUnivForm"]["SATVerb"].value);
 	var math = parseInt(document.forms["AddUnivForm"]["SATMath"].value);
@@ -23,11 +23,11 @@ function validateForms(){
 	var acad = parseInt(document.forms["AddUnivForm"]["AcademicScale"].value);
 	var soc = parseInt(document.forms["AddUnivForm"]["SocialScale"].value);
 	var life = parseInt(document.forms["AddUnivForm"]["QualScale"].value);
-	var emp1 = document.forms["AddUnivForm"]["Emphasis1"].value;
-	var emp2 = document.forms["AddUnivForm"]["Emphasis2"].value;
-	var emp3 = document.forms["AddUnivForm"]["Emphasis3"].value;
-	var emp4 = document.forms["AddUnivForm"]["Emphasis4"].value;
-	var emp5 = document.forms["AddUnivForm"]["Emphasis5"].value;
+	var emp1 = document.forms["AddUnivForm"]["Emphases1"].value;
+	var emp2 = document.forms["AddUnivForm"]["Emphases2"].value;
+	var emp3 = document.forms["AddUnivForm"]["Emphases3"].value;
+	var emp4 = document.forms["AddUnivForm"]["Emphases4"].value;
+	var emp5 = document.forms["AddUnivForm"]["Emphases5"].value; 
 	if(u == ""){
 		alert("Please fill out a unique name");
 		return false;
@@ -40,10 +40,12 @@ function validateForms(){
 	if(math > 800 || verb > 800){
 		alert("SAT scores can not be greater than 800");
 		return false;
-	} if(fem > 100 || finAid > 100 || adm > 100 || enrol > 100){
+	} 
+	if(fem > 100 || finAid > 100 || adm > 100 || enrol > 100){
 		alert("No percentages higher than 100 allowed");
 		return false;
-	}if(soc > 5 || acad > 5 || soc > 5){
+	}
+	if(soc > 5 || acad > 5 || life > 5){
 		alert("No scales greater than 5");
 		return false;
 	} 
@@ -68,7 +70,7 @@ function validateForms(){
 		}
 		%>
 		</i><br>
-<form action="AddUniv_action.jsp" name="AddUnivForm" onsubmit="return validateForms()">
+<form action="AddUniv_action.jsp" name="AddUnivForm" onsubmit="return validateForm()">
 <table style="text-align: left; width: 100%;" border="1"
 		cellpadding="2" cellspacing="2">
 	<tr>
