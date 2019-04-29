@@ -6,38 +6,40 @@
 <html>
 <head>
 <script>
-function validateForm(){
-	var state = document.forms["EditUnivForm"]["State"].value;
-	var location = document.forms["EditUnivForm"]["Location"].value;
-	var control = document.forms["EditUnivForm"]["Control"].value;
-	var numStu = parseInt(document.forms["EditUnivForm"]["NumofStudents"].value);
-	var fem = parseInt(document.forms["EditUnivForm"]["PercentFemale"].value);
-	var verb = parseInt(document.forms["EditUnivForm"]["SATVerb"].value);
-	var math = parseInt(document.forms["EditUnivForm"]["SATMath"].value);
-	var expenses = parseInt(document.forms["EditUnivForm"]["Expenses"].value);
-	var finAid = parseInt(document.forms["EditUnivForm"]["PercentFinAid"].value);
-	var app = parseInt(document.forms["EditUnivForm"]["NumApplicants"].value);
-	var adm = parseInt(document.forms["EditUnivForm"]["PercentAdmitted"].value);
-	var enrol = parseInt(document.forms["EditUnivForm"]["PercentEnrolled"].value);
-	var acad = parseInt(document.forms["EditUnivForm"]["AcademicScale"].value);
-	var soc = parseInt(document.forms["EditUnivForm"]["SocialScale"].value);
-	var life = parseInt(document.forms["EditUnivForm"]["QualScale"].value);
-	var emp1 = document.forms["EditUnivForm"]["Emphasis1"].value;
-	var emp2 = document.forms["EditUnivForm"]["Emphasis2"].value;
-	var emp3 = document.forms["EditUnivForm"]["Emphasis3"].value;
-	var emp4 = document.forms["EditUnivForm"]["Emphasis4"].value;
-	var emp5 = document.forms["EditUnivForm"]["Emphasis5"].value;
-	if(numStu <0 || fem < 0 || verb < 0||  math < 0 || expenses < 0  || finAid < 0  || app < 0  
-			|| adm < 0  || enrol < 0 ||  acad < 0 || soc < 0 || life < 0){
+
+function validate(){
+	var location = document.forms["EditForm"]["Location"].value;
+	var control = document.forms["EditForm"]["Control"].value;
+	var numStu = document.forms["EditForm"]["NumOfStudents"].value;
+	var fem = document.forms["EditForm"]["PercentFemale"].value;
+	var verb = document.forms["EditForm"]["SATVerb"].value;
+	var math = document.forms["EditForm"]["SATMath"].value;
+	var expenses = document.forms["EditForm"]["Expenses"].value;
+	var finAid = document.forms["EditForm"]["PercentFinAid"].value;
+	var app = document.forms["EditForm"]["NumApplicants"].value;
+	var adm = document.forms["EditForm"]["PercentAdmitted"].value;
+	var enrol = document.forms["EditForm"]["PercentEnrolled"].value;
+	var acad = document.forms["EditForm"]["AcademicScale"].value;
+	var soc = document.forms["EditForm"]["SocialScale"].value;
+	var life = document.forms["EditForm"]["QualScale"].value;
+	var emp1 = document.forms["EditForm"]["Emphases1"].value;
+	var emp2 = document.forms["EditForm"]["Emphases2"].value;
+	var emp3 = document.forms["EditForm"]["Emphases3"].value;
+	var emp4 = document.forms["EditForm"]["Emphases4"].value;
+	var emp5 = document.forms["EditForm"]["Emphases5"].value;
+	if(numStu < -1 || fem < -1 || verb < -1||  math < -1 || expenses < -1  || finAid < -1  || app < -1  
+			|| adm < -1  || enrol < -1 ||  acad < -1 || soc < -1 || life < -1){
 		alert("No negative entries allowed. Please enter a positive value or leave the field blank");
 		return false;
-	}if (fem > 100 || finAid > 100 || adm > 100 || enrol > 100){
-		alert("Percents have a maximum value of 100");
-		return false;
 	}
-		
 	if(math > 800 || verb > 800){
 		alert("SAT scores can not be greater than 800");
+		return false;
+	} if(fem > 100 || finAid > 100 || adm > 100 || enrol > 100){
+		alert("No percentages higher than 100 allowed");
+		return false;
+	}if(soc > 5 || acad > 5 || life > 5){
+		alert("No scales greater than 5");
 		return false;
 	}
 }
@@ -53,7 +55,7 @@ function validateForm(){
 %>
 <body style="background-image: url(../images/pens.jpg); background-repeat: no-repeat; background-size: cover;">
 	<a href="AdminMenu.jsp">Back to Menu</a>
-	<form action="EditUniv_action.jsp" name="EditUnivForm" onsubmit="return validateForm()">
+	<form name="EditForm" action="EditUniv_action.jsp" onsubmit= "validate()">
 		<table style="text-align: left; width: 100%;" border="1"
 			cellpadding="2" cellspacing="2">
 			<tbody>

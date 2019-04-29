@@ -49,11 +49,10 @@
 			<tr>
 				<td style="vertical-align: top;">
 					<%
-					out.println("<form method=\"post\" action=\"SaveSchool_action.jsp?SchoolName=" + u.getSchoolName()
-					+ "\" name=\"Save\">");
-							out.println("<input name=\"Save\" value=\"Save\" type=\"submit\"> <input name=\"SchoolName\" value="
-									+ u.getSchoolName() + " type=\"hidden\">");
-							out.println("</form>");
+					out.println("<form method=\"post\" action=\"SaveSchool_action.jsp\" name=\"Save\">");
+			 		out.println("<input name=\"Save\" value=\"Save\" type=\"submit\"> <input");
+			 		out.println("name=\"SchoolName\" value=\"" + u.getSchoolName() + "\" type=\"hidden\">");
+			 		out.println("</form>");
 					%>
 				
 				</td>
@@ -67,8 +66,6 @@
  		out.println("<input name=\"View\" value=\"View\" type=\"submit\"> <input");
  		out.println("name=\"schoolName\" value=\"" + u.getSchoolName() + "\" type=\"hidden\">");
  		out.println("</form>");
- 		//out.println("<input name=\"View\" value=\"View\" type=\"submit\"> <input name=\"SchoolName\" value="
- 		//		+ u.getSchoolName() + " type=\"hidden\">");
  %> <br>
 				</td>
 			</tr>

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="java.util.*"%>
     
     <%@include file="../verifyLogin.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -8,14 +8,10 @@
 <script>
 function validateForm(){
 	var u = document.forms["AddUnivForm"]["Name"].value;
-	if(u == ""){
-		alert("Please fill out a unique name");
-		return false;
-	}
 	var state = document.forms["AddUnivForm"]["State"].value;
 	var location = document.forms["AddUnivForm"]["Location"].value;
 	var control = document.forms["AddUnivForm"]["Control"].value;
-	var numStu = parseInt(document.forms["AddUnivForm"]["NumofStudents"].value);
+	var numStu = parseInt(document.forms["AddUnivForm"]["NumOfStudents"].value);
 	var fem = parseInt(document.forms["AddUnivForm"]["PercentFemale"].value);
 	var verb = parseInt(document.forms["AddUnivForm"]["SATVerb"].value);
 	var math = parseInt(document.forms["AddUnivForm"]["SATMath"].value);
@@ -27,20 +23,37 @@ function validateForm(){
 	var acad = parseInt(document.forms["AddUnivForm"]["AcademicScale"].value);
 	var soc = parseInt(document.forms["AddUnivForm"]["SocialScale"].value);
 	var life = parseInt(document.forms["AddUnivForm"]["QualScale"].value);
-	var emp1 = document.forms["AddUnivForm"]["Emphasis1"].value;
-	var emp2 = document.forms["AddUnivForm"]["Emphasis2"].value;
-	var emp3 = document.forms["AddUnivForm"]["Emphasis3"].value;
-	var emp4 = document.forms["AddUnivForm"]["Emphasis4"].value;
-	var emp5 = document.forms["AddUnivForm"]["Emphasis5"].value;
+	var emp1 = document.forms["AddUnivForm"]["Emphases1"].value;
+	var emp2 = document.forms["AddUnivForm"]["Emphases2"].value;
+	var emp3 = document.forms["AddUnivForm"]["Emphases3"].value;
+	var emp4 = document.forms["AddUnivForm"]["Emphases4"].value;
+	var emp5 = document.forms["AddUnivForm"]["Emphases5"].value; 
+	if(u == ""){
+		alert("Please fill out a unique name");
+		return false;
+	}
 	if(numStu <0 || fem < 0 || verb < 0||  math < 0 || expenses < 0  || finAid < 0  || app < 0  
 			|| adm < 0  || enrol < 0 ||  acad < 0 || soc < 0 || life < 0){
 		alert("No negative entries allowed. Please enter a positive value or leave the field blank");
 		return false;
+	}
 	if(math > 800 || verb > 800){
 		alert("SAT scores can not be greater than 800");
 		return false;
+	} 
+	if(fem > 100 || finAid > 100 || adm > 100 || enrol > 100){
+		alert("No percentages higher than 100 allowed");
+		return false;
 	}
+	if(soc > 5 || acad > 5 || life > 5){
+		alert("No scales greater than 5");
+		return false;
+	} 
+	
+	
 }
+	
+
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add New University</title>
