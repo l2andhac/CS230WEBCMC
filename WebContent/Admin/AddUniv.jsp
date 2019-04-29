@@ -6,32 +6,37 @@
 <html>
 <head>
 <script>
-function validateForm(){
+function validateForms(){
 	var u = document.forms["AddUnivForm"]["Name"].value;
-	/* var state = document.forms["AddUnivForm"]["State"].value;
+	var state = document.forms["AddUnivForm"]["State"].value;
 	var location = document.forms["AddUnivForm"]["Location"].value;
 	var control = document.forms["AddUnivForm"]["Control"].value;
-	var numStu = (document.forms["AddUnivForm"]["NumofStudents"].value);
-	var fem = (document.forms["AddUnivForm"]["PercentFemale"].value);
-	var verb = p(document.forms["AddUnivForm"]["SATVerb"].value);
-	var math = (document.forms["AddUnivForm"]["SATMath"].value);
-	var expenses = (document.forms["AddUnivForm"]["Expenses"].value);
-	var finAid = document.forms["AddUnivForm"]["PercentFinAid"].value;
-	var app = document.forms["AddUnivForm"]["NumApplicants"].value;
-	var adm = (document.forms["AddUnivForm"]["PercentAdmitted"].value);
-	var enrol = (document.forms["AddUnivForm"]["PercentEnrolled"].value);
-	var acad = (document.forms["AddUnivForm"]["AcademicScale"].value);
-	var soc = (document.forms["AddUnivForm"]["SocialScale"].value);
-	var life = (document.forms["AddUnivForm"]["QualScale"].value);
+	var numStu = parseInt(document.forms["AddUnivForm"]["NumofStudents"].value);
+	var fem = parseInt(document.forms["AddUnivForm"]["PercentFemale"].value);
+	var verb = parseInt(document.forms["AddUnivForm"]["SATVerb"].value);
+	var math = parseInt(document.forms["AddUnivForm"]["SATMath"].value);
+	var expenses = parseInt(document.forms["AddUnivForm"]["Expenses"].value);
+	var finAid = parseInt(document.forms["AddUnivForm"]["PercentFinAid"].value);
+	var app = parseInt(document.forms["AddUnivForm"]["NumApplicants"].value);
+	var adm = parseInt(document.forms["AddUnivForm"]["PercentAdmitted"].value);
+	var enrol = parseInt(document.forms["AddUnivForm"]["PercentEnrolled"].value);
+	var acad = parseInt(document.forms["AddUnivForm"]["AcademicScale"].value);
+	var soc = parseInt(document.forms["AddUnivForm"]["SocialScale"].value);
+	var life = parseInt(document.forms["AddUnivForm"]["QualScale"].value);
 	var emp1 = document.forms["AddUnivForm"]["Emphasis1"].value;
 	var emp2 = document.forms["AddUnivForm"]["Emphasis2"].value;
 	var emp3 = document.forms["AddUnivForm"]["Emphasis3"].value;
 	var emp4 = document.forms["AddUnivForm"]["Emphasis4"].value;
 	var emp5 = document.forms["AddUnivForm"]["Emphasis5"].value;
+	if(u == ""){
+		alert("Please fill out a unique name");
+		return false;
+	}
 	if(numStu <0 || fem < 0 || verb < 0||  math < 0 || expenses < 0  || finAid < 0  || app < 0  
 			|| adm < 0  || enrol < 0 ||  acad < 0 || soc < 0 || life < 0){
 		alert("No negative entries allowed. Please enter a positive value or leave the field blank");
 		return false;
+	}
 	if(math > 800 || verb > 800){
 		alert("SAT scores can not be greater than 800");
 		return false;
@@ -41,12 +46,9 @@ function validateForm(){
 	}if(soc > 5 || acad > 5 || soc > 5){
 		alert("No scales greater than 5");
 		return false;
-	} */
+	} 
 	
-	if(u == ""){
-		alert("Please fill out a unique name");
-		return false;
-	}
+	
 }
 	
 
@@ -66,7 +68,7 @@ function validateForm(){
 		}
 		%>
 		</i><br>
-<form action="AddUniv_action.jsp" name="AddUnivForm" onsubmit="return validateForm()">
+<form action="AddUniv_action.jsp" name="AddUnivForm" onsubmit="return validateForms()">
 <table style="text-align: left; width: 100%;" border="1"
 		cellpadding="2" cellspacing="2">
 	<tr>

@@ -9,27 +9,28 @@
 function validate(){
 	var location = document.forms["EditForm"]["Location"].value;
 	var control = document.forms["EditForm"]["Control"].value;
-	var numStu = (document.forms["EditForm"]["NumofStudents"].value);
-	var fem = (document.forms["EditForm"]["PercentFemale"].value);
-	var verb = p(document.forms["EditForm"]["SATVerb"].value);
-	var math = (document.forms["EditForm"]["SATMath"].value);
-	var expenses = (document.forms["EditForm"]["Expenses"].value);
+	var numStu = document.forms["EditForm"]["NumofStudents"].value;
+	var fem = document.forms["EditForm"]["PercentFemale"].value;
+	var verb = document.forms["EditForm"]["SATVerb"].value;
+	var math = document.forms["EditForm"]["SATMath"].value;
+	var expenses = document.forms["EditForm"]["Expenses"].value;
 	var finAid = document.forms["EditForm"]["PercentFinAid"].value;
 	var app = document.forms["EditForm"]["NumApplicants"].value;
-	var adm = (document.forms["EditForm"]["PercentAdmitted"].value);
-	var enrol = (document.forms["EditForm"]["PercentEnrolled"].value);
-	var acad = (document.forms["EditForm"]["AcademicScale"].value);
-	var soc = (document.forms["EditForm"]["SocialScale"].value);
-	var life = (document.forms["EditForm"]["QualScale"].value);
+	var adm = document.forms["EditForm"]["PercentAdmitted"].value;
+	var enrol = document.forms["EditForm"]["PercentEnrolled"].value;
+	var acad = document.forms["EditForm"]["AcademicScale"].value;
+	var soc = document.forms["EditForm"]["SocialScale"].value;
+	var life = document.forms["EditForm"]["QualScale"].value;
 	var emp1 = document.forms["EditForm"]["Emphasis1"].value;
 	var emp2 = document.forms["EditForm"]["Emphasis2"].value;
 	var emp3 = document.forms["EditForm"]["Emphasis3"].value;
 	var emp4 = document.forms["EditForm"]["Emphasis4"].value;
 	var emp5 = document.forms["EditForm"]["Emphasis5"].value;
-	if(numStu <0 || fem < 0 || verb < 0||  math < 0 || expenses < 0  || finAid < 0  || app < 0  
+	if(numStu < 0 || fem < 0 || verb < 0||  math < 0 || expenses < 0  || finAid < 0  || app < 0  
 			|| adm < 0  || enrol < 0 ||  acad < 0 || soc < 0 || life < 0){
 		alert("No negative entries allowed. Please enter a positive value or leave the field blank");
 		return false;
+	}
 	if(math > 800 || verb > 800){
 		alert("SAT scores can not be greater than 800");
 		return false;
@@ -53,7 +54,7 @@ function validate(){
 %>
 <body style="background-image: url(../images/pens.jpg); background-repeat: no-repeat; background-size: cover;">
 	<a href="AdminMenu.jsp">Back to Menu</a>
-	<form name="EditForm" action="EditUniv_action.jsp" onsubmit= "validate()">
+	<form name="EditForm" action="EditUniv_action.jsp" onsubmit="return validate()">
 		<table style="text-align: left; width: 100%;" border="1"
 			cellpadding="2" cellspacing="2">
 			<tbody>
