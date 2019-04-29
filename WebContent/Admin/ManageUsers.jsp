@@ -11,7 +11,7 @@
 	%>
 	<a href="AdminMenu.jsp">Return to menu</a><br>
 	Hello Admin
-	<%=ai.getUsername()%>
+	<%=ai.getAccount().getFirstName()%>
 	<br>
 	
 <br>

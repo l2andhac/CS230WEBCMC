@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	import="java.util.*,cmc.entity.*,cmc.controller.*,cmc.interaction.*"
 	pageEncoding="UTF-8"%>
-	
-	<%@include file="../verifyLogin.jsp" %>
+
+<%@include file="../verifyLogin.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,7 +12,7 @@
 <body>
 	<a href="Search.jsp">Back to Search<br></a> Results of the search
 	<br>
-	
+
 
 	<%
 		//UserInteraction ui = (UserInteraction) session.getAttribute("ai");
@@ -49,26 +49,27 @@
 			<tr>
 				<td style="vertical-align: top;">
 					<%
-						out.println("<form method=\"post\" action=\"SaveSchool_action.jsp?SchoolName=" + u.getSchoolName()
-									+ "\" name=\"Save\">");
+					out.println("<form method=\"post\" action=\"SaveSchool_action.jsp?SchoolName=" + u.getSchoolName()
+					+ "\" name=\"Save\">");
 							out.println("<input name=\"Save\" value=\"Save\" type=\"submit\"> <input name=\"SchoolName\" value="
 									+ u.getSchoolName() + " type=\"hidden\">");
+							out.println("</form>");
 					%>
-					</form>
+				
 				</td>
 				<%
 					out.println("<td style=\"vertical-align: top;\">" + u.getSchoolName() + "</td>");
 				%>
 				<td style="vertical-align: top;">
-					<%--<form method="post" action="ViewSchoolDetails.jsp" name="View">--%>
-					<%
-						out.println("<form method=\"post\" action=\"../ViewSchoolDetails.jsp?schoolName=" + u.getSchoolName()
-									+ "\" name=\"View\">");
-							out.println("<input name = \"View\" value=\"View\" type=\"submit\">");
-							//out.println("<input name=\"View\" value=\"View\" type=\"submit\"> <input name=\"SchoolName\" value="
-							//		+ u.getSchoolName() + " type=\"hidden\">");
-					%>
-					</form> <br>
+					<%--out.println("<form method=\"post\" action=\"SaveSchool_action.jsp?SchoolName=" + u.getSchoolName()
+									+ "\" name=\"Save\">");--%> <%
+ 	out.println("<form method=\"post\" action=\"../ViewSchoolDetails.jsp\" name=\"View\">");
+ 		out.println("<input name=\"View\" value=\"View\" type=\"submit\"> <input");
+ 		out.println("name=\"schoolName\" value=\"" + u.getSchoolName() + "\" type=\"hidden\">");
+ 		out.println("</form>");
+ 		//out.println("<input name=\"View\" value=\"View\" type=\"submit\"> <input name=\"SchoolName\" value="
+ 		//		+ u.getSchoolName() + " type=\"hidden\">");
+ %> <br>
 				</td>
 			</tr>
 			<%

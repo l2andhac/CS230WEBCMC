@@ -188,7 +188,7 @@ function validateForm(){
 						SAT VERBAL:<br>
 					</td>
 					<td style="vertical-align: top; height: 30px; width: 634px;">between&nbsp;<input
-						name="VerbalDown" type="number" min="1"> and&nbsp;<input name="VerbalUp" type="number" min="1" max="100">
+						name="VerbalDown" type="number" min="1" max="800"> and&nbsp;<input name="VerbalUp" type="number" min="1" max="800">
 						<br>
 					</td>
 				</tr>
@@ -197,7 +197,7 @@ function validateForm(){
 						SAT MATH:<br>
 					</td>
 					<td style="vertical-align: top; height: 30px; width: 634px;">between&nbsp;<input
-						name="MathDown" type="number" min="1"> and&nbsp;<input name="MathUp" type="number" min="1"> <br>
+						name="MathDown" type="number" min="1" max="800"> and&nbsp;<input name="MathUp" type="number" min="1" max="800"> <br>
 					</td>
 				</tr>
 				<tr>
