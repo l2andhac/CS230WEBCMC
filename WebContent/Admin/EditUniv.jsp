@@ -9,6 +9,7 @@
 function validate(){
 	var location = document.forms["EditForm"]["Location"].value;
 	var control = document.forms["EditForm"]["Control"].value;
+<<<<<<< HEAD
 	var numStu = document.forms["EditForm"]["NumOfStudents"].value;
 	var fem = document.forms["EditForm"]["PercentFemale"].value;
 	var verb = document.forms["EditForm"]["SATVerb"].value;
@@ -54,7 +55,7 @@ function validate(){
 %>
 <body style="background-image: url(../images/pens.jpg); background-repeat: no-repeat; background-size: cover;">
 	<a href="AdminMenu.jsp">Back to Menu</a>
-	<form name="EditForm" action="EditUniv_action.jsp" onsubmit="return validate()">
+	<form name="EditForm" action="EditUniv_action.jsp" onsubmit= "validate()">
 		<table style="text-align: left; width: 100%;" border="1"
 			cellpadding="2" cellspacing="2">
 			<tbody>

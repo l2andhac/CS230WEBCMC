@@ -67,8 +67,8 @@
 					out.println("<td style=\"vertical-align: top;\">" + u.getControl() + "</td>");
 					out.println("<td style=\"vertical-align: top;\">" + u.getNumStudents() + "</td>");
 					out.println("<td style=\"vertical-align: top;\">" + u.getPercentFemales() + "</td>");
-					out.println("<td style=\"vertical-align: top;\">" + u.getSATVerbal() + "</td>");
 					out.println("<td style=\"vertical-align: top;\">" + u.getSATMath() + "</td>");
+					out.println("<td style=\"vertical-align: top;\">" + u.getSATVerbal() + "</td>");
 					out.println("<td style=\"vertical-align: top;\">" + u.getExpenses() + "</td>");
 					out.println("<td style=\"vertical-align: top;\">" + u.getPercentFinancialAid() + "</td>");
 					out.println("<td style=\"vertical-align: top;\">" + u.getNumApplicants() + "</td>");
