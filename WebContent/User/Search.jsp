@@ -96,18 +96,18 @@ function validateForm(){
 		alert("Social Scale lower bound must be lower than or equal to the upper bound");
 		return false;
 	} 
-	if(acadLo < 1 && acadUp > 5 && socLo < 1 && socUp > 5 && lifeLo < 1
-			&& lifeUp > 5){
+	if(acadLo > 5 || acadUp > 5 || socLo > 5 || socUp > 5 || lifeLo > 5
+			|| lifeUp > 5){
 		alert("Entries must be between 1 and 5 inclusive");
 		return false;
 		
 	}
-	if (femUp > 100 || finAidUp > 100 || admUp > 100 || enrolUp > 100|| femLo > 100 || finAidLo > 100
-			|| admLo > 100){
+	if (femLo > 100 || femUp > 100 || finAidLo > 100 || finAidUp > 100 || admLo > 100 || 
+			admUp > 100 || enrolLo > 100 || enrolUp > 100){
 		alert("Percents have a maximum value of 100");
 		return false;
 	}
-	if(mathUp > 800 || verbUp > 800){
+	if(mathLo > 800 || mathUp > 800 || verbLo > 800 || verbUp > 800){
 		alert("SAT scores have a maximum value of 800");
 		return false;
 	}
