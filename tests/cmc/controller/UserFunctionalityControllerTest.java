@@ -95,7 +95,7 @@ public class UserFunctionalityControllerTest {
 
 	@Test
 	public void testSearchSchool() {
-		Search so = new Search("BER", "CALI", "URBAN", "STATE", 50000, 35000, -1, -1, 600, 525, 605, 595, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, null);
+		Search so = new Search("BER", "CALI", "URBAN", "STATE", 35000, 50000, -1, -1, 600, 525, 605, 595, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, null);
 		List<University> matches = ufc.searchSchool(so);
 		University expected = dbc.getSchool("UNIVERSITY OF CALIFORNIA BERKELEY");
 		boolean found = false;
@@ -112,7 +112,7 @@ public class UserFunctionalityControllerTest {
 		List<String> foci = new ArrayList<String>();
 	    foci.add("ENGINEERING");
 	    foci.add("ENGLISH");
-	    Search s = new Search("","CALI", "URBAN", "STATE", 60000, 5000, 60, 25, -1, -1, -1, 
+	    Search s = new Search("","CALI", "URBAN", "STATE", 5000, 60000, 25, 60, -1, -1, -1, 
 	    		  -1, -1, -1, -1, -1, -1, -1, -1, -1,-1, -1, -1, -1, -1, -1, -1, -1, foci);
 	    List<University> listOfMatches = ufc.searchSchool(s);
 	    
@@ -241,12 +241,6 @@ public class UserFunctionalityControllerTest {
 				+ "that are actually saved", savedSchools.get(0).equals((univ)));
 	}
 
-	@Test
-	public void testCompareSavedSchools() {
-		List<University> list = ufc.compareSavedSchools(s.getSchoolName());
-		assertTrue("The list should contain both schools", list.get(0).equals(s));
-		assertTrue("The list should contain both schools", list.get(1).getSchoolName().equals("AUBURN"));
-	}
 
 
 	@Test

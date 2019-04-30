@@ -247,6 +247,19 @@ public class DBController {
     return retList;
   }
   
+  public boolean hasSavedSchools(String u) {
+	    //
+	    boolean b = false;
+	    String[][] savedSchools = univDBlib.user_getUsernamesWithSavedSchools();
+	    for (int i = 0; i < savedSchools.length; i++)
+	    {
+	        if(u.equals(savedSchools[i][0]))
+	        {
+	        	b = true;
+	        }
+	    }
+	    return b;
+  }
   /**
    * Finds the name of a school in the database.
    * 

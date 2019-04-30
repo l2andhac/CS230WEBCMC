@@ -30,7 +30,7 @@ public class SearchControllerTest {
 	public void setUp() throws Exception {
 		foci = new ArrayList<String>();
 		foci.add("ENGINEERING");
-		searchCriteria = new Search("BETHEL UNIVERSITY", "MINNESOTA", "SUBURBAN", "PRIVATE", 8001, 7999, 31, 29, 700, 600, 700, 600, 5001, 4999, 11, 9, 11000, 10000, 96, 94, 71, 69, 3, 1, 5, 1, 5, 1,foci);
+		searchCriteria = new Search("BETHEL UNIVERSITY", "MINNESOTA", "SUBURBAN", "PRIVATE", 8000, 8000, 30, 30, 600, 700, 600, 700, 4999, 5001, 10, 11, 10000, 11000, 94, 96, 69, 71, 1, 3, 1, 5, 1, 5,foci);
 		u = new University("BETHEL UNIVERSITY", "MINNESOTA", "SUBURBAN", "PRIVATE", 8000, 30.0, 650, 650, 5000, 10.5, 10500, 95.0, 70.0, 2, 1, 1, foci);
 	    dbcontroller.addSchool(u);
 	}

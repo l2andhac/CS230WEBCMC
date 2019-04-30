@@ -133,8 +133,14 @@ public class AdminFunctionalityController extends AccountFunctionalityController
 
 
 public boolean removeAccount(String accountToRemove) {
-	dbController.removeAccount(accountToRemove);
-	return true;
+	if(!dbController.hasSavedSchools(accountToRemove)) {
+		dbController.removeAccount(accountToRemove);
+		return true;
+	}
+	else {
+		throw new IllegalArgumentException("This user cannot be removed becuase they have one or more saved schools");
+	}
+	
 }
 
   

@@ -24,19 +24,17 @@
 	<br>
 	
 	<%
-		String anyErrors = (String) request.getAttribute("Error");
+		String anyErrors1 = (String) request.getAttribute("Error");
+		String anyErrors = request.getParameter("Error");
 		String person = request.getParameter("name");
-		if (anyErrors != null) {
+		if (anyErrors1 != null) {
 	%>
 	<big><i style="color: white"> <%
- 	out.println(anyErrors);
+ 	out.println(anyErrors1);
  	}
  %>
 	</i></big>
-	<%-- if (anyErrors != null && anyErrors.equals("")) {
-			out.println("Incorrect information was given<br>");
-		}
-		if (anyErrors != null && anyErrors.equals("2")) {
+	<%  if (anyErrors != null && anyErrors.equals("2")) {
 			out.println("Account status is not valid<br>");
 		}
 		if (anyErrors != null && anyErrors.equals("3")) {
@@ -44,7 +42,7 @@
 		}
 		if (anyErrors != null && anyErrors.equals("4")) {
 			out.println("Username is not an email, so a new password will not be sent<br>");
-		}--%>
+		}%>
 
 
 <br>

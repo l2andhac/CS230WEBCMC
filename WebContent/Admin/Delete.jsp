@@ -12,6 +12,8 @@ ai.removeAccount(request.getParameter("Username"));
     
 response.sendRedirect("ManageUsers.jsp");
 }catch(Exception e){
-	out.println(e.getMessage());
+	String err = e.getMessage();
+	request.setAttribute("Error", err);
+    request.getRequestDispatcher("ManageUsers.jsp").forward(request, response);
 }
 %>

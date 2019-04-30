@@ -8,7 +8,15 @@
 <body>
 	<%
 		AdminInteraction ai = (AdminInteraction) session.getAttribute("ai");
-	%>
+		String anyErrors = (String) request.getAttribute("Error");
+		String person = request.getParameter("name");
+		if (anyErrors != null) {
+%>
+	<big><i style="color: red"> <%
+		out.println(anyErrors + "<br>");
+		}
+%>
+</i></big>
 	<a href="AdminMenu.jsp">Return to menu</a><br>
 	Hello Admin
 	<%=ai.getAccount().getFirstName()%>

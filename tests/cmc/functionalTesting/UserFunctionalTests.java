@@ -290,7 +290,7 @@ public class UserFunctionalTests {
 		assertTrue("The saved school list is correct", found);
 	}
 
-	@Test
+/*	@Test
 	public void testCompareSavedSchools() {
 		SavedSchool ss = new SavedSchool(univ, "dummyUser");
 		dbc.addSavedSchool(u, ss);
@@ -308,7 +308,7 @@ public class UserFunctionalTests {
 	@Test (expected = IllegalArgumentException.class)
 	public void testCompareSavedSchoolsUserOnlyHasOneSavedSchool() {
 		List<University> schoolsToCompare = ui.compareSavedSchools(null);
-	}
+	}*/
 	
 	@Test
 	public void testShowRecSchools() {
