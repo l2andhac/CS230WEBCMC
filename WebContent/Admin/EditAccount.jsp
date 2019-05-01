@@ -86,8 +86,8 @@ function validateForm(){
 					<td style="vertical-align: top;">Username:<br>
 					</td>
 					<%
-						out.println("<td style=\"vertical-align: top;\"><input name=\"Username\" value=" + a.getUsername()
-								+ " readonly>");
+						out.println("<td style=\"vertical-align: top;\"><input name=\"Username\" value=\"" + a.getUsername()
+								+ "\" readonly>");
 					%>
 					</td>
 				</tr>

@@ -51,12 +51,12 @@
 					out.println("<td style=\"vertical-align: top;\">");
 					out.println("<form method=\"post\" action=\"Deactive_Account.jsp\" name=\"Deactivate\">");
 					out.println("<input name=\"Delete\" value=\"Deactivate\" type=\"submit\"> <input");
-					out.println("name=\"Username\" value=" + u.getUsername() + " type=\"hidden\">");
+					out.println("name=\"Username\" value=\"" + u.getUsername() + "\" type=\"hidden\">");
 					out.println("</form>");
 					out.println("<td style=\"vertical-align: top;\">");//
 					out.println("<form method=\"post\" action=\"EditAccount.jsp\" name=\"Edit\">");
 					out.println("<input name=\"Edit\" value=\"Edit\" type=\"submit\"> <input");
-					out.println("name=\"Username\" value=" + u.getUsername() + " type=\"hidden\">");
+					out.println("name=\"Username\" value=\"" + u.getUsername() + "\" type=\"hidden\">");
 					out.println("</form>");
 					out.println("</td>");
 					out.println("<td style=\"vertical-align: top;\">" + u.getFirstName() + " " + u.getLastName() + "</td>");
@@ -67,7 +67,7 @@
 					out.println("<td style=\"vertical-align: top;\">");
 					out.println("<form method=\"post\" action=\"Delete.jsp\" name=\"Delete\">");
 					out.println("<input name=\"Delete\" value=\"Delete\" type=\"submit\"> <input");
-					out.println("name=\"Username\" value=" + u.getUsername() + " type=\"hidden\">");
+					out.println("name=\"Username\" value=\"" + u.getUsername() + "\" type=\"hidden\">");
 					out.println("</form>");
 					out.println("</td>");
 					out.println("</tr>");
