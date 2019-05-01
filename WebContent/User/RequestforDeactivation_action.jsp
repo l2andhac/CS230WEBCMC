@@ -7,7 +7,7 @@
 try{
 UserInteraction ai = (UserInteraction) session.getAttribute("ai");
 ai.requestDeactivation();
-response.sendRedirect("ManageProfile.jsp");
+response.sendRedirect("UserMenu.jsp");
 }catch(Exception e){
 	out.println(e.getMessage());
 }
