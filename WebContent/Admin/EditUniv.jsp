@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8" import="cmc.interaction.*"
 	import="cmc.entity.*, java.util.*"%>
 	
-	<%@include file="../verifyLogin.jsp" %>
+	<%@include file="../verifyLoginAdmin.jsp" %>
 <html>
 <head>
 <script>

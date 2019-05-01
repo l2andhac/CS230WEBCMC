@@ -38,7 +38,7 @@
 			out.println("</table>");
 
 		} else {
-			out.println("NO MATCHES FOUND");
+			out.println("USER HAS NO SAVED SCHOOLS");
 		}
 	%>
 </body>

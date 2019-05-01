@@ -211,22 +211,6 @@ public class UserFunctionalityController extends AccountFunctionalityController{
 	  return retList;
   }
   
-  /**
-   * Requests for the second school to compare to.
-
-   * @return SavedSchool to compare
-   */
-  private University requestForSecondSchool(){
-	  /*    Scanner sc = new Scanner(System.in);
-	    System.out.println("Enter the name of a school to compare to the first one: ");
-	    String schoolName = sc.next();*/
-	  University school2= this.dbController.getSchool("AUBURN");
-	  
-	//sc.close();
-	  return school2;
-    
-    
-  }
   
   /**
    * Calls the method of DBCOntroller to find 5 most related schools.

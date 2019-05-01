@@ -1,7 +1,7 @@
 <%@page language="java" import="cmc.controller.*" import="cmc.entity.*"
 	import="cmc.interaction.*"%>
 	
-	<%@include file="../verifyLogin.jsp" %>
+	<%@include file="../verifyLoginAdmin.jsp" %>
 	
 <%
 try{

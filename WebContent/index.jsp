@@ -34,7 +34,13 @@
  	}
  %>
 	</i></big>
-	<%  if (anyErrors != null && anyErrors.equals("2")) {
+	<%  if (anyErrors != null && anyErrors.equals("0")) {
+		out.println("Account must be admin to access that page. You have been logged off.<br>");
+		}
+		if (anyErrors != null && anyErrors.equals("1")) {
+		out.println("Account must be user to access that page. You have been logged off.<br>");
+		}
+		if (anyErrors != null && anyErrors.equals("2")) {
 			out.println("Account status is not valid<br>");
 		}
 		if (anyErrors != null && anyErrors.equals("3")) {

@@ -1,6 +1,6 @@
 <%@page language="java" import="cmc.interaction.*" import="cmc.entity.*"
 	import="java.util.*"%>
-	<%@include file="../verifyLogin.jsp" %>
+	<%@include file="../verifyLoginAdmin.jsp" %>
 <html>
 <head>
 <title></title>
